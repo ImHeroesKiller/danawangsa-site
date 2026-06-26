@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 
+import { useConsultation } from "@/components/consultation/consultation-context";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Logo } from "@/components/layout/logo";
 import { SiteNavLink } from "@/components/layout/site-nav-link";
@@ -19,7 +20,11 @@ interface FooterColumnProps {
   links: { label: string; href: string }[];
 }
 
-function FooterColumn({ title, links }: FooterColumnProps) {
+function FooterColumn({
+  title,
+  links,
+  onConsultationClick,
+}: FooterColumnProps & { onConsultationClick?: () => void }) {
   return (
     <div>
       <h3 className="mb-3 text-xs font-semibold tracking-wider text-gold">
@@ -28,9 +33,19 @@ function FooterColumn({ title, links }: FooterColumnProps) {
       <ul className="space-y-2 text-sm text-white/55">
         {links.map((link) => (
           <li key={link.href + link.label}>
-            <SiteNavLink href={link.href} className="text-white/55">
-              {link.label}
-            </SiteNavLink>
+            {link.href === "/#cta-section" && onConsultationClick ? (
+              <button
+                type="button"
+                onClick={onConsultationClick}
+                className="text-left text-white/55 transition-colors hover:text-gold"
+              >
+                {link.label}
+              </button>
+            ) : (
+              <SiteNavLink href={link.href} className="text-white/55">
+                {link.label}
+              </SiteNavLink>
+            )}
           </li>
         ))}
       </ul>
@@ -49,8 +64,12 @@ const COMPANY_LABEL_KEYS: Record<NavLinkKey, string> = {
 
 export function Footer() {
   const locale = useLocale() as Locale;
+  const { openConsultation } = useConsultation();
   const tFooter = useTranslations("footer");
   const tNav = useTranslations("nav");
+
+  const openConsultationForm = () =>
+    openConsultation("general", { source: "footer" });
 
   const serviceLinks = getFooterServiceLinks(locale).map((link) => ({
     ...link,
@@ -83,7 +102,11 @@ export function Footer() {
           </div>
 
           <FooterColumn title={tFooter("services")} links={serviceLinks} />
-          <FooterColumn title={tFooter("company")} links={companyLinks} />
+          <FooterColumn
+            title={tFooter("company")}
+            links={companyLinks}
+            onConsultationClick={openConsultationForm}
+          />
           <FooterColumn title={tFooter("legal")} links={legalLinks} />
         </div>
 

@@ -11,7 +11,7 @@ export const privacyPolicyContent: LegalPageContent = {
       id: "pendahuluan",
       title: "1. 引言",
       paragraphs: [
-        "Danawangsa Capital（「我们」）是一家战略商业与财务咨询公司。本隐私政策说明我们如何通过网站、咨询表单、电子邮件、WhatsApp 或商务会议收集、使用、存储及保护您提供的个人信息。",
+        "Danawangsa Capital（「我们」）是一家战略商业与财务咨询公司。本隐私政策说明我们如何通过网站及官方咨询表单收集、使用、存储及保护您提供的个人信息。",
         "本政策适用于我们作为 Strategic Business & Financial Consultant 提供的全部咨询服务。我们收集的数据仅用于咨询与战略顾问目的。",
       ],
     },
@@ -62,7 +62,7 @@ export const privacyPolicyContent: LegalPageContent = {
         "请求访问、更正或更新我们存储的个人信息。",
         "在不与适用法律或合同义务冲突的前提下，请求删除特定数据。",
         "撤回将数据用于营销沟通的同意（如有）。",
-        "通过我们的官方联系方式就隐私事宜提出疑问或投诉。",
+        "通过网站上的官方咨询表单就隐私事宜提出疑问或投诉。",
       ],
     },
     {
@@ -84,7 +84,7 @@ export const privacyPolicyContent: LegalPageContent = {
       id: "kontak",
       title: "9. 联系方式",
       paragraphs: [
-        "有关隐私与数据保护的问题，请通过网站上的联系信息或 Danawangsa Capital 官方咨询表单与我们联系。",
+        "有关隐私与数据保护的问题，请通过 Danawangsa Capital 网站上的官方咨询表单与我们联系。",
       ],
     },
   ],
@@ -195,7 +195,7 @@ export const consultationTermsContent: LegalPageContent = {
       id: "kontak",
       title: "11. 联系方式",
       paragraphs: [
-        "有关咨询服务条款的疑问，请通过网站官方联系方式联系 Danawangsa Capital 团队，或预约免费初步咨询。",
+        "有关咨询服务条款的疑问，请通过网站上的官方咨询表单联系 Danawangsa Capital 团队。",
       ],
     },
   ],

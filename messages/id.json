@@ -61,8 +61,7 @@
     "copyright": "© 2026 Danawangsa Capital — Strategic Advisory",
     "disclaimer": "Strategic Business & Financial Consultant",
     "allServices": "Semua Layanan",
-    "contactUs": "Hubungi Kami",
-    "whatsapp": "WhatsApp"
+    "contactUs": "Formulir Konsultasi"
   },
   "hero": {
     "titleLine1": "TURNING ASSETS",
@@ -115,7 +114,6 @@
     "titleLine1": "Siap Mengoptimalkan",
     "titleLine2": "Strategi Keuangan Bisnis Anda?",
     "description": "Ceritakan tantangan bisnis Anda. Tim advisor kami akan merespons dalam 1×24 jam dengan rekomendasi langkah selanjutnya.",
-    "chatWhatsApp": "Chat WhatsApp",
     "strategicAdvisory": "Strategic Business & Financial Consultant"
   },
   "consultation": {
@@ -200,7 +198,7 @@
     "termsTitle": "Syarat & Ketentuan Layanan Konsultasi",
     "footerNote": "Danawangsa Capital — Strategic Business & Financial Advisory.",
     "footerDisclaimer": "Strategic Business & Financial Consultant. Untuk pertanyaan lebih lanjut,",
-    "footerContactLink": "hubungi kami"
+    "footerContactLink": "gunakan formulir konsultasi"
   },
   "layanan": {
     "badge": "LAYANAN KONSULTASI",
@@ -266,13 +264,11 @@
     "tagline": "Strategic Business & Financial Advisory",
     "ctaLabel": "Jadwalkan Konsultasi Gratis",
     "riskReversal": "Respon dalam 1×24 jam • Sesi konsultasi awal tanpa komitmen • Data Anda dijaga kerahasiaannya",
-    "whatsappMessage": "Halo Danawangsa Capital, saya ingin konsultasi strategi keuangan bisnis.",
     "viewFee": "Lihat Struktur Fee",
     "viewServiceDetail": "Lihat Detail Layanan",
     "viewAllServices": "Lihat Semua Layanan",
     "viewOtherServices": "Lihat Layanan Lainnya",
     "popular": "Populer",
-    "chatWhatsApp": "Chat WhatsApp",
     "backToHome": "Kembali ke Beranda",
     "backToServices": "Kembali ke Layanan",
     "close": "Tutup",
@@ -288,9 +284,6 @@
     "ariaLabel": "Navigasi halaman legal"
   },
   "stickyCta": {},
-  "floatingWhatsapp": {
-    "ariaLabel": "Chat WhatsApp"
-  },
   "collateralDiagram": {
     "ariaLabel": "Diagram struktur tripartit Collateral Partnership Scheme",
     "eyebrow": "STRUKTUR VISUAL",

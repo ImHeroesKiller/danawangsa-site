@@ -3,7 +3,6 @@ export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 export const AnalyticsEvents = {
   CONSULTATION_CTA_CLICK: "consultation_cta_click",
   CONSULTATION_FORM_SUCCESS: "consultation_form_success",
-  WHATSAPP_CLICK: "whatsapp_click",
 } as const;
 
 type Gtag = (...args: unknown[]) => void;
@@ -49,9 +48,3 @@ export function trackConsultationFormSuccess(
   });
 }
 
-export function trackWhatsAppClick(source = "floating_button") {
-  trackEvent(AnalyticsEvents.WHATSAPP_CLICK, {
-    event_category: "engagement",
-    source,
-  });
-}

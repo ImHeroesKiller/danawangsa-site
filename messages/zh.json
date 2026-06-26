@@ -61,8 +61,7 @@
     "copyright": "© 2026 Danawangsa Capital — Strategic Advisory",
     "disclaimer": "Strategic Business & Financial Consultant",
     "allServices": "全部服务",
-    "contactUs": "联系我们",
-    "whatsapp": "WhatsApp"
+    "contactUs": "咨询表单"
   },
   "hero": {
     "titleLine1": "TURNING ASSETS",
@@ -115,7 +114,6 @@
     "titleLine1": "准备好优化",
     "titleLine2": "您的企业财务战略了吗？",
     "description": "告诉我们您的业务挑战。顾问团队将在 24 小时内回复并推荐后续步骤。",
-    "chatWhatsApp": "WhatsApp 咨询",
     "strategicAdvisory": "Strategic Business & Financial Consultant"
   },
   "consultation": {
@@ -200,7 +198,7 @@
     "termsTitle": "咨询服务条款与条件",
     "footerNote": "Danawangsa Capital — Strategic Business & Financial Advisory。",
     "footerDisclaimer": "Strategic Business & Financial Consultant。如有更多问题，请",
-    "footerContactLink": "联系我们"
+    "footerContactLink": "使用咨询表单"
   },
   "layanan": {
     "badge": "咨询服务",
@@ -266,13 +264,11 @@
     "tagline": "Strategic Business & Financial Advisory",
     "ctaLabel": "预约免费咨询",
     "riskReversal": "24 小时内回复 • 初步咨询无需承诺 • 您的数据严格保密",
-    "whatsappMessage": "您好 Danawangsa Capital，我想咨询企业财务战略。",
     "viewFee": "查看费用结构",
     "viewServiceDetail": "查看服务详情",
     "viewAllServices": "查看全部服务",
     "viewOtherServices": "查看其他服务",
     "popular": "热门",
-    "chatWhatsApp": "WhatsApp 咨询",
     "backToHome": "返回首页",
     "backToServices": "返回服务",
     "close": "关闭",
@@ -288,9 +284,6 @@
     "ariaLabel": "法律页面导航"
   },
   "stickyCta": {},
-  "floatingWhatsapp": {
-    "ariaLabel": "WhatsApp 咨询"
-  },
   "collateralDiagram": {
     "ariaLabel": "抵押合伙方案三方结构示意图",
     "eyebrow": "结构示意图",

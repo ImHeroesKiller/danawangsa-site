@@ -11,7 +11,7 @@ export const privacyPolicyContent: LegalPageContent = {
       id: "pendahuluan",
       title: "1. Introduction",
       paragraphs: [
-        "Danawangsa Capital («we») is a strategic business & financial consulting firm. This Privacy Policy explains how we collect, use, store, and protect personal information you provide through our website, consultation forms, email, WhatsApp, or business meetings.",
+        "Danawangsa Capital («we») is a strategic business & financial consulting firm. This Privacy Policy explains how we collect, use, store, and protect personal information you provide through our website and official consultation form.",
         "This policy applies to all of our consulting services as a Strategic Business & Financial Consultant. Data we collect is used solely for consulting and strategic advisory purposes.",
       ],
     },
@@ -62,7 +62,7 @@ export const privacyPolicyContent: LegalPageContent = {
         "Request access to, correction of, or updates to personal data we store.",
         "Request deletion of certain data, to the extent it does not conflict with applicable legal or contractual obligations.",
         "Withdraw consent for use of data for marketing communications (if any).",
-        "Submit questions or complaints regarding privacy through our official contact channels.",
+        "Submit questions or complaints regarding privacy through the official consultation form on our website.",
       ],
     },
     {
@@ -84,7 +84,7 @@ export const privacyPolicyContent: LegalPageContent = {
       id: "kontak",
       title: "9. Contact",
       paragraphs: [
-        "For questions regarding privacy and data protection, contact us through the contact information available on the website or Danawangsa Capital's official consultation form.",
+        "For questions regarding privacy and data protection, contact us through the official consultation form on the Danawangsa Capital website.",
       ],
     },
   ],
@@ -195,7 +195,7 @@ export const consultationTermsContent: LegalPageContent = {
       id: "kontak",
       title: "11. Contact",
       paragraphs: [
-        "For questions regarding consultation service terms, please contact the Danawangsa Capital team through official website contacts or schedule a free initial consultation.",
+        "For questions regarding consultation service terms, please contact the Danawangsa Capital team through the official consultation form on our website.",
       ],
     },
   ],

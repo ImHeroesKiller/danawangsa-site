@@ -61,8 +61,7 @@
     "copyright": "© 2026 Danawangsa Capital — Strategic Advisory",
     "disclaimer": "Strategic Business & Financial Consultant",
     "allServices": "All Services",
-    "contactUs": "Contact Us",
-    "whatsapp": "WhatsApp"
+    "contactUs": "Consultation Form"
   },
   "hero": {
     "titleLine1": "TURNING ASSETS",
@@ -115,7 +114,6 @@
     "titleLine1": "Ready to Optimize",
     "titleLine2": "Your Business Financial Strategy?",
     "description": "Tell us your business challenges. Our advisor team will respond within 24 hours with recommended next steps.",
-    "chatWhatsApp": "Chat on WhatsApp",
     "strategicAdvisory": "Strategic Business & Financial Consultant"
   },
   "consultation": {
@@ -200,7 +198,7 @@
     "termsTitle": "Consultation Service Terms & Conditions",
     "footerNote": "Danawangsa Capital — Strategic Business & Financial Advisory.",
     "footerDisclaimer": "Strategic Business & Financial Consultant. For further questions,",
-    "footerContactLink": "contact us"
+    "footerContactLink": "use the consultation form"
   },
   "layanan": {
     "badge": "CONSULTING SERVICES",
@@ -266,13 +264,11 @@
     "tagline": "Strategic Business & Financial Advisory",
     "ctaLabel": "Schedule Free Consultation",
     "riskReversal": "Response within 24 hours • Initial consultation with no commitment • Your data is kept confidential",
-    "whatsappMessage": "Hello Danawangsa Capital, I would like to consult on business financial strategy.",
     "viewFee": "View Fee Structure",
     "viewServiceDetail": "View Service Details",
     "viewAllServices": "View All Services",
     "viewOtherServices": "View Other Services",
     "popular": "Popular",
-    "chatWhatsApp": "Chat on WhatsApp",
     "backToHome": "Back to Home",
     "backToServices": "Back to Services",
     "close": "Close",
@@ -288,9 +284,6 @@
     "ariaLabel": "Legal page navigation"
   },
   "stickyCta": {},
-  "floatingWhatsapp": {
-    "ariaLabel": "Chat on WhatsApp"
-  },
   "collateralDiagram": {
     "ariaLabel": "Collateral Partnership Scheme tripartite structure diagram",
     "eyebrow": "VISUAL STRUCTURE",

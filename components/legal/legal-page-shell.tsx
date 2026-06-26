@@ -2,10 +2,10 @@
 
 import { useTranslations } from "next-intl";
 
+import { useConsultation } from "@/components/consultation/consultation-context";
 import { LegalNav } from "@/components/legal/legal-nav";
 import { Breadcrumb } from "@/components/shared/breadcrumb";
 import type { LegalPageContent } from "@/lib/data/legal-content";
-import { Link } from "@/lib/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 
 interface LegalPageShellProps {
@@ -14,6 +14,7 @@ interface LegalPageShellProps {
 
 /** Shared layout wrapper for all legal/document pages */
 export function LegalPageShell({ content }: LegalPageShellProps) {
+  const { openConsultation } = useConsultation();
   const t = useTranslations("legal");
   const tBreadcrumb = useTranslations("breadcrumb");
 
@@ -84,9 +85,15 @@ export function LegalPageShell({ content }: LegalPageShellProps) {
           {t("footerNote")}
           <br />
           {t("footerDisclaimer")}{" "}
-          <Link href="/#cta-section" className="text-gold hover:underline">
+          <button
+            type="button"
+            onClick={() =>
+              openConsultation("general", { source: "legal_footer" })
+            }
+            className="text-gold hover:underline"
+          >
             {t("footerContactLink")}
-          </Link>
+          </button>
           .
         </p>
       </footer>

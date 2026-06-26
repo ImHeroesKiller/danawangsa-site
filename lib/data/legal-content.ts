@@ -24,7 +24,7 @@ export const privacyPolicyContent: LegalPageContent = {
       id: "pendahuluan",
       title: "1. Pendahuluan",
       paragraphs: [
-        "Danawangsa Capital («kami») adalah firma konsultasi bisnis & keuangan strategis. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi informasi pribadi yang Anda berikan melalui website, formulir konsultasi, komunikasi email, WhatsApp, atau pertemuan bisnis.",
+        "Danawangsa Capital («kami») adalah firma konsultasi bisnis & keuangan strategis. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi informasi pribadi yang Anda berikan melalui website dan formulir konsultasi resmi.",
         "Kebijakan ini berlaku untuk seluruh layanan konsultasi kami sebagai Strategic Business & Financial Consultant. Data yang kami kumpulkan digunakan semata-mata untuk keperluan konsultasi dan pendampingan strategis.",
       ],
     },
@@ -75,7 +75,7 @@ export const privacyPolicyContent: LegalPageContent = {
         "Meminta akses, koreksi, atau pembaruan data pribadi yang kami simpan.",
         "Meminta penghapusan data tertentu, sejauh tidak bertentangan dengan kewajiban hukum atau kontrak yang berlaku.",
         "Menarik persetujuan penggunaan data untuk komunikasi pemasaran (jika ada).",
-        "Mengajukan pertanyaan atau keluhan terkait privasi melalui kontak resmi kami.",
+        "Mengajukan pertanyaan atau keluhan terkait privasi melalui formulir konsultasi resmi di website.",
       ],
     },
     {
@@ -97,7 +97,7 @@ export const privacyPolicyContent: LegalPageContent = {
       id: "kontak",
       title: "9. Kontak",
       paragraphs: [
-        "Untuk pertanyaan terkait privasi dan perlindungan data, hubungi kami melalui informasi kontak yang tersedia di website atau formulir konsultasi resmi Danawangsa Capital.",
+        "Untuk pertanyaan terkait privasi dan perlindungan data, hubungi kami melalui formulir konsultasi resmi di website Danawangsa Capital.",
       ],
     },
   ],
@@ -208,7 +208,7 @@ export const termsOfServiceContent: LegalPageContent = {
       id: "kontak",
       title: "11. Kontak",
       paragraphs: [
-        "Untuk pertanyaan terkait syarat layanan konsultasi, silakan hubungi tim Danawangsa Capital melalui kontak resmi di website atau jadwalkan konsultasi awal gratis.",
+        "Untuk pertanyaan terkait syarat layanan konsultasi, silakan hubungi tim Danawangsa Capital melalui formulir konsultasi resmi di website.",
       ],
     },
   ],
