@@ -23,7 +23,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { trackConsultationFormSuccess } from "@/lib/analytics";
 import { consultationTopicKeys } from "@/lib/data/content";
-import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/i18n/routing";
 
@@ -154,7 +153,7 @@ export function ConsultationModal() {
                     type="tel"
                     inputMode="tel"
                     autoComplete="tel"
-                    placeholder={siteConfig.phone.replace(/-/g, "")}
+                    placeholder={t("bridging.placeholders.whatsapp")}
                     aria-invalid={!!fieldErrors.whatsapp}
                     disabled={isPending}
                   />
@@ -169,7 +168,7 @@ export function ConsultationModal() {
                   type="email"
                   inputMode="email"
                   autoComplete="email"
-                  placeholder={siteConfig.email}
+                  placeholder={t("bridging.placeholders.email")}
                   aria-invalid={!!fieldErrors.email}
                   disabled={isPending}
                 />
@@ -246,7 +245,7 @@ export function ConsultationModal() {
                       type="tel"
                       inputMode="tel"
                       autoComplete="tel"
-                      placeholder={siteConfig.phone.replace(/-/g, "")}
+                      placeholder={t("general.placeholders.whatsapp")}
                       aria-invalid={!!fieldErrors.whatsapp}
                       disabled={isPending}
                     />
@@ -260,7 +259,7 @@ export function ConsultationModal() {
                       type="email"
                       inputMode="email"
                       autoComplete="email"
-                      placeholder={siteConfig.email}
+                      placeholder={t("general.placeholders.email")}
                       aria-invalid={!!fieldErrors.email}
                       disabled={isPending}
                     />

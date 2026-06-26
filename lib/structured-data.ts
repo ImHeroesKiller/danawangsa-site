@@ -1,5 +1,4 @@
 import type { Locale } from "@/i18n/routing";
-import { routing } from "@/i18n/routing";
 import { getAbsoluteUrl } from "@/lib/metadata";
 import { getOrganizationSameAs, siteConfig } from "@/lib/site-config";
 
@@ -17,15 +16,6 @@ export function buildOrganizationSchema(locale: Locale, description: string) {
     url: getAbsoluteUrl(`/${locale}`),
     logo: getAbsoluteUrl("/logo.png"),
     description,
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: `+${siteConfig.phoneRaw}`,
-      email: siteConfig.email,
-      contactType: "customer service",
-      availableLanguage: routing.locales.map((l) =>
-        l === "id" ? "Indonesian" : l === "en" ? "English" : "Chinese",
-      ),
-    },
     sameAs: getOrganizationSameAs(),
   };
 }

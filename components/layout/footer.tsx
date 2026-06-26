@@ -7,7 +7,6 @@ import { Logo } from "@/components/layout/logo";
 import { SiteNavLink } from "@/components/layout/site-nav-link";
 import {
   footerCompanyLinkDefs,
-  getFooterContactLinks,
   getFooterLegalLinks,
   getFooterServiceLinks,
   type NavLinkKey,
@@ -70,16 +69,12 @@ export function Footer() {
   }));
 
   const legalLinks = getFooterLegalLinks(locale);
-  const contactLinks = getFooterContactLinks().map((link) => ({
-    ...link,
-    label: link.label === "WhatsApp" ? tFooter("whatsapp") : link.label,
-  }));
 
   return (
     <footer className="border-t border-white/10 py-12">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:gap-12">
-          <div className="col-span-2 md:col-span-4 lg:col-span-1">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
+          <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Logo compact />
             <p className="mt-3 max-w-xs text-xs leading-relaxed text-white/45">
               {siteConfig.tagline}. {tFooter("taglineExtension")}
@@ -90,7 +85,6 @@ export function Footer() {
           <FooterColumn title={tFooter("services")} links={serviceLinks} />
           <FooterColumn title={tFooter("company")} links={companyLinks} />
           <FooterColumn title={tFooter("legal")} links={legalLinks} />
-          <FooterColumn title={tFooter("contact")} links={contactLinks} />
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row">

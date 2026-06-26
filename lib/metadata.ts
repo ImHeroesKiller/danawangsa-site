@@ -128,8 +128,8 @@ export function createPageMetadata({
       statusBarStyle: "black-translucent",
     },
     formatDetection: {
-      telephone: true,
-      email: true,
+      telephone: false,
+      email: false,
     },
     ...(keywords && keywords.length > 0 ? { keywords } : {}),
     icons: {

@@ -1,14 +1,12 @@
 "use client";
 
-import { Building2, Mail, MessageCircle, Phone } from "lucide-react";
+import { Building2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { useConsultation } from "@/components/consultation/consultation-context";
 import { RiskReversal } from "@/components/shared/risk-reversal";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { getWhatsAppUrl } from "@/lib/site-config";
-import { siteConfig } from "@/lib/site-config";
 
 export function CtaSection() {
   const { openConsultation } = useConsultation();
@@ -28,7 +26,7 @@ export function CtaSection() {
           {t("description")}
         </p>
 
-        <div className="flex flex-col justify-center gap-3 sm:flex-row">
+        <div className="flex justify-center">
           <Button
             size="lg"
             onClick={() =>
@@ -40,30 +38,11 @@ export function CtaSection() {
           >
             {tCommon("ctaLabel")}
           </Button>
-          <Button variant="outline" size="lg" asChild>
-            <a
-              href={getWhatsAppUrl(tCommon("whatsappMessage"))}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-x-2"
-            >
-              <MessageCircle className="h-5 w-5 text-emerald-400" />
-              {t("chatWhatsApp")}
-            </a>
-          </Button>
         </div>
 
         <RiskReversal className="mt-6" />
 
-        <div className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-white/50">
-          <span className="inline-flex items-center gap-1">
-            <Phone className="h-3.5 w-3.5 text-gold" />
-            {siteConfig.phone}
-          </span>
-          <span className="inline-flex items-center gap-1">
-            <Mail className="h-3.5 w-3.5 text-gold" />
-            {siteConfig.email}
-          </span>
+        <div className="mt-5 flex justify-center text-xs text-white/50">
           <span className="inline-flex items-center gap-1">
             <Building2 className="h-3.5 w-3.5 text-gold" />
             {t("strategicAdvisory")}

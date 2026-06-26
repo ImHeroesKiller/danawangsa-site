@@ -132,6 +132,8 @@
       },
       "placeholders": {
         "name": "PT Maju Bersama",
+        "whatsapp": "081234567890",
+        "email": "name@company.com",
         "topic": "请选择主题",
         "description": "例如：需要解决两周内到期的银行贷款..."
       },
@@ -156,6 +158,8 @@
       },
       "placeholders": {
         "companyName": "PT Maju Bersama",
+        "whatsapp": "081234567890",
+        "email": "name@company.com",
         "bank": "Bank Mandiri / BRI / BCA 等",
         "loanAmount": "Rp 350.000.000"
       }
@@ -169,11 +173,11 @@
     },
     "errors": {
       "validation": "请检查您填写的信息。",
-      "webhookMissing": "表单服务尚未配置。请通过 WhatsApp 联系我们。",
-      "generic": "提交失败。请重试或通过 WhatsApp 联系我们。",
+      "webhookMissing": "表单服务尚未配置。请稍后再试。",
+      "generic": "提交失败。请重试。",
       "whatsappMin": "WhatsApp 号码至少 10 位",
       "whatsappMax": "WhatsApp 号码过长",
-      "whatsappFormat": "WhatsApp 格式无效（示例：081214144214）",
+      "whatsappFormat": "WhatsApp 格式无效（示例：081234567890）",
       "emailInvalid": "电子邮箱地址无效",
       "emailMax": "电子邮箱过长",
       "nameMin": "姓名/公司名称至少 2 个字符",

@@ -1,7 +1,6 @@
 import type { Locale } from "@/i18n/routing";
 import { getServices } from "@/lib/data/services";
 import { getLegalNavLinks } from "@/lib/data/legal";
-import { getWhatsAppUrl, siteConfig } from "@/lib/site-config";
 import type { NavLink } from "@/types";
 
 export type NavLinkKey =
@@ -50,10 +49,3 @@ export function getFooterLegalLinks(locale: Locale): NavLink[] {
   }));
 }
 
-export function getFooterContactLinks(): NavLink[] {
-  return [
-    { label: siteConfig.phone, href: `tel:+${siteConfig.phoneRaw}` },
-    { label: siteConfig.email, href: `mailto:${siteConfig.email}` },
-    { label: "WhatsApp", href: getWhatsAppUrl() },
-  ];
-}

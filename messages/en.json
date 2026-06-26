@@ -132,6 +132,8 @@
       },
       "placeholders": {
         "name": "PT Maju Bersama",
+        "whatsapp": "081234567890",
+        "email": "name@company.com",
         "topic": "Select a topic",
         "description": "Example: Need a solution for a bank loan maturing in 2 weeks..."
       },
@@ -156,6 +158,8 @@
       },
       "placeholders": {
         "companyName": "PT Maju Bersama",
+        "whatsapp": "081234567890",
+        "email": "name@company.com",
         "bank": "Bank Mandiri / BRI / BCA / etc.",
         "loanAmount": "Rp 350,000,000"
       }
@@ -169,11 +173,11 @@
     },
     "errors": {
       "validation": "Please review the information you entered.",
-      "webhookMissing": "Form service is not configured. Please contact us via WhatsApp.",
-      "generic": "Failed to submit request. Please try again or contact us via WhatsApp.",
+      "webhookMissing": "Form service is not configured. Please try again later.",
+      "generic": "Failed to submit request. Please try again.",
       "whatsappMin": "WhatsApp number must be at least 10 digits",
       "whatsappMax": "WhatsApp number is too long",
-      "whatsappFormat": "Invalid WhatsApp format (example: 081214144214)",
+      "whatsappFormat": "Invalid WhatsApp format (example: 081234567890)",
       "emailInvalid": "Invalid email address",
       "emailMax": "Email is too long",
       "nameMin": "Name / company must be at least 2 characters",

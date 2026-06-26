@@ -132,6 +132,8 @@
       },
       "placeholders": {
         "name": "PT Maju Bersama",
+        "whatsapp": "081234567890",
+        "email": "nama@perusahaan.com",
         "topic": "Pilih topik",
         "description": "Contoh: Butuh solusi untuk pinjaman bank yang akan jatuh tempo dalam 2 minggu..."
       },
@@ -156,6 +158,8 @@
       },
       "placeholders": {
         "companyName": "PT Maju Bersama",
+        "whatsapp": "081234567890",
+        "email": "nama@perusahaan.com",
         "bank": "Bank Mandiri / BRI / BCA / dll",
         "loanAmount": "Rp 350.000.000"
       }
@@ -169,11 +173,11 @@
     },
     "errors": {
       "validation": "Periksa kembali data yang Anda isi.",
-      "webhookMissing": "Layanan formulir belum dikonfigurasi. Silakan hubungi kami via WhatsApp.",
-      "generic": "Gagal mengirim permintaan. Silakan coba lagi atau hubungi WhatsApp.",
+      "webhookMissing": "Layanan formulir belum dikonfigurasi. Silakan coba lagi nanti.",
+      "generic": "Gagal mengirim permintaan. Silakan coba lagi.",
       "whatsappMin": "Nomor WhatsApp minimal 10 digit",
       "whatsappMax": "Nomor WhatsApp terlalu panjang",
-      "whatsappFormat": "Format WhatsApp tidak valid (contoh: 081214144214)",
+      "whatsappFormat": "Format WhatsApp tidak valid (contoh: 081234567890)",
       "emailInvalid": "Alamat email tidak valid",
       "emailMax": "Email terlalu panjang",
       "nameMin": "Nama / perusahaan minimal 2 karakter",
