@@ -15,7 +15,7 @@ export function buildOrganizationSchema(locale: Locale, description: string) {
     "@type": "Organization",
     name: siteConfig.name,
     url: getAbsoluteUrl(`/${locale}`),
-    logo: getAbsoluteUrl("/icons/icon-512.png"),
+    logo: getAbsoluteUrl("/logo.png"),
     description,
     contactPoint: {
       "@type": "ContactPoint",

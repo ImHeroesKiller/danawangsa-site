@@ -1,5 +1,5 @@
 /** Minimal service worker — enables PWA installability without aggressive caching */
-const SW_VERSION = "dc-v1";
+const SW_VERSION = "dc-v2";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(self.skipWaiting());
