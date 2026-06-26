@@ -72,12 +72,12 @@ export type ConsultationTopic =
   | "Struktur Modal Kerja & SKBDN"
   | "Konsultasi Bisnis & Keuangan Umum";
 
-/** General consultation form payload — ready for Server Actions / API */
+/** General consultation form payload */
 export interface ConsultationFormData {
   name: string;
   whatsapp: string;
   email: string;
-  topic: ConsultationTopic | "";
+  topic: ConsultationTopic;
   description: string;
 }
 
@@ -91,3 +91,10 @@ export interface BridgingFormData {
 }
 
 export type ConsultationModalType = "general" | "bridging";
+
+/** Server Action response shape */
+export interface ConsultationActionResult {
+  success: boolean;
+  message: string;
+  fieldErrors?: Record<string, string>;
+}

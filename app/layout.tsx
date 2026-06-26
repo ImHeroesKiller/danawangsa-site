@@ -7,7 +7,7 @@ import { FloatingWhatsApp } from "@/components/layout/floating-whatsapp";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { StickyCTA } from "@/components/layout/sticky-cta";
-import { siteConfig } from "@/lib/site-config";
+import { rootMetadata } from "@/lib/metadata";
 
 import "./globals.css";
 
@@ -24,20 +24,7 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: `${siteConfig.name} • ${siteConfig.tagline}`,
-  description: siteConfig.description,
-  robots: { index: true, follow: true },
-  openGraph: {
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
-    description:
-      "Partner konsultasi terpercaya untuk strategi keuangan bisnis. Transparan, profesional, dan berorientasi hasil.",
-    type: "website",
-    url: siteConfig.url,
-    locale: "id_ID",
-    siteName: siteConfig.name,
-  },
-};
+export const metadata: Metadata = rootMetadata;
 
 export default function RootLayout({
   children,

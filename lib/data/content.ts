@@ -3,9 +3,7 @@ import {
   Bolt,
   Briefcase,
   Castle,
-  CheckCircle2,
   Clock,
-  Coins,
   FileSignature,
   Flag,
   HandCoins,
@@ -30,11 +28,11 @@ import type {
 } from "@/types";
 
 export const navLinks: NavLink[] = [
-  { label: "Solusi", href: "#solutions" },
-  { label: "Proses Kerja", href: "#process" },
-  { label: "Struktur Fee", href: "#fee" },
-  { label: "Testimoni", href: "#testimonials" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Solusi", href: "/#solutions" },
+  { label: "Proses Kerja", href: "/#process" },
+  { label: "Struktur Fee", href: "/#fee" },
+  { label: "Testimoni", href: "/#testimonials" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 export const trustStats: TrustStat[] = [

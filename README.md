@@ -1,82 +1,85 @@
 # Danawangsa Capital
 
-Website korporasi **Strategic Business & Financial Advisory** — dibangun dengan Next.js 15, TypeScript, Tailwind CSS, dan shadcn/ui.
+Website korporasi **Strategic Business & Financial Advisory** — Next.js 15, TypeScript, Tailwind CSS, shadcn/ui.
 
 ## Struktur Proyek
 
 ```
 app/
-├── layout.tsx          # Root layout, metadata, providers
-├── page.tsx            # Homepage (semua sections)
-├── globals.css         # Tailwind + custom brand styles
-└── actions/
-    └── consultation.ts # Server Actions (form submission)
+├── layout.tsx
+├── page.tsx
+├── privasi/page.tsx
+├── syarat-konsultasi/page.tsx
+├── globals.css
+└── actions/consultation.ts
 
 components/
-├── ui/                 # shadcn/ui primitives
-├── sections/           # Hero, Services, Fee, FAQ, dll.
-├── layout/             # Navbar, Footer, StickyCTA, WhatsApp
-├── shared/             # Reusable cards & headers
-└── consultation/       # Modal + context
+├── ui/
+├── sections/
+├── layout/
+├── legal/
+├── shared/
+└── consultation/
 
 lib/
-├── utils.ts            # cn() helper
-├── site-config.ts      # Env-based configuration
-└── data/content.ts     # Static content (CMS-ready)
+├── metadata.ts
+├── site-config.ts
+├── validations/consultation.ts
+└── data/content.ts, legal-content.ts
 
-types/
-└── index.ts            # TypeScript interfaces
+public/
+└── og-image.png
 
-legacy/
-└── danawangsa-capital.html  # Original HTML reference
+scripts/
+├── og-image.svg
+└── generate-og-image.mjs
 ```
 
 ## Menjalankan Secara Lokal
 
 ```bash
-# 1. Install dependencies
 npm install
-
-# 2. Copy environment variables
 cp .env.example .env.local
-
-# 3. Jalankan development server
 npm run dev
 ```
 
 Buka [http://localhost:3000](http://localhost:3000)
 
-## Deploy ke Vercel
-
-### Via CLI
-
-```bash
-npm i -g vercel
-vercel login
-vercel
-```
-
-### Via GitHub
-
-1. Push repo ke GitHub
-2. Import project di [vercel.com/new](https://vercel.com/new)
-3. Set environment variables dari `.env.example`
-4. Deploy
-
 ## Environment Variables
 
 | Variable | Deskripsi |
 |----------|-----------|
-| `NEXT_PUBLIC_SITE_URL` | URL production untuk Open Graph |
+| `NEXT_PUBLIC_SITE_URL` | URL production (Open Graph & canonical) |
 | `NEXT_PUBLIC_CONTACT_PHONE` | Nomor telepon tampilan |
-| `NEXT_PUBLIC_CONTACT_PHONE_RAW` | Nomor WA tanpa format (628xxx) |
+| `NEXT_PUBLIC_CONTACT_PHONE_RAW` | Nomor WA (628xxx) |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Email kontak |
-| `CONSULTATION_WEBHOOK_URL` | Webhook untuk form submission (opsional) |
+| `CONSULTATION_WEBHOOK_URL` | Webhook form konsultasi (Formspree / n8n) |
 
-## Langkah Selanjutnya
+## OG Image
 
-- [ ] Integrasi form ke Resend / webhook / CRM
-- [ ] Halaman legal (Privasi & Syarat Konsultasi)
-- [ ] OG image branded (`public/og-image.png`)
-- [ ] Google Analytics / Meta Pixel
-- [ ] Admin dashboard untuk lead management
+Preview share (WhatsApp, LinkedIn, Twitter) memakai `public/og-image.png` (1200×630).
+
+**Update desain:**
+
+1. Edit `scripts/og-image.svg`
+2. Jalankan `npm run generate:og`
+3. Commit `public/og-image.png` dan deploy ulang
+
+## Deploy ke Vercel
+
+```bash
+vercel login
+vercel
+vercel env add CONSULTATION_WEBHOOK_URL
+vercel --prod
+```
+
+Atau hubungkan repo GitHub di [vercel.com/new](https://vercel.com/new).
+
+## Scripts
+
+| Command | Fungsi |
+|---------|--------|
+| `npm run dev` | Development server |
+| `npm run build` | Production build |
+| `npm run generate:og` | Regenerate OG image PNG |

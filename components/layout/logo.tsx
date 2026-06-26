@@ -1,5 +1,7 @@
+import Link from "next/link";
+
 export function Logo({ compact = false }: { compact?: boolean }) {
-  return (
+  const content = (
     <div className="flex items-center gap-x-3.5">
       <div
         className={`flex items-center justify-center border border-gold rounded-2xl ${
@@ -25,5 +27,13 @@ export function Logo({ compact = false }: { compact?: boolean }) {
         </div>
       )}
     </div>
+  );
+
+  if (compact) return content;
+
+  return (
+    <Link href="/" className="transition-opacity hover:opacity-90">
+      {content}
+    </Link>
   );
 }

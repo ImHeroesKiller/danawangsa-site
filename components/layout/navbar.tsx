@@ -8,6 +8,7 @@ import { useConsultation } from "@/components/consultation/consultation-context"
 import { Logo } from "@/components/layout/logo";
 import { Button } from "@/components/ui/button";
 import { navLinks } from "@/lib/data/content";
+import { legalNavLinks } from "@/lib/data/legal-content";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
@@ -54,7 +55,7 @@ export function Navbar() {
               className="hidden md:inline-flex"
               asChild
             >
-              <Link href="#cta-section">Hubungi Kami</Link>
+              <Link href="/#cta-section">Hubungi Kami</Link>
             </Button>
             <Button
               size="sm"
@@ -94,12 +95,26 @@ export function Navbar() {
             ))}
             <div className="mx-4 my-2 h-px bg-white/10" />
             <Link
-              href="#cta-section"
+              href="/#cta-section"
               className="rounded-2xl px-4 py-3 font-medium hover:bg-white/5"
               onClick={closeMobile}
             >
               Hubungi Kami
             </Link>
+            <div className="mx-4 my-2 h-px bg-white/10" />
+            <p className="px-4 text-[10px] tracking-wider text-white/30">
+              LEGAL
+            </p>
+            {legalNavLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rounded-2xl px-4 py-3 hover:bg-white/5"
+                onClick={closeMobile}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}

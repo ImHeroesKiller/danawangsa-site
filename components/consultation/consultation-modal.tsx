@@ -1,13 +1,14 @@
 "use client";
 
-import { useState, useTransition } from "react";
-import { Check } from "lucide-react";
+import { useCallback, useState, useTransition } from "react";
+import { AlertCircle, Check, Loader2 } from "lucide-react";
 
 import {
   submitBridgingRequest,
   submitConsultationRequest,
 } from "@/app/actions/consultation";
 import { useConsultation } from "@/components/consultation/consultation-context";
+import { FieldError } from "@/components/shared/field-error";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -21,56 +22,72 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { consultationTopics } from "@/lib/data/content";
 import { siteConfig } from "@/lib/site-config";
-import type { ConsultationTopic } from "@/types";
+import { cn } from "@/lib/utils";
+
+type FormStatus = "idle" | "success" | "error";
 
 export function ConsultationModal() {
   const { isOpen, modalType, closeConsultation } = useConsultation();
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [isPending, startTransition] = useTransition();
+
+  const resetFormState = useCallback(() => {
+    setStatus("idle");
+    setMessage("");
+    setFieldErrors({});
+  }, []);
 
   const handleOpenChange = (open: boolean) => {
     if (!open) {
       closeConsultation();
-      setTimeout(() => {
-        setSubmitted(false);
-        setMessage("");
-      }, 200);
+      setTimeout(resetFormState, 200);
     }
   };
 
   const handleGeneralSubmit = (formData: FormData) => {
+    setFieldErrors({});
+    setMessage("");
+
     startTransition(async () => {
-      const result = await submitConsultationRequest({
-        name: String(formData.get("name") ?? ""),
-        whatsapp: String(formData.get("whatsapp") ?? ""),
-        email: String(formData.get("email") ?? ""),
-        topic: String(formData.get("topic") ?? "") as ConsultationTopic | "",
-        description: String(formData.get("description") ?? ""),
-      });
+      const result = await submitConsultationRequest(formData);
+
+      if (result.success) {
+        setStatus("success");
+        setMessage(result.message);
+        return;
+      }
+
+      setStatus("error");
       setMessage(result.message);
-      setSubmitted(result.success);
+      if (result.fieldErrors) setFieldErrors(result.fieldErrors);
     });
   };
 
   const handleBridgingSubmit = (formData: FormData) => {
+    setFieldErrors({});
+    setMessage("");
+
     startTransition(async () => {
-      const result = await submitBridgingRequest({
-        companyName: String(formData.get("companyName") ?? ""),
-        whatsapp: String(formData.get("whatsapp") ?? ""),
-        email: String(formData.get("email") ?? ""),
-        bank: String(formData.get("bank") ?? ""),
-        loanAmount: String(formData.get("loanAmount") ?? ""),
-      });
+      const result = await submitBridgingRequest(formData);
+
+      if (result.success) {
+        setStatus("success");
+        setMessage(result.message);
+        return;
+      }
+
+      setStatus("error");
       setMessage(result.message);
-      setSubmitted(result.success);
+      if (result.fieldErrors) setFieldErrors(result.fieldErrors);
     });
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
-      <DialogContent className="p-0">
-        {submitted ? (
+      <DialogContent className="max-h-[90vh] overflow-y-auto p-0 sm:max-h-[85vh]">
+        {status === "success" ? (
           <div className="px-6 py-12 text-center">
             <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-gold">
               <Check className="h-7 w-7 text-gold" />
@@ -78,20 +95,20 @@ export function ConsultationModal() {
             <h3 className="mb-1.5 text-xl font-semibold tracking-tight">
               Permintaan Konsultasi Diterima
             </h3>
-            <p className="mx-auto max-w-[260px] text-sm text-white/70">
+            <p className="mx-auto max-w-xs text-sm leading-relaxed text-white/70">
               {message}
             </p>
             <Button
               variant="outline"
-              className="mt-7"
+              className="mt-7 w-full sm:w-auto"
               onClick={() => handleOpenChange(false)}
             >
               Tutup
             </Button>
           </div>
         ) : modalType === "bridging" ? (
-          <div className="px-6 pb-5 pt-7">
-            <div className="mb-4 flex items-start justify-between">
+          <div className="px-5 pb-5 pt-6 sm:px-6 sm:pt-7">
+            <div className="mb-4 flex items-start justify-between gap-3">
               <DialogHeader>
                 <p className="text-xs tracking-wider text-amber-400">
                   STRATEGI BRIDGING & RESTRUKTURISASI
@@ -100,16 +117,23 @@ export function ConsultationModal() {
               </DialogHeader>
               <DialogCloseButton />
             </div>
+
+            {status === "error" && message && (
+              <FormAlert message={message} />
+            )}
+
             <form action={handleBridgingSubmit} className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <Label htmlFor="companyName">NAMA PERUSAHAAN</Label>
                   <Input
                     id="companyName"
                     name="companyName"
                     placeholder="PT Maju Bersama"
-                    required
+                    aria-invalid={!!fieldErrors.companyName}
+                    disabled={isPending}
                   />
+                  <FieldError message={fieldErrors.companyName} />
                 </div>
                 <div>
                   <Label htmlFor="bridging-whatsapp">NO. WHATSAPP</Label>
@@ -117,9 +141,13 @@ export function ConsultationModal() {
                     id="bridging-whatsapp"
                     name="whatsapp"
                     type="tel"
+                    inputMode="tel"
+                    autoComplete="tel"
                     placeholder={siteConfig.phone.replace(/-/g, "")}
-                    required
+                    aria-invalid={!!fieldErrors.whatsapp}
+                    disabled={isPending}
                   />
+                  <FieldError message={fieldErrors.whatsapp} />
                 </div>
               </div>
               <div>
@@ -128,9 +156,13 @@ export function ConsultationModal() {
                   id="bridging-email"
                   name="email"
                   type="email"
+                  inputMode="email"
+                  autoComplete="email"
                   placeholder={siteConfig.email}
-                  required
+                  aria-invalid={!!fieldErrors.email}
+                  disabled={isPending}
                 />
+                <FieldError message={fieldErrors.email} />
               </div>
               <div>
                 <Label htmlFor="bank">BANK YANG MENGALAMI JATUH TEMPO</Label>
@@ -138,8 +170,10 @@ export function ConsultationModal() {
                   id="bank"
                   name="bank"
                   placeholder="Bank Mandiri / BRI / BCA / dll"
-                  required
+                  aria-invalid={!!fieldErrors.bank}
+                  disabled={isPending}
                 />
+                <FieldError message={fieldErrors.bank} />
               </div>
               <div>
                 <Label htmlFor="loanAmount">ESTIMASI NILAI PINJAMAN</Label>
@@ -147,12 +181,12 @@ export function ConsultationModal() {
                   id="loanAmount"
                   name="loanAmount"
                   placeholder="Rp 350.000.000"
-                  required
+                  aria-invalid={!!fieldErrors.loanAmount}
+                  disabled={isPending}
                 />
+                <FieldError message={fieldErrors.loanAmount} />
               </div>
-              <Button type="submit" className="w-full" disabled={isPending}>
-                {isPending ? "Mengirim..." : "KIRIM PERMINTAAN KONSULTASI"}
-              </Button>
+              <SubmitButton isPending={isPending} />
               <p className="text-center text-[10px] text-white/40">
                 Kami bantu rancang strategi & dampingi proses • Bukan penyaluran
                 dana
@@ -161,8 +195,8 @@ export function ConsultationModal() {
           </div>
         ) : (
           <>
-            <div className="px-6 pb-5 pt-7">
-              <div className="mb-5 flex items-start justify-between">
+            <div className="px-5 pb-5 pt-6 sm:px-6 sm:pt-7">
+              <div className="mb-5 flex items-start justify-between gap-3">
                 <DialogHeader>
                   <p className="text-xs tracking-[2.5px] text-gold">
                     DANAWANGSA CAPITAL
@@ -174,6 +208,11 @@ export function ConsultationModal() {
                 </DialogHeader>
                 <DialogCloseButton />
               </div>
+
+              {status === "error" && message && (
+                <FormAlert message={message} />
+              )}
+
               <form action={handleGeneralSubmit} className="space-y-4">
                 <div>
                   <Label htmlFor="name">NAMA LENGKAP / PERUSAHAAN</Label>
@@ -181,19 +220,26 @@ export function ConsultationModal() {
                     id="name"
                     name="name"
                     placeholder="PT Maju Bersama"
-                    required
+                    autoComplete="organization"
+                    aria-invalid={!!fieldErrors.name}
+                    disabled={isPending}
                   />
+                  <FieldError message={fieldErrors.name} />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
                     <Label htmlFor="whatsapp">NO. WHATSAPP</Label>
                     <Input
                       id="whatsapp"
                       name="whatsapp"
                       type="tel"
+                      inputMode="tel"
+                      autoComplete="tel"
                       placeholder={siteConfig.phone.replace(/-/g, "")}
-                      required
+                      aria-invalid={!!fieldErrors.whatsapp}
+                      disabled={isPending}
                     />
+                    <FieldError message={fieldErrors.whatsapp} />
                   </div>
                   <div>
                     <Label htmlFor="email">EMAIL</Label>
@@ -201,9 +247,13 @@ export function ConsultationModal() {
                       id="email"
                       name="email"
                       type="email"
+                      inputMode="email"
+                      autoComplete="email"
                       placeholder={siteConfig.email}
-                      required
+                      aria-invalid={!!fieldErrors.email}
+                      disabled={isPending}
                     />
+                    <FieldError message={fieldErrors.email} />
                   </div>
                 </div>
                 <div>
@@ -211,9 +261,13 @@ export function ConsultationModal() {
                   <select
                     id="topic"
                     name="topic"
-                    required
-                    className="flex h-11 w-full rounded-2xl border border-white/20 bg-black px-4 py-3 text-sm text-white focus-visible:border-gold focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold/30"
                     defaultValue=""
+                    aria-invalid={!!fieldErrors.topic}
+                    disabled={isPending}
+                    className={cn(
+                      "flex h-11 w-full rounded-2xl border border-white/20 bg-black px-4 py-3 text-sm text-white focus-visible:border-gold focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold/30 disabled:opacity-50",
+                      fieldErrors.topic && "border-red-400/60",
+                    )}
                   >
                     <option value="" disabled>
                       Pilih topik
@@ -224,6 +278,7 @@ export function ConsultationModal() {
                       </option>
                     ))}
                   </select>
+                  <FieldError message={fieldErrors.topic} />
                 </div>
                 <div>
                   <Label htmlFor="description">
@@ -233,20 +288,47 @@ export function ConsultationModal() {
                     id="description"
                     name="description"
                     placeholder="Contoh: Butuh solusi untuk pinjaman bank yang akan jatuh tempo dalam 2 minggu..."
-                    required
+                    aria-invalid={!!fieldErrors.description}
+                    disabled={isPending}
                   />
+                  <FieldError message={fieldErrors.description} />
                 </div>
-                <Button type="submit" className="w-full" disabled={isPending}>
-                  {isPending ? "Mengirim..." : "KIRIM PERMINTAAN KONSULTASI"}
-                </Button>
+                <SubmitButton isPending={isPending} />
               </form>
             </div>
-            <div className="border-t border-white/10 bg-black/40 px-6 py-3.5 text-center text-[10px] text-white/40">
+            <div className="border-t border-white/10 bg-black/40 px-5 py-3.5 text-center text-[10px] text-white/40 sm:px-6">
               Data dilindungi • Hanya untuk keperluan konsultasi
             </div>
           </>
         )}
       </DialogContent>
     </Dialog>
+  );
+}
+
+function FormAlert({ message }: { message: string }) {
+  return (
+    <div
+      role="alert"
+      className="mb-4 flex items-start gap-2 rounded-2xl border border-red-400/30 bg-red-500/10 px-4 py-3 text-sm text-red-200"
+    >
+      <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+      <span>{message}</span>
+    </div>
+  );
+}
+
+function SubmitButton({ isPending }: { isPending: boolean }) {
+  return (
+    <Button type="submit" className="w-full" disabled={isPending}>
+      {isPending ? (
+        <>
+          <Loader2 className="h-4 w-4 animate-spin" />
+          Mengirim...
+        </>
+      ) : (
+        "KIRIM PERMINTAAN KONSULTASI"
+      )}
+    </Button>
   );
 }
