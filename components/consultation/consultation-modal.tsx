@@ -20,6 +20,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { trackConsultationFormSuccess } from "@/lib/analytics";
 import { consultationTopics } from "@/lib/data/content";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
@@ -54,6 +55,7 @@ export function ConsultationModal() {
       const result = await submitConsultationRequest(formData);
 
       if (result.success) {
+        trackConsultationFormSuccess("general");
         setStatus("success");
         setMessage(result.message);
         return;
@@ -73,6 +75,7 @@ export function ConsultationModal() {
       const result = await submitBridgingRequest(formData);
 
       if (result.success) {
+        trackConsultationFormSuccess("bridging");
         setStatus("success");
         setMessage(result.message);
         return;

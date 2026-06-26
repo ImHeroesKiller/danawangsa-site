@@ -37,7 +37,15 @@ export function HeroSection() {
       </p>
 
       <div className="flex flex-col justify-center gap-3 px-2 sm:flex-row">
-        <Button size="lg" onClick={() => openConsultation("general")}>
+        <Button
+          size="lg"
+          onClick={() =>
+            openConsultation("general", {
+              trackPrimaryCta: true,
+              source: "hero",
+            })
+          }
+        >
           {siteConfig.ctaLabel}
         </Button>
         <Button variant="outline" size="lg" asChild>

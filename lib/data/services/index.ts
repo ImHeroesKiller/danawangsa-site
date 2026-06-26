@@ -23,3 +23,8 @@ export { businessFinancialAdvisoryService } from "./business-financial-advisory"
 export function getServiceBySlug(slug: string): ServicePageData | undefined {
   return services.find((service) => service.slug === slug);
 }
+
+/** Canonical detail path — always `/layanan/[slug]` */
+export function getServiceDetailPath(slug: string): string {
+  return `/layanan/${slug}`;
+}

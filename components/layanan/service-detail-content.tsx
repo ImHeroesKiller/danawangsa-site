@@ -80,7 +80,10 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
               <Button
                 size="lg"
                 onClick={() =>
-                  openConsultation(service.consultationModalType)
+                  openConsultation(service.consultationModalType, {
+                    trackPrimaryCta: true,
+                    source: "service_detail_hero",
+                  })
                 }
               >
                 {siteConfig.ctaLabel}
@@ -295,7 +298,10 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
             <Button
               size="lg"
               onClick={() =>
-                openConsultation(service.consultationModalType)
+                openConsultation(service.consultationModalType, {
+                  trackPrimaryCta: true,
+                  source: "service_detail_cta",
+                })
               }
             >
               {siteConfig.ctaLabel}

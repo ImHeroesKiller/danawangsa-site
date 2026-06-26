@@ -109,7 +109,12 @@ export function ServiceTeaserSection({
                 <Button
                   variant="outline"
                   className="w-full sm:flex-1"
-                  onClick={() => openConsultation(consultationModalType)}
+                  onClick={() =>
+                    openConsultation(consultationModalType, {
+                      trackPrimaryCta: true,
+                      source: "service_teaser",
+                    })
+                  }
                 >
                   {siteConfig.ctaLabel}
                 </Button>

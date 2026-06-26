@@ -47,7 +47,12 @@ export function Navbar() {
             <Button
               size="sm"
               className="hidden sm:inline-flex"
-              onClick={() => openConsultation("general")}
+              onClick={() =>
+                openConsultation("general", {
+                  trackPrimaryCta: true,
+                  source: "navbar",
+                })
+              }
             >
               {siteConfig.ctaLabel}
             </Button>
@@ -84,7 +89,10 @@ export function Navbar() {
             <Button
               className="mx-4"
               onClick={() => {
-                openConsultation("general");
+                openConsultation("general", {
+                  trackPrimaryCta: true,
+                  source: "navbar_mobile",
+                });
                 closeMobile();
               }}
             >

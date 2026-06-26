@@ -9,12 +9,23 @@ import {
   type ReactNode,
 } from "react";
 
+import { trackConsultationCtaClick } from "@/lib/analytics";
 import type { ConsultationModalType } from "@/types";
+
+export interface OpenConsultationOptions {
+  /** Where the CTA was clicked — used for GA4 event `source` */
+  source?: string;
+  /** Track as primary CTA ("Jadwalkan Konsultasi Gratis") */
+  trackPrimaryCta?: boolean;
+}
 
 interface ConsultationContextValue {
   isOpen: boolean;
   modalType: ConsultationModalType;
-  openConsultation: (type?: ConsultationModalType) => void;
+  openConsultation: (
+    type?: ConsultationModalType,
+    options?: OpenConsultationOptions,
+  ) => void;
   closeConsultation: () => void;
 }
 
@@ -29,7 +40,14 @@ export function ConsultationProvider({ children }: { children: ReactNode }) {
     useState<ConsultationModalType>("general");
 
   const openConsultation = useCallback(
-    (type: ConsultationModalType = "general") => {
+    (
+      type: ConsultationModalType = "general",
+      options?: OpenConsultationOptions,
+    ) => {
+      if (options?.trackPrimaryCta && options.source) {
+        trackConsultationCtaClick(options.source, type);
+      }
+
       setModalType(type);
       setIsOpen(true);
     },

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { ConsultationModal } from "@/components/consultation/consultation-modal";
 import { ConsultationProvider } from "@/components/consultation/consultation-context";
 import { FloatingWhatsApp } from "@/components/layout/floating-whatsapp";
@@ -33,6 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${inter.variable} ${playfair.variable}`}>
+      <GoogleAnalytics />
       <body className="min-h-screen bg-background pb-24 text-white antialiased md:pb-0">
         <ConsultationProvider>
           <Navbar />

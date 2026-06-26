@@ -29,7 +29,15 @@ export function CtaSection() {
         </p>
 
         <div className="flex flex-col justify-center gap-3 sm:flex-row">
-          <Button size="lg" onClick={() => openConsultation("general")}>
+          <Button
+            size="lg"
+            onClick={() =>
+              openConsultation("general", {
+                trackPrimaryCta: true,
+                source: "cta_section",
+              })
+            }
+          >
             {siteConfig.ctaLabel}
           </Button>
           <Button variant="outline" size="lg" asChild>

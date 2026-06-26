@@ -42,7 +42,15 @@ export function StickyCTA() {
         visible && "visible",
       )}
     >
-      <Button className="w-full" onClick={() => openConsultation("general")}>
+      <Button
+        className="w-full"
+        onClick={() =>
+          openConsultation("general", {
+            trackPrimaryCta: true,
+            source: "sticky_cta",
+          })
+        }
+      >
         {siteConfig.ctaLabel}
       </Button>
     </div>
