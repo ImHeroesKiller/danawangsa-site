@@ -13,7 +13,32 @@
     "layanan": {
       "title": "咨询服务",
       "description": "Danawangsa Capital 咨询服务列表——过桥融资、营运资金融资、SKBDN、资产抵押计划及商业与财务顾问。",
-      "imageAlt": "咨询服务 — Danawangsa Capital"
+      "imageAlt": "咨询服务 — Danawangsa Capital",
+      "keywords": [
+        "咨询服务",
+        "商业咨询",
+        "财务咨询",
+        "过桥融资",
+        "danawangsa capital"
+      ]
+    },
+    "privasi": {
+      "keywords": [
+        "隐私政策",
+        "数据保护",
+        "客户保密",
+        "danawangsa capital",
+        "商业咨询"
+      ]
+    },
+    "terms": {
+      "keywords": [
+        "咨询条款",
+        "服务协议",
+        "咨询合同",
+        "danawangsa capital",
+        "战略顾问"
+      ]
     }
   },
   "nav": {
@@ -180,6 +205,38 @@
     "viewDetail": "查看服务详情",
     "moreServicesPrefix": "其他咨询服务请见",
     "moreServicesLink": "首页",
+    "process": {
+      "eyebrow": "工作流程",
+      "title": "我们的工作方式",
+      "description": "从初步分析到战略实施的系统化咨询流程——每个阶段透明可控。",
+      "steps": [
+        {
+          "step": "1",
+          "title": "免费初步咨询",
+          "description": "约30分钟会议，了解您的商业与财务需求，说明服务范围并确定下一步行动。"
+        },
+        {
+          "step": "2",
+          "title": "分析与诊断",
+          "description": "审阅文件、财务结构和业务状况，形成准确诊断和战略建议。"
+        },
+        {
+          "step": "3",
+          "title": "战略制定",
+          "description": "根据风险状况和业务目标，设计融资、重组或资产优化战略。"
+        },
+        {
+          "step": "4",
+          "title": "实施辅导",
+          "description": "协助谈判、与第三方（银行、投资者、法律）协调，并监控进展直至达成里程碑。"
+        },
+        {
+          "step": "5",
+          "title": "评估与跟进",
+          "description": "提交报告、评估成果并提供后续建议，确保战略持续有效运行。"
+        }
+      ]
+    },
     "notFound": {
       "badge": "404 — 未找到服务",
       "title": "未找到服务",

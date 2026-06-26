@@ -16,6 +16,7 @@ type PrivacyPageProps = {
 export async function generateMetadata({ params }: PrivacyPageProps) {
   const { locale } = await params;
   const content = getPrivacyContent(locale as Locale);
+  const t = await getTranslations({ locale, namespace: "metadata.privasi" });
 
   return createPageMetadata({
     locale: locale as Locale,
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: PrivacyPageProps) {
     description: content.subtitle,
     path: `/${locale}/privasi`,
     imageAlt: `${content.title} — ${siteConfig.name}`,
+    keywords: t.raw("keywords") as string[],
   });
 }
 

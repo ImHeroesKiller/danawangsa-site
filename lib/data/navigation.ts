@@ -21,7 +21,7 @@ interface NavLinkDefinition {
 export const mainNavLinkDefs: NavLinkDefinition[] = [
   { key: "home", href: "/" },
   { key: "services", href: "/layanan" },
-  { key: "process", href: "/layanan" },
+  { key: "process", href: "/layanan#proses" },
   { key: "testimonials", href: "/#testimonials" },
 ];
 
@@ -38,7 +38,7 @@ export function getFooterServiceLinks(locale: Locale): NavLink[] {
 }
 
 export const footerCompanyLinkDefs: NavLinkDefinition[] = [
-  { key: "process", href: "/layanan" },
+  { key: "process", href: "/layanan#proses" },
   { key: "testimonials", href: "/#testimonials" },
   { key: "contactUs", href: "/#cta-section" },
 ];

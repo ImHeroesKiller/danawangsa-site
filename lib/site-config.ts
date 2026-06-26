@@ -16,7 +16,19 @@ export const siteConfig = {
   ctaLabel: "Jadwalkan Konsultasi Gratis",
   riskReversal:
     "Respon dalam 1×24 jam • Sesi konsultasi awal tanpa komitmen • Data Anda dijaga kerahasiaannya",
+  linkedinUrl: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? "",
 } as const;
+
+/** Social / official profile URLs for Organization schema sameAs */
+export function getOrganizationSameAs(): string[] {
+  const urls = [siteConfig.url];
+
+  if (siteConfig.linkedinUrl) {
+    urls.push(siteConfig.linkedinUrl);
+  }
+
+  return urls;
+}
 
 export function getWhatsAppUrl(message: string = siteConfig.whatsappMessage) {
   return `https://wa.me/${siteConfig.phoneRaw}?text=${encodeURIComponent(message)}`;

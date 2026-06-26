@@ -13,7 +13,32 @@
     "layanan": {
       "title": "Consulting Services",
       "description": "Danawangsa Capital consulting services — Bridging Finance, working capital financing, SKBDN, Asset Collateral Program, and Business & Financial Advisory.",
-      "imageAlt": "Consulting Services — Danawangsa Capital"
+      "imageAlt": "Consulting Services — Danawangsa Capital",
+      "keywords": [
+        "consulting services",
+        "business consulting",
+        "financial consulting",
+        "bridging finance",
+        "danawangsa capital"
+      ]
+    },
+    "privasi": {
+      "keywords": [
+        "privacy policy",
+        "data protection",
+        "client confidentiality",
+        "danawangsa capital",
+        "business consulting"
+      ]
+    },
+    "terms": {
+      "keywords": [
+        "consultation terms",
+        "service agreement",
+        "consulting contract",
+        "danawangsa capital",
+        "strategic advisory"
+      ]
     }
   },
   "nav": {
@@ -180,6 +205,38 @@
     "viewDetail": "View Service Details",
     "moreServicesPrefix": "Other consulting services are available on the",
     "moreServicesLink": "homepage",
+    "process": {
+      "eyebrow": "OUR PROCESS",
+      "title": "How We Work",
+      "description": "A structured consulting approach from initial analysis through strategy implementation — transparent at every stage.",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Free Initial Consultation",
+          "description": "A ±30-minute session to understand your business & financial needs, explain service scope, and determine next steps."
+        },
+        {
+          "step": "2",
+          "title": "Analysis & Diagnosis",
+          "description": "Review documents, financial structure, and business conditions to build an accurate diagnosis and strategic recommendations."
+        },
+        {
+          "step": "3",
+          "title": "Strategy Development",
+          "description": "Design funding, restructuring, or asset optimization strategies tailored to your risk profile and business goals."
+        },
+        {
+          "step": "4",
+          "title": "Implementation Support",
+          "description": "Support negotiations, coordination with third parties (banks, investors, legal), and monitor progress until milestones are reached."
+        },
+        {
+          "step": "5",
+          "title": "Evaluation & Follow-up",
+          "description": "Deliver reports, evaluate outcomes, and provide follow-up recommendations to ensure the strategy runs sustainably."
+        }
+      ]
+    },
     "notFound": {
       "badge": "404 — SERVICE NOT FOUND",
       "title": "Service not found",

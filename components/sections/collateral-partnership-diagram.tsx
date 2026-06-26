@@ -88,7 +88,7 @@ function InteractiveFlowLabel({
         onBlur={onLeave}
         onClick={() => onTogglePin(flowKey)}
         className={cn(
-          "inline-flex cursor-pointer items-center gap-1 rounded-full border px-2.5 py-1 text-[10px] font-medium tracking-wide transition-colors sm:text-xs",
+          "diagram-focus-ring inline-flex cursor-pointer items-center gap-1 rounded-full border px-2.5 py-1 text-[10px] font-medium tracking-wide transition-colors sm:text-xs",
           showTooltip
             ? "border-gold/60 bg-gold/15 text-gold"
             : "border-gold/30 bg-gold/5 text-gold hover:border-gold/50 hover:bg-gold/10",
@@ -102,6 +102,48 @@ function InteractiveFlowLabel({
         </div>
       )}
     </div>
+  );
+}
+
+function DiagramFlowHitPath({
+  d,
+  flowKey,
+  label,
+  onHover,
+  onLeave,
+  onTogglePin,
+}: {
+  d: string;
+  flowKey: FlowKey;
+  label: string;
+  onHover: (key: FlowKey) => void;
+  onLeave: () => void;
+  onTogglePin: (key: FlowKey) => void;
+}) {
+  const handleKeyDown = (event: React.KeyboardEvent<SVGPathElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      onTogglePin(flowKey);
+    }
+  };
+
+  return (
+    <path
+      d={d}
+      fill="none"
+      stroke="transparent"
+      strokeWidth="20"
+      role="button"
+      tabIndex={0}
+      aria-label={label}
+      className="diagram-focus-ring cursor-pointer"
+      onMouseEnter={() => onHover(flowKey)}
+      onMouseLeave={onLeave}
+      onFocus={() => onHover(flowKey)}
+      onBlur={onLeave}
+      onClick={() => onTogglePin(flowKey)}
+      onKeyDown={handleKeyDown}
+    />
   );
 }
 
@@ -270,42 +312,38 @@ export function CollateralPartnershipDiagram({
             className={flowLineClass("collateralLink")}
           />
 
-          {/* Invisible hit targets */}
-          <path
+          {/* Keyboard-accessible hit targets */}
+          <DiagramFlowHitPath
             d="M 100 80 Q 200 40 300 80"
-            fill="none"
-            stroke="transparent"
-            strokeWidth="20"
-            className="cursor-pointer"
-            onMouseEnter={() => handleHover("collateral")}
-            onMouseLeave={handleLeave}
+            flowKey="collateral"
+            label={t("flows.collateral")}
+            onHover={handleHover}
+            onLeave={handleLeave}
+            onTogglePin={handleTogglePin}
           />
-          <path
+          <DiagramFlowHitPath
             d="M 340 100 L 500 100"
-            fill="none"
-            stroke="transparent"
-            strokeWidth="20"
-            className="cursor-pointer"
-            onMouseEnter={() => handleHover("funds")}
-            onMouseLeave={handleLeave}
+            flowKey="funds"
+            label={t("flows.funds")}
+            onHover={handleHover}
+            onLeave={handleLeave}
+            onTogglePin={handleTogglePin}
           />
-          <path
+          <DiagramFlowHitPath
             d="M 500 120 Q 400 160 300 120"
-            fill="none"
-            stroke="transparent"
-            strokeWidth="20"
-            className="cursor-pointer"
-            onMouseEnter={() => handleHover("return")}
-            onMouseLeave={handleLeave}
+            flowKey="return"
+            label={t("flows.return")}
+            onHover={handleHover}
+            onLeave={handleLeave}
+            onTogglePin={handleTogglePin}
           />
-          <path
+          <DiagramFlowHitPath
             d="M 120 100 Q 300 150 480 100"
-            fill="none"
-            stroke="transparent"
-            strokeWidth="20"
-            className="cursor-pointer"
-            onMouseEnter={() => handleHover("collateralLink")}
-            onMouseLeave={handleLeave}
+            flowKey="collateralLink"
+            label={t("flows.collateralLink")}
+            onHover={handleHover}
+            onLeave={handleLeave}
+            onTogglePin={handleTogglePin}
           />
         </svg>
 
@@ -346,6 +384,9 @@ export function CollateralPartnershipDiagram({
           <InteractiveFlowLabel {...flowProps("return")}>
             <RefreshCw className="h-3 w-3" />
             {t("flows.return")}
+          </InteractiveFlowLabel>
+          <InteractiveFlowLabel {...flowProps("collateralLink")}>
+            {t("flows.collateralLink")}
           </InteractiveFlowLabel>
         </div>
 

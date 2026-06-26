@@ -13,7 +13,32 @@
     "layanan": {
       "title": "Layanan Konsultasi",
       "description": "Daftar layanan konsultasi Danawangsa Capital — Bridging Finance, pembiayaan modal usaha, SKBDN, Asset Collateral Program, dan Business & Financial Advisory.",
-      "imageAlt": "Layanan Konsultasi — Danawangsa Capital"
+      "imageAlt": "Layanan Konsultasi — Danawangsa Capital",
+      "keywords": [
+        "layanan konsultasi",
+        "konsultasi bisnis",
+        "konsultasi keuangan",
+        "bridging finance",
+        "danawangsa capital"
+      ]
+    },
+    "privasi": {
+      "keywords": [
+        "kebijakan privasi",
+        "perlindungan data",
+        "kerahasiaan klien",
+        "danawangsa capital",
+        "konsultasi bisnis"
+      ]
+    },
+    "terms": {
+      "keywords": [
+        "syarat konsultasi",
+        "ketentuan layanan",
+        "perjanjian konsultasi",
+        "danawangsa capital",
+        "strategic advisory"
+      ]
     }
   },
   "nav": {
@@ -180,6 +205,38 @@
     "viewDetail": "Lihat Detail Layanan",
     "moreServicesPrefix": "Layanan konsultasi lainnya tersedia di",
     "moreServicesLink": "halaman utama",
+    "process": {
+      "eyebrow": "PROSES KERJA",
+      "title": "Bagaimana Kami Bekerja",
+      "description": "Pendekatan konsultasi terstruktur dari analisis awal hingga implementasi strategi — transparan di setiap tahap.",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Konsultasi Awal Gratis",
+          "description": "Sesi ±30 menit untuk memahami kebutuhan bisnis & keuangan Anda, menjelaskan scope layanan, dan menentukan langkah selanjutnya."
+        },
+        {
+          "step": "2",
+          "title": "Analisis & Diagnosis",
+          "description": "Review dokumen, struktur keuangan, dan kondisi bisnis untuk menyusun diagnosis yang akurat dan rekomendasi strategis."
+        },
+        {
+          "step": "3",
+          "title": "Penyusunan Strategi",
+          "description": "Merancang strategi pendanaan, restrukturisasi, atau optimalisasi aset yang disesuaikan dengan profil risiko dan tujuan bisnis Anda."
+        },
+        {
+          "step": "4",
+          "title": "Pendampingan Implementasi",
+          "description": "Mendampingi negosiasi, koordinasi dengan pihak ketiga (bank, investor, legal), dan monitoring progres hingga milestone tercapai."
+        },
+        {
+          "step": "5",
+          "title": "Evaluasi & Tindak Lanjut",
+          "description": "Penyerahan laporan, evaluasi hasil, dan rekomendasi tindak lanjut untuk memastikan strategi berjalan berkelanjutan."
+        }
+      ]
+    },
     "notFound": {
       "badge": "404 — LAYANAN TIDAK DITEMUKAN",
       "title": "Layanan tidak ditemukan",

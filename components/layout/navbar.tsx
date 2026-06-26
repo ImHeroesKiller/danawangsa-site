@@ -32,6 +32,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [currentHash, setCurrentHash] = useState("");
   const { openConsultation } = useConsultation();
   const tNav = useTranslations("nav");
   const tCommon = useTranslations("common");
@@ -48,6 +49,17 @@ export function Navbar() {
 
   useEffect(() => {
     setMobileOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const updateHash = () => setCurrentHash(window.location.hash);
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+    return () => window.removeEventListener("hashchange", updateHash);
+  }, []);
+
+  useEffect(() => {
+    setCurrentHash(window.location.hash);
   }, [pathname]);
 
   const closeMobile = () => setMobileOpen(false);
@@ -71,7 +83,12 @@ export function Navbar() {
 
           <div className="hidden items-center gap-x-1 lg:flex">
             {mainNavLinkDefs.map((link) => {
-              const isActive = isMainNavLinkActive(pathname, link.key, link.href);
+              const isActive = isMainNavLinkActive(
+                pathname,
+                link.key,
+                link.href,
+                currentHash,
+              );
 
               return (
                 <SiteNavLink
@@ -124,7 +141,12 @@ export function Navbar() {
         <div className="mobile-menu max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-white/10 bg-background lg:hidden">
           <div className="flex flex-col gap-y-1 px-5 py-4 text-sm">
             {mainNavLinkDefs.map((link) => {
-              const isActive = isMainNavLinkActive(pathname, link.key, link.href);
+              const isActive = isMainNavLinkActive(
+                pathname,
+                link.key,
+                link.href,
+                currentHash,
+              );
 
               return (
                 <SiteNavLink

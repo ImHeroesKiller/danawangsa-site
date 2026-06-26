@@ -15,6 +15,7 @@ type TermsPageProps = {
 export async function generateMetadata({ params }: TermsPageProps) {
   const { locale } = await params;
   const content = getTermsContent(locale as Locale);
+  const t = await getTranslations({ locale, namespace: "metadata.terms" });
 
   return createPageMetadata({
     locale: locale as Locale,
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: TermsPageProps) {
     description: content.subtitle,
     path: `/${locale}/syarat-konsultasi`,
     imageAlt: `${content.title} — ${siteConfig.name}`,
+    keywords: t.raw("keywords") as string[],
   });
 }
 

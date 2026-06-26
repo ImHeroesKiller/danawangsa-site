@@ -131,13 +131,9 @@ export function createPageMetadata({
       telephone: true,
       email: true,
     },
-    keywords: keywords ?? [
-      "konsultasi bisnis",
-      "konsultasi keuangan",
-      "strategic advisory",
-      "danawangsa capital",
-      "restrukturisasi kredit",
-      "bridging strategy",
-    ],
+    ...(keywords && keywords.length > 0 ? { keywords } : {}),
+    icons: {
+      apple: "/icons/icon-192.png",
+    },
   };
 }

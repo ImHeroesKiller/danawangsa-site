@@ -10,6 +10,7 @@ import {
   getServiceCanonicalPath,
   getServices,
 } from "@/lib/data/services";
+import { getServiceKeywords } from "@/lib/metadata-keywords";
 import { createPageMetadata } from "@/lib/metadata";
 import {
   buildBreadcrumbSchema,
@@ -47,6 +48,7 @@ export async function generateMetadata({
     description: service.meta.description,
     path: getServiceCanonicalPath(slug, locale as Locale),
     imageAlt: `${service.meta.title} — ${siteConfig.name}`,
+    keywords: getServiceKeywords(locale as Locale, slug),
   });
 }
 

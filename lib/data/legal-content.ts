@@ -13,11 +13,6 @@ export interface LegalPageContent {
   sections: LegalSection[];
 }
 
-export const legalNavLinks = [
-  { label: "Kebijakan Privasi", href: "/privasi" },
-  { label: "Syarat Konsultasi", href: "/syarat-konsultasi" },
-] as const;
-
 export const privacyPolicyContent: LegalPageContent = {
   slug: "privasi",
   title: "Kebijakan Privasi",

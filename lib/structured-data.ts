@@ -1,7 +1,7 @@
 import type { Locale } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import { getAbsoluteUrl } from "@/lib/metadata";
-import { siteConfig } from "@/lib/site-config";
+import { getOrganizationSameAs, siteConfig } from "@/lib/site-config";
 
 export interface BreadcrumbItem {
   name: string;
@@ -26,7 +26,7 @@ export function buildOrganizationSchema(locale: Locale, description: string) {
         l === "id" ? "Indonesian" : l === "en" ? "English" : "Chinese",
       ),
     },
-    sameAs: [],
+    sameAs: getOrganizationSameAs(),
   };
 }
 
