@@ -229,5 +229,57 @@
   "stickyCta": {},
   "floatingWhatsapp": {
     "ariaLabel": "Chat WhatsApp"
+  },
+  "collateralDiagram": {
+    "ariaLabel": "Diagram struktur tripartit Collateral Partnership Scheme",
+    "eyebrow": "STRUKTUR VISUAL",
+    "title": "Collateral Partnership Scheme — Tripartit",
+    "subtitle": "Tiga pihak dengan peran, alur dana & jaminan, serta kontrak legal terpisah.",
+    "parties": {
+      "assetOwner": {
+        "title": "Pemilik Aset",
+        "subtitle": "Menyediakan jaminan aset tetap"
+      },
+      "investor": {
+        "title": "Investor",
+        "subtitle": "Menyalurkan modal & imbal hasil"
+      },
+      "fundUser": {
+        "title": "Pengguna Dana",
+        "subtitle": "Menerima likuiditas untuk operasional"
+      }
+    },
+    "flows": {
+      "collateral": "Jaminan Aset",
+      "funds": "Alur Dana",
+      "return": "Return / Fee 10%",
+      "collateralLink": "Jaminan Terkait"
+    },
+    "contracts": {
+      "title": "Pemisahan Kontrak Legal",
+      "contractA": {
+        "badge": "KONTRAK A",
+        "title": "Pemilik Aset ↔ Investor",
+        "description": "Perjanjian jaminan, hak atas aset, imbal hasil, dan exit clause — terpisah dari kontrak pendanaan."
+      },
+      "contractB": {
+        "badge": "KONTRAK B",
+        "title": "Investor ↔ Pengguna Dana",
+        "description": "Perjanjian pendanaan, tenor siklus 3 bulan, kewajiban bayar, dan mekanisme eksekusi jaminan."
+      },
+      "note": "Bukan satu kontrak gabungan — setiap pihak dilindungi secara legal."
+    },
+    "schemes": {
+      "liquidation": {
+        "badge": "SKEMA 1",
+        "title": "Asset/Collateral Liquidation Scheme",
+        "description": "Pemanfaatan aset melalui likuidasi terstruktur dengan timeline jelas — cocok untuk monetisasi jaminan tanpa menjual aset produktif."
+      },
+      "freshMoney": {
+        "badge": "SKEMA 2",
+        "title": "Fresh Money Scheme",
+        "description": "Likuiditas baru kepada Pengguna Dana dengan jaminan aset dari Pemilik Aset — ideal untuk kebutuhan modal jangka pendek."
+      }
+    }
   }
 }

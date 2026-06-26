@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { CollateralPartnershipDiagram } from "@/components/sections/collateral-partnership-diagram";
 import { Link } from "@/lib/i18n/navigation";
 import type { ServiceIconKey, ServicePageData } from "@/types/service";
 
@@ -142,6 +143,11 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
               </li>
             ))}
           </ul>
+
+          {service.slug === "asset-collateral-program" && (
+            <CollateralPartnershipDiagram className="mt-10" />
+          )}
+
           <div className="mt-8 text-center">
             <Button
               onClick={() =>

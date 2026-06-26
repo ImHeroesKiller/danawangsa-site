@@ -229,5 +229,57 @@
   "stickyCta": {},
   "floatingWhatsapp": {
     "ariaLabel": "Chat on WhatsApp"
+  },
+  "collateralDiagram": {
+    "ariaLabel": "Collateral Partnership Scheme tripartite structure diagram",
+    "eyebrow": "VISUAL STRUCTURE",
+    "title": "Collateral Partnership Scheme — Tripartite",
+    "subtitle": "Three parties with distinct roles, fund & collateral flows, and separate legal contracts.",
+    "parties": {
+      "assetOwner": {
+        "title": "Asset Owner",
+        "subtitle": "Provides fixed asset collateral"
+      },
+      "investor": {
+        "title": "Investor",
+        "subtitle": "Deploys capital & earns returns"
+      },
+      "fundUser": {
+        "title": "Fund User",
+        "subtitle": "Receives liquidity for operations"
+      }
+    },
+    "flows": {
+      "collateral": "Asset Collateral",
+      "funds": "Fund Flow",
+      "return": "Return / 10% Fee",
+      "collateralLink": "Linked Collateral"
+    },
+    "contracts": {
+      "title": "Separate Legal Contracts",
+      "contractA": {
+        "badge": "CONTRACT A",
+        "title": "Asset Owner ↔ Investor",
+        "description": "Collateral agreement, asset rights, returns, and exit clauses — separate from the funding contract."
+      },
+      "contractB": {
+        "badge": "CONTRACT B",
+        "title": "Investor ↔ Fund User",
+        "description": "Funding agreement, 3-month cycle tenor, payment obligations, and collateral execution mechanisms."
+      },
+      "note": "Not one combined contract — each party is legally protected."
+    },
+    "schemes": {
+      "liquidation": {
+        "badge": "SCHEME 1",
+        "title": "Asset/Collateral Liquidation Scheme",
+        "description": "Structured asset utilization through liquidation with a clear timeline — suited for collateral monetization without selling productive assets."
+      },
+      "freshMoney": {
+        "badge": "SCHEME 2",
+        "title": "Fresh Money Scheme",
+        "description": "New liquidity to Fund Users with asset collateral from Asset Owners — ideal for short-term capital needs."
+      }
+    }
   }
 }

@@ -229,5 +229,57 @@
   "stickyCta": {},
   "floatingWhatsapp": {
     "ariaLabel": "WhatsApp 咨询"
+  },
+  "collateralDiagram": {
+    "ariaLabel": "抵押合伙方案三方结构示意图",
+    "eyebrow": "结构示意图",
+    "title": "抵押合伙方案 — 三方结构",
+    "subtitle": "三方角色分明，资金与抵押品流向清晰，法律合同相互独立。",
+    "parties": {
+      "assetOwner": {
+        "title": "资产所有者",
+        "subtitle": "提供固定资产抵押"
+      },
+      "investor": {
+        "title": "投资者",
+        "subtitle": "投放资金并获取回报"
+      },
+      "fundUser": {
+        "title": "资金使用者",
+        "subtitle": "获得运营流动性"
+      }
+    },
+    "flows": {
+      "collateral": "资产抵押",
+      "funds": "资金流向",
+      "return": "回报 / 10% 费用",
+      "collateralLink": "关联抵押"
+    },
+    "contracts": {
+      "title": "独立法律合同",
+      "contractA": {
+        "badge": "合同 A",
+        "title": "资产所有者 ↔ 投资者",
+        "description": "抵押协议、资产权利、回报及退出条款——与融资合同分开。"
+      },
+      "contractB": {
+        "badge": "合同 B",
+        "title": "投资者 ↔ 资金使用者",
+        "description": "融资协议、3个月周期、付款义务及抵押执行机制。"
+      },
+      "note": "非统一合同——各方均受法律保护。"
+    },
+    "schemes": {
+      "liquidation": {
+        "badge": "方案 1",
+        "title": "资产/抵押品清算方案",
+        "description": "通过结构化清算利用资产，时间表明确——适合在不出售生产性资产的情况下盘活抵押品。"
+      },
+      "freshMoney": {
+        "badge": "方案 2",
+        "title": "新鲜资金方案",
+        "description": "以资产所有者的资产抵押为资金使用者提供新流动性——适合短期资金需求。"
+      }
+    }
   }
 }
