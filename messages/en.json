@@ -284,6 +284,22 @@
     "ariaLabel": "Legal page navigation"
   },
   "stickyCta": {},
+  "ida": {
+    "open": "Open IDA chat",
+    "close": "Close IDA chat",
+    "windowLabel": "Chat with IDA",
+    "subtitle": "Danawangsa Capital Virtual Assistant",
+    "welcome": "Hello! I'm IDA, Danawangsa Capital's virtual assistant. I can help you understand our strategic business & financial consulting services.\n\nWhere would you like to start — bridging finance, working capital, or strategic advisory?",
+    "startConsultation": "Start Consultation",
+    "inputLabel": "Message for IDA",
+    "inputPlaceholder": "Type your question...",
+    "send": "Send message",
+    "disclaimer": "IDA is an AI assistant. For business decisions, use the consultation form.",
+    "errors": {
+      "generic": "Failed to get a response. Please try again.",
+      "tooLong": "Message is too long."
+    }
+  },
   "collateralDiagram": {
     "ariaLabel": "Collateral Partnership Scheme tripartite structure diagram",
     "eyebrow": "VISUAL STRUCTURE",

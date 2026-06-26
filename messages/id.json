@@ -284,6 +284,22 @@
     "ariaLabel": "Navigasi halaman legal"
   },
   "stickyCta": {},
+  "ida": {
+    "open": "Buka chat IDA",
+    "close": "Tutup chat IDA",
+    "windowLabel": "Chat dengan IDA",
+    "subtitle": "Asisten Virtual Danawangsa Capital",
+    "welcome": "Halo! Saya IDA, asisten virtual Danawangsa Capital. Saya bisa bantu Anda memahami layanan konsultasi bisnis & keuangan kami.\n\nMau mulai dari mana — bridging finance, modal usaha, atau konsultasi strategis?",
+    "startConsultation": "Mulai Konsultasi",
+    "inputLabel": "Pesan untuk IDA",
+    "inputPlaceholder": "Tulis pertanyaan Anda...",
+    "send": "Kirim pesan",
+    "disclaimer": "IDA adalah asisten AI. Untuk keputusan bisnis, gunakan formulir konsultasi.",
+    "errors": {
+      "generic": "Gagal mendapatkan jawaban. Silakan coba lagi.",
+      "tooLong": "Pesan terlalu panjang."
+    }
+  },
   "collateralDiagram": {
     "ariaLabel": "Diagram struktur tripartit Collateral Partnership Scheme",
     "eyebrow": "STRUKTUR VISUAL",

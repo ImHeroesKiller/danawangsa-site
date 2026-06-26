@@ -284,6 +284,22 @@
     "ariaLabel": "法律页面导航"
   },
   "stickyCta": {},
+  "ida": {
+    "open": "打开 IDA 聊天",
+    "close": "关闭 IDA 聊天",
+    "windowLabel": "与 IDA 聊天",
+    "subtitle": "Danawangsa Capital 虚拟助手",
+    "welcome": "您好！我是 IDA，Danawangsa Capital 的虚拟助手。我可以帮助您了解我们的战略商业与财务咨询服务。\n\n您想从哪里开始——过桥融资、营运资金，还是战略顾问？",
+    "startConsultation": "开始咨询",
+    "inputLabel": "给 IDA 的消息",
+    "inputPlaceholder": "输入您的问题...",
+    "send": "发送消息",
+    "disclaimer": "IDA 是 AI 助手。业务决策请使用咨询表单。",
+    "errors": {
+      "generic": "获取回复失败，请重试。",
+      "tooLong": "消息过长。"
+    }
+  },
   "collateralDiagram": {
     "ariaLabel": "抵押合伙方案三方结构示意图",
     "eyebrow": "结构示意图",

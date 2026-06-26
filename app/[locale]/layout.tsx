@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { ConsultationModal } from "@/components/consultation/consultation-modal";
 import { ConsultationProvider } from "@/components/consultation/consultation-context";
+import { IdaChat } from "@/components/ida/ida-chat";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { StickyCTA } from "@/components/layout/sticky-cta";
@@ -105,6 +106,7 @@ export default async function LocaleLayout({
             <main>{children}</main>
             <Footer />
             <StickyCTA />
+            <IdaChat />
             <ConsultationModal />
           </ConsultationProvider>
         </NextIntlClientProvider>
