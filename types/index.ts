@@ -92,6 +92,8 @@ export interface BridgingFormData {
 
 export type ConsultationModalType = "general" | "bridging";
 
+export type { ServicePageData } from "@/types/service";
+
 /** Server Action response shape */
 export interface ConsultationActionResult {
   success: boolean;

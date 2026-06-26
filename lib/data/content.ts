@@ -1,9 +1,7 @@
 import {
   Banknote,
-  Bolt,
   Briefcase,
   Castle,
-  Clock,
   FileSignature,
   Flag,
   HandCoins,
@@ -123,29 +121,6 @@ export const services: Service[] = [
     ],
     icon: MessageSquare,
   },
-];
-
-export const bridgingSteps = [
-  "Analisis posisi keuangan & jatuh tempo",
-  "Merancang strategi bridging yang tepat",
-  "Pendampingan negosiasi dengan bank",
-  "Struktur pelunasan & monitoring",
-  "Pemulihan arus kas & plafon kredit",
-];
-
-export const bridgingBenefits = [
-  "Cash flow tetap terkendali",
-  "Operasional tidak terganggu",
-  "Plafon bank dapat dipulihkan",
-];
-
-export const bridgingTargets = [
-  "Memiliki pinjaman bank mendekati jatuh tempo",
-  "Butuh waktu untuk restrukturisasi",
-  "Ingin menjaga reputasi kredit",
-  "Supplier & Kontraktor proyek",
-  "Vendor BUMN / Swasta",
-  "Perusahaan dengan fasilitas kredit aktif",
 ];
 
 export const processSteps: ProcessStep[] = [
@@ -323,8 +298,3 @@ export const consultationTopics = [
   "Konsultasi Bisnis & Keuangan Umum",
 ] as const;
 
-export const bridgingHighlights = [
-  { label: "Analisis Cepat 1-2 Hari", icon: Bolt },
-  { label: "Strategi Jangka Pendek", icon: Clock },
-  { label: "Pendampingan Profesional", icon: Shield },
-];

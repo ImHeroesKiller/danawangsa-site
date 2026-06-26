@@ -25,6 +25,12 @@ export function Footer() {
               </Link>
             ))}
             <Link
+              href="/layanan"
+              className="transition-colors hover:text-gold"
+            >
+              Layanan
+            </Link>
+            <Link
               href="/#cta-section"
               className="transition-colors hover:text-gold"
             >
