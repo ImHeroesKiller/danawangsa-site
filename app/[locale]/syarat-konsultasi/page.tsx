@@ -1,8 +1,10 @@
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { LegalPageShell } from "@/components/legal/legal-page-shell";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getTermsContent } from "@/lib/data/legal";
 import { createPageMetadata } from "@/lib/metadata";
+import { buildBreadcrumbSchema } from "@/lib/structured-data";
 import { siteConfig } from "@/lib/site-config";
 import type { Locale } from "@/i18n/routing";
 
@@ -28,6 +30,21 @@ export default async function TermsPage({ params }: TermsPageProps) {
   setRequestLocale(locale);
 
   const content = getTermsContent(locale as Locale);
+  const localeKey = locale as Locale;
+  const tBreadcrumb = await getTranslations({
+    locale,
+    namespace: "breadcrumb",
+  });
 
-  return <LegalPageShell content={content} />;
+  const structuredData = buildBreadcrumbSchema([
+    { name: tBreadcrumb("home"), path: `/${localeKey}` },
+    { name: tBreadcrumb("terms"), path: `/${localeKey}/syarat-konsultasi` },
+  ]);
+
+  return (
+    <>
+      <JsonLd data={structuredData} />
+      <LegalPageShell content={content} />
+    </>
+  );
 }

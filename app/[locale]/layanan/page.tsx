@@ -5,9 +5,14 @@ import { ServiceNav } from "@/components/layanan/service-nav";
 import { Breadcrumb } from "@/components/shared/breadcrumb";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { JsonLd } from "@/components/seo/json-ld";
 import { Link } from "@/lib/i18n/navigation";
 import { getServiceDetailPath, getServices } from "@/lib/data/services";
 import { createPageMetadata } from "@/lib/metadata";
+import {
+  buildBreadcrumbSchema,
+  buildServicesListSchema,
+} from "@/lib/structured-data";
 import { siteConfig } from "@/lib/site-config";
 import type { Locale } from "@/i18n/routing";
 
@@ -35,9 +40,26 @@ export default async function LayananPage({ params }: LayananPageProps) {
   const t = await getTranslations("layanan");
   const tBreadcrumb = await getTranslations("breadcrumb");
   const services = getServices(locale as Locale);
+  const localeKey = locale as Locale;
+
+  const structuredData = [
+    buildBreadcrumbSchema([
+      { name: tBreadcrumb("home"), path: `/${localeKey}` },
+      { name: tBreadcrumb("services"), path: `/${localeKey}/layanan` },
+    ]),
+    buildServicesListSchema(
+      localeKey,
+      services.map((service) => ({
+        name: service.listing.title,
+        description: service.listing.description,
+        slug: service.slug,
+      })),
+    ),
+  ];
 
   return (
     <div className="mx-auto max-w-5xl px-5 py-12 sm:px-6 sm:py-16">
+      <JsonLd data={structuredData} />
       <Breadcrumb
         items={[
           { label: tBreadcrumb("home"), href: "/" },

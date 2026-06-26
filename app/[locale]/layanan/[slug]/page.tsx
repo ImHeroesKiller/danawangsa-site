@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 import { ServiceDetailContent } from "@/components/layanan/service-detail-content";
+import { JsonLd } from "@/components/seo/json-ld";
 import { routing, type Locale } from "@/i18n/routing";
 import {
   getServiceBySlug,
@@ -10,6 +11,10 @@ import {
   getServices,
 } from "@/lib/data/services";
 import { createPageMetadata } from "@/lib/metadata";
+import {
+  buildBreadcrumbSchema,
+  buildServiceSchema,
+} from "@/lib/structured-data";
 import { siteConfig } from "@/lib/site-config";
 
 type ServicePageProps = {
@@ -55,5 +60,33 @@ export default async function ServicePage({ params }: ServicePageProps) {
     notFound();
   }
 
-  return <ServiceDetailContent service={service} />;
+  const localeKey = locale as Locale;
+  const tBreadcrumb = await getTranslations({
+    locale,
+    namespace: "breadcrumb",
+  });
+
+  const structuredData = [
+    buildServiceSchema({
+      locale: localeKey,
+      name: service.meta.title,
+      description: service.meta.description,
+      slug: service.slug,
+    }),
+    buildBreadcrumbSchema([
+      { name: tBreadcrumb("home"), path: `/${localeKey}` },
+      { name: tBreadcrumb("services"), path: `/${localeKey}/layanan` },
+      {
+        name: service.navLabel,
+        path: `/${localeKey}/layanan/${service.slug}`,
+      },
+    ]),
+  ];
+
+  return (
+    <>
+      <JsonLd data={structuredData} />
+      <ServiceDetailContent service={service} />
+    </>
+  );
 }

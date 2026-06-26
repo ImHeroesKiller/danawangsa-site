@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -10,8 +10,14 @@ import { FloatingWhatsApp } from "@/components/layout/floating-whatsapp";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { StickyCTA } from "@/components/layout/sticky-cta";
+import { RegisterServiceWorker } from "@/components/pwa/register-service-worker";
+import { JsonLd } from "@/components/seo/json-ld";
 import { routing, type Locale } from "@/i18n/routing";
 import { createPageMetadata } from "@/lib/metadata";
+import {
+  buildOrganizationSchema,
+  buildWebSiteSchema,
+} from "@/lib/structured-data";
 import { siteConfig } from "@/lib/site-config";
 
 import { Inter, Playfair_Display } from "next/font/google";
@@ -32,6 +38,13 @@ const playfair = Playfair_Display({
 type LocaleLayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
+};
+
+export const viewport: Viewport = {
+  themeColor: "#d4af37",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export function generateStaticParams() {
@@ -73,11 +86,20 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const description = t("siteDescription");
+
+  const structuredData = [
+    buildOrganizationSchema(locale as Locale, description),
+    buildWebSiteSchema(locale as Locale, description),
+  ];
 
   return (
     <html lang={locale} className={`${inter.variable} ${playfair.variable}`}>
       <GoogleAnalytics />
       <body className="min-h-screen bg-background pb-24 text-white antialiased md:pb-0">
+        <JsonLd data={structuredData} />
+        <RegisterServiceWorker />
         <NextIntlClientProvider messages={messages}>
           <ConsultationProvider>
             <Navbar />

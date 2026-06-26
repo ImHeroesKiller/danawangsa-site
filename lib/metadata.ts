@@ -56,6 +56,12 @@ function buildLanguageAlternates(path: string) {
     ]),
   );
 
+  languages["x-default"] = getAbsoluteUrl(
+    pathWithoutLocale === "/"
+      ? "/id"
+      : `/id${pathWithoutLocale}`,
+  );
+
   return { canonical: getAbsoluteUrl(normalized), languages };
 }
 
@@ -114,6 +120,16 @@ export function createPageMetadata({
       title,
       description,
       images: [OG_IMAGE.path],
+    },
+    applicationName: siteConfig.name,
+    appleWebApp: {
+      capable: true,
+      title: siteConfig.name,
+      statusBarStyle: "black-translucent",
+    },
+    formatDetection: {
+      telephone: true,
+      email: true,
     },
     keywords: keywords ?? [
       "konsultasi bisnis",

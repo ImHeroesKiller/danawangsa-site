@@ -178,3 +178,24 @@ body {
     border-color 0.25s ease;
 }
 
+.diagram-focus-ring:focus {
+  outline: none;
+}
+
+.diagram-focus-ring:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diagram-flow-line--active {
+    animation: none;
+    stroke-opacity: 0.85 !important;
+  }
+
+  .diagram-node-icon,
+  .diagram-node {
+    transition: none;
+  }
+}
+
