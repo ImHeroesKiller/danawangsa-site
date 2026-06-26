@@ -757,14 +757,14 @@ export const assetCollateralProgramService: ServicePageData = {
   meta: {
     title: assetName,
     description:
-      "Asset Collateral Program consultation — optimize fixed assets as collateral and income source. Strategy & legal support, not a lending institution.",
+      "Collateral Partnership Scheme consultation — connecting Asset Owners, Investors, and Fund Users through a tripartite structure & separate legal contracts. Not a lending institution.",
   },
 
   listing: {
-    category: "ASSET OPTIMIZATION",
+    category: "COLLATERAL PARTNERSHIP",
     title: assetName,
     description:
-      "Consultation program to optimize fixed assets as financing collateral and additional income source — without selling assets.",
+      "Collateral partnership scheme with two main pathways — Asset/Collateral Liquidation Scheme & Fresh Money Scheme — for fast disbursement and structured returns.",
   },
 
   hero: {
@@ -772,7 +772,7 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "Asset Collateral",
     titleHighlight: "Program",
     description:
-      "Consulting partner to optimize company fixed assets — we analyze asset potential, design collateral & return structure, and accompany legal processes, not disburse funds directly.",
+      "Consulting partner to design Collateral Partnership Schemes — we structure tripartite relationships between Asset Owners, Investors, and Fund Users with separate legal contracts, not disburse funds directly.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "View Fee Structure", href: `${assetPath}#fee` },
   },
@@ -782,15 +782,15 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "ASSET COLLATERAL",
     titleHighlight: "Program",
     description:
-      "Own underutilized fixed assets? We help design asset utilization strategy as collateral and income source — with professional support.",
+      "Need fast liquidity or want to monetize assets? We help design collateral partnership schemes via two pathways — Liquidation & Fresh Money — with professional support.",
     highlights: [
-      { label: "Asset Potential Analysis", icon: "shield" },
-      { label: "Return Structure", icon: "wallet" },
-      { label: "Legal Support", icon: "zap" },
+      { label: "10% Fee per 3-Month Cycle", icon: "wallet" },
+      { label: "Up to 4× per Year", icon: "trending-up" },
+      { label: "Fast Disbursement", icon: "bolt" },
     ],
     benefitBullets: [
-      "Fixed assets optimally utilized",
-      "Stable additional income",
+      "Clear tripartite structure",
+      "Separate legal contracts per party",
       "Without selling productive assets",
     ],
     card: {
@@ -803,136 +803,207 @@ export const assetCollateralProgramService: ServicePageData = {
 
   masalah: {
     eyebrow: "COMMON CHALLENGES",
-    title: "When Assets Don't Work for the Business",
+    title: "When Liquidity Needs Meet Idle Assets",
     description:
-      "Unoptimized fixed assets become a burden — not a contributor — to company liquidity and growth.",
+      "Without a clear partnership structure, all three parties — Asset Owners, Investors, and Fund Users — often struggle to find a scheme that is safe, fast, and profitable.",
     items: [
       {
-        title: "Idle & Underutilized Assets",
+        title: "Asset Owners Struggle to Monetize",
         description:
-          "Land, buildings, or productive assets not utilized as collateral or income source.",
+          "High-value fixed assets cannot be activated as income sources without selling or undergoing complex liquidation processes.",
       },
       {
-        title: "Asset Value Not Mobilized",
+        title: "Fund Users Need Fast Disbursement",
         description:
-          "Collateral value potential not mapped to support business financing needs.",
+          "Urgent capital needs go unmet because conventional bank processes are slow or credit limits are insufficient.",
       },
       {
-        title: "Weak Legal & Contract Structure",
+        title: "Investors Seek Measurable Returns",
         description:
-          "Asset utilization schemes lack strong legal documentation and contracts.",
+          "Capital sits idle because no transparent collateral scheme exists with mapped risk and return profiles.",
       },
       {
-        title: "Unmeasured Return Risk",
+        title: "Multi-Party Structure Is Unclear",
         description:
-          "Without professional analysis, asset income strategies carry high risk and are unsustainable.",
+          "Relationships between parties are not governed by separate legal contracts, increasing dispute and execution risk.",
       },
     ],
   },
 
   solusi: {
     eyebrow: "OUR SOLUTION",
-    title: "Asset Collateral Advisory — Not Fund Disbursement",
+    title: "Collateral Partnership Scheme — Two Main Pathways",
     description:
-      "Danawangsa Capital helps design an Asset Collateral Program tailored to your asset portfolio and business goals.",
+      "Danawangsa Capital designs and accompanies Collateral Partnership Schemes with a tripartite structure tailored to each party's needs — not direct fund disbursement.",
     items: [
-      "In-depth analysis of company fixed asset potential and value",
-      "Recommendations for safe collateral structure and return schemes",
-      "Asset utilization strategy design without selling productive assets",
-      "Legal, contract, and third-party coordination support",
-      "Periodic program performance monitoring & evaluation",
+      "Asset/Collateral Liquidation Scheme — structured utilization of assets or collateral through a liquidation scheme with clear timeline and returns",
+      "Fresh Money Scheme — fresh money structure with asset collateral for short-term liquidity needs of Fund Users",
+      "Mapping roles & obligations of Asset Owners, Investors, and Fund Users within one partnership framework",
+      "Drafting separate legal contracts for each party — not one ambiguous combined agreement",
+      "Due diligence, negotiation, and cycle monitoring support",
     ],
-    ctaLabel: "Discuss Your Asset Potential",
+    ctaLabel: "Discuss Your Partnership Scheme",
   },
 
   manfaat: {
     eyebrow: "KEY BENEFITS",
-    title: "What You Get",
+    title: "Collateral Partnership Scheme Advantages",
     items: [
       {
-        title: "Productive Assets",
+        title: "One Time Fee 10% per Cycle",
         description:
-          "Strategy that activates fixed assets as liquidity and income contributors.",
+          "Transparent return structure — 10% per 3-month cycle, enabling clear planning for Investors and Asset Owners.",
         icon: "wallet",
       },
       {
-        title: "Safe Structure",
+        title: "Up to 4× per Year",
         description:
-          "Scheme recommendations with due diligence and professional legal support.",
-        icon: "shield",
+          "With 3-month cycles, the scheme can be extended up to 4 times per year — maximizing capital rotation and income.",
+        icon: "trending-up",
       },
       {
-        title: "Stable Income",
+        title: "Fast Disbursement",
         description:
-          "Medium-term approach for sustainable additional income from assets.",
-        icon: "trending-up",
+          "Standardized tripartite structure accelerates matching, contracting, and disbursement compared to conventional channels.",
+        icon: "bolt",
       },
     ],
   },
 
   proses: {
     eyebrow: "WORK PROCESS",
-    title: "5 Program Steps We Accompany",
-    description: "Each stage has clear and measurable deliverables.",
+    title: "Tripartite Structure & Separate Legal Contracts",
+    description:
+      "Each scheme involves three parties with distinct roles, risks, and legally separate contracts.",
     items: [
       {
         step: 1,
-        title: "Discovery & Asset Inventory",
+        title: "Party Assessment & Matching",
         description:
-          "Map asset portfolio, legal status, market value, and utilization goals.",
-        deliverable: "Asset inventory & potential summary",
+          "Identify Asset Owners, Investors, and Fund Users — evaluate asset profiles, funding needs, and return expectations.",
+        deliverable: "Tripartite profile & scheme recommendation (Liquidation / Fresh Money)",
       },
       {
         step: 2,
-        title: "Potential & Risk Analysis",
+        title: "Due Diligence & Asset Valuation",
         description:
-          "Evaluate collateral value, utilization options, legal risks, and return profile.",
-        deliverable: "Potential & risk analysis report",
+          "Verify asset legality, collateral appraisal, and risk analysis for all three parties.",
+        deliverable: "Due diligence report & collateral valuation",
       },
       {
         step: 3,
-        title: "Program Design",
+        title: "Separate Contract Drafting",
         description:
-          "Develop Asset Collateral Program — collateral structure, income scheme, and timeline.",
-        deliverable: "Program document & transparent fee proposal",
+          "Prepare independent legal contracts: Asset Owner ↔ Investor, Investor ↔ Fund User, plus collateral agreements — each with clear rights, obligations, and exit clauses.",
+        deliverable: "Separate contract drafts per party & term sheet",
       },
       {
         step: 4,
-        title: "Execution Support",
+        title: "Execution & Disbursement",
         description:
-          "Legal coordination, contracts, bank or partner negotiation, and implementation.",
-        deliverable: "Execution documentation & action plan",
+          "Coordinate signing, fund disbursement, and collateral registration per the selected scheme.",
+        deliverable: "Execution documentation & disbursement proof",
       },
       {
         step: 5,
-        title: "Monitoring & Evaluation",
+        title: "Cycle Monitoring & Renewal",
         description:
-          "Evaluate program performance and recommend long-term strategy adjustments.",
-        deliverable: "Evaluation report & follow-up recommendations",
+          "Monitor 3-month cycles, evaluate performance, and recommend renewals up to 4 cycles per year.",
+        deliverable: "Monitoring report & next-cycle recommendations",
       },
     ],
   },
 
-  strukturFee: generalStrukturFee,
+  strukturFee: {
+    eyebrow: "FEE STRUCTURE",
+    title: "One Time Fee 10% per Cycle",
+    description:
+      "Scheme fees are calculated per 3-month cycle — transparent, measurable, and explained upfront before execution.",
+    items: [
+      {
+        id: "cycle-fee",
+        title: "One Time Fee per Cycle",
+        amount: "10%",
+        description:
+          "Charged once per 3-month cycle on the agreed transaction or collateral value — applies to each cycle renewal.",
+        highlighted: true,
+      },
+      {
+        id: "annual-potential",
+        title: "Annual Potential",
+        amount: "4× / Year",
+        description:
+          "With 3-month cycles, the scheme can be renewed up to 4 times per year — 10% fee applies per active cycle.",
+      },
+      {
+        id: "consultation",
+        title: "Danawangsa Consultation Fee",
+        amount: "Separate",
+        description:
+          "Strategy, legal, and execution support fees are set in the Consultation Agreement — separate from partnership scheme fees between parties.",
+      },
+    ],
+    footnote:
+      "Full fee details for the scheme and consultation are set out in the official proposal and agreements. Danawangsa Capital is a strategic consultant — not a fund disbursing party.",
+  },
 
   cocokUntuk: {
     eyebrow: "SUITABLE FOR",
-    title: "Who Needs This Service?",
+    title: "Three Parties in the Collateral Partnership Scheme",
     items: [
-      "Fixed asset owners (land, buildings, commercial property)",
-      "Companies with large asset portfolios",
-      "Businesses seeking passive income from assets",
-      "Entities needing credit collateral optimization",
-      "Investors & holding companies",
-      "Management seeking asset monetization without divestment",
+      "Asset Owners — owners of land, buildings, commercial property, or productive assets seeking monetization without selling",
+      "Investors — individuals or institutions seeking structured returns from collateral assets (10% per 3-month cycle)",
+      "Fund Users — companies or SMEs needing fast liquidity with asset collateral via Fresh Money or Liquidation Scheme",
     ],
   },
 
-  faq: createStandardFaq("ASSET", "Asset Collateral Program"),
+  faq: {
+    eyebrow: "FAQ COLLATERAL PARTNERSHIP",
+    title: "Frequently Asked Questions",
+    items: [
+      {
+        id: "aset-1",
+        question: "Does Danawangsa Capital disburse funds in this scheme?",
+        answer:
+          "No. We are strategic consultants who design structures, draft contracts, and accompany the process. Fund disbursement occurs directly between Investors and Fund Users per the agreed agreements.",
+      },
+      {
+        id: "aset-2",
+        question:
+          "What is the difference between Asset/Collateral Liquidation Scheme and Fresh Money Scheme?",
+        answer:
+          "The Liquidation Scheme utilizes assets or collateral through a structured liquidation process with a clear timeline. The Fresh Money Scheme provides new liquidity to Fund Users with asset collateral from Asset Owners — suited for short-term capital needs.",
+      },
+      {
+        id: "aset-3",
+        question: "Why must legal contracts be separate per party?",
+        answer:
+          "Separate contracts protect the rights and obligations of each party — Asset Owner, Investor, and Fund User — and minimize dispute risk. Each contract has specific exit clauses, collateral, and resolution mechanisms.",
+      },
+      {
+        id: "aset-4",
+        question: "How are collateral and execution risks managed?",
+        answer:
+          "Risks are mitigated through asset due diligence, independent valuation, and collateral execution clauses in contracts. We do not guarantee investment returns — but ensure structure, documentation, and process follow best practices.",
+      },
+      {
+        id: "aset-5",
+        question: "Can the scheme be renewed beyond one cycle?",
+        answer:
+          "Yes. Each cycle runs 3 months and can be renewed up to 4 times per year. The 10% One Time Fee applies per active cycle, with consent from all three parties.",
+      },
+      {
+        id: "aset-6",
+        question: "Can I start with a free consultation?",
+        answer:
+          "Yes. The initial ±30-minute consultation is free and without commitment. We will assess your profile — as Asset Owner, Investor, or Fund User — and explain the most suitable scheme.",
+      },
+    ],
+  },
 
   cta: createServiceCta(
-    "Activate Your Asset Value with the Right Strategy",
-    "Tell us about your asset portfolio and business goals. Our advisor team is ready to respond within 24 hours.",
+    "Design the Right Collateral Partnership Scheme for You",
+    "Tell us your role — Asset Owner, Investor, or Fund User. Our advisor team is ready to respond within 24 hours.",
   ),
 };
 

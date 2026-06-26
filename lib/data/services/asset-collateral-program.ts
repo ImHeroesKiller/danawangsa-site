@@ -1,11 +1,6 @@
 import type { ServicePageData } from "@/types/service";
 
-import {
-  ADVISORY_POSITIONING,
-  createServiceCta,
-  createStandardFaq,
-  generalStrukturFee,
-} from "./shared-content";
+import { ADVISORY_POSITIONING, createServiceCta } from "./shared-content";
 
 const slug = "asset-collateral-program";
 const path = `/layanan/${slug}`;
@@ -20,14 +15,14 @@ export const assetCollateralProgramService: ServicePageData = {
   meta: {
     title: name,
     description:
-      "Konsultasi Asset Collateral Program — optimalisasi aset tetap sebagai jaminan dan sumber pendapatan. Pendampingan strategi & legal, bukan lembaga pembiayaan.",
+      "Konsultasi Collateral Partnership Scheme — menghubungkan Pemilik Aset, Investor, dan Pengguna Dana melalui struktur tripartit & kontrak legal terpisah. Bukan lembaga pembiayaan.",
   },
 
   listing: {
-    category: "OPTIMALISASI ASET",
+    category: "COLLATERAL PARTNERSHIP",
     title: name,
     description:
-      "Program konsultasi untuk mengoptimalkan aset tetap sebagai jaminan pembiayaan dan sumber pendapatan tambahan — tanpa harus menjual aset.",
+      "Skema kemitraan jaminan dengan dua jalur utama — Asset/Collateral Liquidation Scheme & Fresh Money Scheme — untuk pencairan cepat dan imbal hasil terstruktur.",
   },
 
   hero: {
@@ -35,7 +30,7 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "Asset Collateral",
     titleHighlight: "Program",
     description:
-      "Partner konsultasi untuk mengoptimalkan aset tetap perusahaan — kami analisis potensi aset, rancang struktur jaminan & imbal hasil, dan dampingi proses legal, bukan menyalurkan dana langsung.",
+      "Partner konsultasi untuk merancang Collateral Partnership Scheme — kami strukturkan hubungan tripartit antara Pemilik Aset, Investor, dan Pengguna Dana dengan kontrak legal terpisah, bukan menyalurkan dana langsung.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "Lihat Struktur Fee", href: `${path}#fee` },
   },
@@ -45,15 +40,15 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "ASSET COLLATERAL",
     titleHighlight: "Program",
     description:
-      "Miliki aset tetap yang belum optimal? Kami bantu merancang strategi pemanfaatan aset sebagai jaminan dan sumber pendapatan — dengan pendampingan profesional.",
+      "Butuh likuiditas cepat atau ingin monetisasi aset? Kami bantu merancang skema kemitraan jaminan dengan dua jalur — Liquidation & Fresh Money — melalui pendampingan profesional.",
     highlights: [
-      { label: "Analisis Potensi Aset", icon: "shield" },
-      { label: "Struktur Imbal Hasil", icon: "wallet" },
-      { label: "Pendampingan Legal", icon: "zap" },
+      { label: "Fee 10% per Siklus 3 Bulan", icon: "wallet" },
+      { label: "Potensi 4× per Tahun", icon: "trending-up" },
+      { label: "Pencairan Cepat", icon: "bolt" },
     ],
     benefitBullets: [
-      "Aset tetap dimanfaatkan optimal",
-      "Pendapatan tambahan stabil",
+      "Struktur tripartit yang jelas",
+      "Kontrak legal terpisah per pihak",
       "Tanpa menjual aset produktif",
     ],
     card: {
@@ -67,135 +62,207 @@ export const assetCollateralProgramService: ServicePageData = {
 
   masalah: {
     eyebrow: "MASALAH YANG SERING DIALAMI",
-    title: "Ketika Aset Tidak Bekerja untuk Bisnis",
+    title: "Ketika Kebutuhan Likuiditas Bertemu Aset yang Idle",
     description:
-      "Aset tetap yang tidak dioptimalkan menjadi beban — bukan kontributor — terhadap likuiditas dan pertumbuhan perusahaan.",
+      "Tanpa struktur kemitraan yang jelas, ketiga pihak — Pemilik Aset, Investor, dan Pengguna Dana — sering kesulitan menemukan skema yang aman, cepat, dan menguntungkan.",
     items: [
       {
-        title: "Aset Idle & Underutilized",
+        title: "Pemilik Aset Sulit Monetisasi",
         description:
-          "Tanah, bangunan, atau aset produktif tidak dimanfaatkan sebagai jaminan atau sumber pendapatan.",
+          "Aset tetap bernilai tinggi tetapi tidak bisa diaktifkan sebagai sumber pendapatan tanpa menjual atau mengalami proses likuidasi yang rumit.",
       },
       {
-        title: "Nilai Aset Tidak Tersalurkan",
+        title: "Pengguna Dana Butuh Pencairan Cepat",
         description:
-          "Potensi collateral value aset belum dipetakan untuk mendukung kebutuhan pembiayaan bisnis.",
+          "Kebutuhan modal mendesak tidak terlayani karena proses bank konvensional lambat atau plafon kredit terbatas.",
       },
       {
-        title: "Struktur Legal & Kontrak Lemah",
+        title: "Investor Mencari Imbal Hasil Terukur",
         description:
-          "Skema pemanfaatan aset belum didukung dokumentasi legal dan kontrak yang kuat.",
+          "Modal menganggur karena belum ada skema jaminan yang transparan, dengan risiko dan return yang dapat dipetakan.",
       },
       {
-        title: "Risiko Imbal Hasil Tidak Terukur",
+        title: "Struktur Multi-Pihak Tidak Jelas",
         description:
-          "Tanpa analisis profesional, strategi pendapatan dari aset berisiko tinggi dan tidak sustainable.",
+          "Hubungan antar pihak belum diatur dengan kontrak legal terpisah, sehingga risiko sengketa dan eksekusi meningkat.",
       },
     ],
   },
 
   solusi: {
     eyebrow: "SOLUSI KAMI",
-    title: "Asset Collateral Advisory — Bukan Penyaluran Dana",
+    title: "Collateral Partnership Scheme — Dua Jalur Utama",
     description:
-      "Danawangsa Capital membantu merancang Asset Collateral Program yang disesuaikan dengan portofolio aset dan tujuan bisnis Anda.",
+      "Danawangsa Capital merancang dan mendampingi Collateral Partnership Scheme dengan struktur tripartit yang disesuaikan kebutuhan masing-masing pihak — bukan penyaluran dana langsung.",
     items: [
-      "Analisis mendalam potensi dan nilai aset tetap perusahaan",
-      "Rekomendasi struktur jaminan dan skema imbal hasil yang aman",
-      "Perancangan strategi pemanfaatan aset tanpa menjual aset produktif",
-      "Pendampingan legal, kontrak, dan koordinasi dengan pihak ketiga",
-      "Monitoring & evaluasi berkala performa program",
+      "Asset/Collateral Liquidation Scheme — pemanfaatan aset atau jaminan melalui skema likuidasi terstruktur dengan timeline dan imbal hasil yang jelas",
+      "Fresh Money Scheme — struktur fresh money dengan jaminan aset untuk kebutuhan likuiditas jangka pendek Pengguna Dana",
+      "Pemetaan peran & kewajiban Pemilik Aset, Investor, dan Pengguna Dana dalam satu kerangka kemitraan",
+      "Penyusunan kontrak legal terpisah untuk setiap pihak — bukan satu kontrak gabungan yang ambigu",
+      "Pendampingan due diligence, negosiasi, dan monitoring siklus program",
     ],
-    ctaLabel: "Diskusikan Potensi Aset Anda",
+    ctaLabel: "Diskusikan Skema Kemitraan Anda",
   },
 
   manfaat: {
     eyebrow: "MANFAAT UTAMA",
-    title: "Apa yang Anda Dapatkan",
+    title: "Keunggulan Collateral Partnership Scheme",
     items: [
       {
-        title: "Aset Produktif",
+        title: "One Time Fee 10% per Siklus",
         description:
-          "Strategi yang mengaktifkan aset tetap sebagai kontributor likuiditas dan pendapatan.",
+          "Struktur imbal hasil transparan — 10% per siklus 3 bulan, memudahkan perencanaan bagi Investor dan Pemilik Aset.",
         icon: "wallet",
       },
       {
-        title: "Struktur Aman",
+        title: "Potensi 4× per Tahun",
         description:
-          "Rekomendasi skema dengan due diligence dan pendampingan legal yang profesional.",
-        icon: "shield",
+          "Dengan siklus 3 bulan, skema berpotensi diperpanjang hingga 4 kali dalam setahun — memaksimalkan rotasi modal dan pendapatan.",
+        icon: "trending-up",
       },
       {
-        title: "Pendapatan Stabil",
+        title: "Pencairan Cepat",
         description:
-          "Pendekatan jangka menengah untuk pendapatan tambahan yang sustainable dari aset.",
-        icon: "trending-up",
+          "Struktur tripartit yang sudah distandarkan mempercepat proses matching, kontrak, dan pencairan dibanding jalur konvensional.",
+        icon: "bolt",
       },
     ],
   },
 
   proses: {
     eyebrow: "PROSES KERJA",
-    title: "5 Langkah Program yang Kami Dampingi",
-    description: "Setiap tahap memiliki deliverable yang jelas dan terukur.",
+    title: "Struktur Tripartit & Kontrak Legal Terpisah",
+    description:
+      "Setiap skema melibatkan tiga pihak dengan peran, risiko, dan kontrak yang terpisah secara legal.",
     items: [
       {
         step: 1,
-        title: "Discovery & Asset Inventory",
+        title: "Assessment & Matching Pihak",
         description:
-          "Memetakan portofolio aset, status legal, nilai pasar, dan tujuan pemanfaatan.",
-        deliverable: "Inventaris aset & ringkasan potensi",
+          "Identifikasi Pemilik Aset, Investor, dan Pengguna Dana — evaluasi profil aset, kebutuhan dana, dan ekspektasi imbal hasil.",
+        deliverable: "Profil tripartit & rekomendasi skema (Liquidation / Fresh Money)",
       },
       {
         step: 2,
-        title: "Analisis Potensi & Risiko",
+        title: "Due Diligence & Valuasi Aset",
         description:
-          "Evaluasi nilai collateral, opsi pemanfaatan, risiko hukum, dan profil imbal hasil.",
-        deliverable: "Laporan analisis potensi & risiko",
+          "Verifikasi legal aset, appraisal nilai jaminan, dan analisis risiko untuk ketiga pihak.",
+        deliverable: "Laporan due diligence & valuasi jaminan",
       },
       {
         step: 3,
-        title: "Perancangan Program",
+        title: "Perancangan Kontrak Terpisah",
         description:
-          "Menyusun Asset Collateral Program — struktur jaminan, skema pendapatan, dan timeline.",
-        deliverable: "Dokumen program & proposal fee transparan",
+          "Penyusunan kontrak legal independen: Pemilik Aset ↔ Investor, Investor ↔ Pengguna Dana, serta perjanjian jaminan — masing-masing dengan hak, kewajiban, dan exit clause yang jelas.",
+        deliverable: "Draft kontrak terpisah per pihak & term sheet",
       },
       {
         step: 4,
-        title: "Pendampingan Eksekusi",
+        title: "Eksekusi & Pencairan",
         description:
-          "Koordinasi legal, kontrak, negosiasi dengan bank atau mitra, dan implementasi.",
-        deliverable: "Dokumentasi eksekusi & action plan",
+          "Koordinasi penandatanganan, pencairan dana, dan pendaftaran jaminan sesuai skema yang dipilih.",
+        deliverable: "Dokumentasi eksekusi & bukti pencairan",
       },
       {
         step: 5,
-        title: "Monitoring & Evaluasi",
+        title: "Monitoring Siklus & Perpanjangan",
         description:
-          "Evaluasi performa program dan rekomendasi penyesuaian strategi jangka panjang.",
-        deliverable: "Laporan evaluasi & rekomendasi lanjutan",
+          "Pemantauan siklus 3 bulan, evaluasi performa, dan rekomendasi perpanjangan hingga 4 siklus per tahun.",
+        deliverable: "Laporan monitoring & rekomendasi siklus berikutnya",
       },
     ],
   },
 
-  strukturFee: generalStrukturFee,
+  strukturFee: {
+    eyebrow: "STRUKTUR FEE",
+    title: "One Time Fee 10% per Cycle",
+    description:
+      "Fee skema dihitung per siklus 3 bulan — transparan, terukur, dan dijelaskan di awal sebelum eksekusi.",
+    items: [
+      {
+        id: "cycle-fee",
+        title: "One Time Fee per Cycle",
+        amount: "10%",
+        description:
+          "Dibebankan sekali per siklus 3 bulan atas nilai transaksi atau jaminan yang disepakati — berlaku untuk setiap perpanjangan siklus.",
+        highlighted: true,
+      },
+      {
+        id: "annual-potential",
+        title: "Potensi Tahunan",
+        amount: "4× / Tahun",
+        description:
+          "Dengan siklus 3 bulan, skema dapat diperpanjang hingga 4 kali setahun — fee 10% berlaku per siklus yang aktif.",
+      },
+      {
+        id: "consultation",
+        title: "Fee Konsultasi Danawangsa",
+        amount: "Terpisah",
+        description:
+          "Fee pendampingan strategi, legal, dan eksekusi diatur dalam Perjanjian Konsultasi — terpisah dari fee skema kemitraan antar pihak.",
+      },
+    ],
+    footnote:
+      "Detail lengkap fee skema dan konsultasi dituangkan dalam proposal dan perjanjian resmi. Danawangsa Capital adalah konsultan strategis — bukan pihak yang menyalurkan dana.",
+  },
 
   cocokUntuk: {
     eyebrow: "COCOK UNTUK",
-    title: "Siapa yang Membutuhkan Layanan Ini?",
+    title: "Tiga Pihak dalam Collateral Partnership Scheme",
     items: [
-      "Pemilik aset tetap (tanah, bangunan, properti komersial)",
-      "Perusahaan dengan portofolio aset besar",
-      "Bisnis yang ingin pendapatan pasif dari aset",
-      "Entitas yang butuh optimalisasi jaminan kredit",
-      "Investor & holding company",
-      "Manajemen yang ingin monetisasi aset tanpa divestasi",
+      "Pemilik Aset — pemilik tanah, bangunan, properti komersial, atau aset produktif yang ingin monetisasi tanpa menjual",
+      "Investor — individu atau institusi yang mencari imbal hasil terstruktur dari aset jaminan (10% per siklus 3 bulan)",
+      "Pengguna Dana — perusahaan atau UMKM yang membutuhkan likuiditas cepat dengan jaminan aset melalui Fresh Money atau Liquidation Scheme",
     ],
   },
 
-  faq: createStandardFaq("ASET", "Asset Collateral Program"),
+  faq: {
+    eyebrow: "FAQ COLLATERAL PARTNERSHIP",
+    title: "Pertanyaan Umum",
+    items: [
+      {
+        id: "aset-1",
+        question:
+          "Apakah Danawangsa Capital menyalurkan dana dalam skema ini?",
+        answer:
+          "Tidak. Kami adalah konsultan strategis yang merancang struktur, menyusun kontrak, dan mendampingi proses. Penyaluran dana dilakukan langsung antar Investor dan Pengguna Dana sesuai perjanjian yang disepakati.",
+      },
+      {
+        id: "aset-2",
+        question:
+          "Apa beda Asset/Collateral Liquidation Scheme dan Fresh Money Scheme?",
+        answer:
+          "Liquidation Scheme memanfaatkan aset atau jaminan melalui proses likuidasi terstruktur dengan timeline jelas. Fresh Money Scheme menyediakan likuiditas baru kepada Pengguna Dana dengan jaminan aset dari Pemilik Aset — cocok untuk kebutuhan modal jangka pendek.",
+      },
+      {
+        id: "aset-3",
+        question: "Mengapa kontrak legal harus terpisah per pihak?",
+        answer:
+          "Pemisahan kontrak melindungi hak dan kewajiban masing-masing pihak — Pemilik Aset, Investor, dan Pengguna Dana — serta meminimalkan risiko sengketa. Setiap kontrak memiliki exit clause, jaminan, dan mekanisme penyelesaian yang spesifik.",
+      },
+      {
+        id: "aset-4",
+        question: "Bagaimana risiko jaminan dan eksekusi ditangani?",
+        answer:
+          "Risiko diminimalkan melalui due diligence aset, valuasi independen, dan klausul eksekusi jaminan dalam kontrak. Kami tidak menjamin hasil investasi — namun memastikan struktur, dokumentasi, dan proses sesuai praktik terbaik.",
+      },
+      {
+        id: "aset-5",
+        question: "Apakah skema bisa diperpanjang lebih dari satu siklus?",
+        answer:
+          "Ya. Setiap siklus berjalan 3 bulan dan dapat diperpanjang hingga 4 kali per tahun. Fee 10% One Time Fee berlaku per siklus yang aktif, dengan persetujuan ketiga pihak.",
+      },
+      {
+        id: "aset-6",
+        question: "Bisakah saya mulai dengan konsultasi gratis?",
+        answer:
+          "Ya. Konsultasi awal ±30 menit gratis dan tanpa komitmen. Kami akan menilai profil Anda — sebagai Pemilik Aset, Investor, atau Pengguna Dana — dan menjelaskan skema yang paling sesuai.",
+      },
+    ],
+  },
 
   cta: createServiceCta(
-    "Aktifkan Nilai Aset Anda dengan Strategi yang Tepat",
-    "Ceritakan portofolio aset dan tujuan bisnis Anda. Tim advisor kami siap merespons dalam 1×24 jam.",
+    "Rancang Collateral Partnership Scheme yang Tepat untuk Anda",
+    "Ceritakan peran Anda — Pemilik Aset, Investor, atau Pengguna Dana. Tim advisor kami siap merespons dalam 1×24 jam.",
   ),
 };
