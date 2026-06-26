@@ -1198,3 +1198,285 @@ export const businessFinancialAdvisoryService: ServicePageData = {
     "Tell us about your business and financial challenges. Our advisor team is ready to respond within 24 hours.",
   ),
 };
+
+const renewableSlug = "pembiayaan-energi-terbarukan";
+const renewablePath = `/layanan/${renewableSlug}`;
+const renewableName = "Renewable Energy Financing Advisory";
+
+const renewableEnergyStrukturFee: ServicePageData["strukturFee"] = {
+  eyebrow: "FEE STRUCTURE",
+  title: "Transparent & Deliverable-Based",
+  description:
+    "Consultation fees are explained upfront in the proposal and Consultation Agreement — separate from third-party costs (appraisal, legal, technical due diligence, etc.).",
+  items: [
+    {
+      id: "base",
+      title: "Retainer / Base Fee",
+      amount: "35–50%",
+      description:
+        "Upfront deposit (non-refundable) to commence project analysis, initial due diligence, and green financing strategy development.",
+    },
+    {
+      id: "milestone",
+      title: "Milestone Payment",
+      amount: "Phased",
+      description:
+        "Payment per stage: feasibility study completed, financing structure approved, documentation ready, funding source negotiations commenced.",
+    },
+    {
+      id: "final",
+      title: "Final / Settlement Fee",
+      amount: "Balance",
+      description:
+        "Settlement upon delivery of agreed deliverables: financing strategy report, investor pitch deck, or agreed milestone achieved.",
+      highlighted: true,
+    },
+    {
+      id: "success",
+      title: "Success Fee (Optional)",
+      amount: "2–5%",
+      description:
+        "Specific to green financing projects — only payable if funding is successfully agreed or the financing transaction closes per agreed targets.",
+    },
+  ],
+  footnote: FEE_FOOTNOTE,
+};
+
+export const renewableEnergyFinancingService: ServicePageData = {
+  slug: renewableSlug,
+  path: renewablePath,
+  navLabel: renewableName,
+  consultationModalType: "general",
+
+  meta: {
+    title: renewableName,
+    description:
+      "Strategic advisory for renewable energy project financing and energy efficiency — solar, wind, hydro, biomass, and waste-to-energy. Professional support — not a lending institution.",
+  },
+
+  listing: {
+    category: "GREEN FINANCING ADVISORY",
+    title: renewableName,
+    description:
+      "Strategic support for designing and structuring renewable energy project financing, industrial energy efficiency, and ESG-based green financing.",
+    badge: "New",
+  },
+
+  hero: {
+    badge: { label: "GREEN FINANCING ADVISORY", variant: "amber" },
+    title: "Renewable Energy",
+    titleHighlight: "Financing Advisory",
+    description:
+      "Strategic consulting partner for designing and accompanying renewable energy and energy efficiency project financing — we help structure strategy and coordinate with green funding sources, not disburse funds directly.",
+    positioning: ADVISORY_POSITIONING,
+    secondaryCta: { label: "View Fee Structure", href: `${renewablePath}#fee` },
+  },
+
+  teaser: {
+    badge: { label: "GREEN FINANCING", variant: "amber" },
+    title: "RENEWABLE ENERGY",
+    titleHighlight: "Financing Advisory",
+    description:
+      "Need strategic support for solar, wind, hydro, or energy efficiency project financing? We help design optimal structures and access green funding sources.",
+    highlights: [
+      { label: "Green Financing Strategy", icon: "zap" },
+      { label: "Energy Efficiency", icon: "bolt" },
+      { label: "ESG Compliance", icon: "shield" },
+    ],
+    benefitBullets: [
+      "More optimal financing structure",
+      "More targeted green funding access",
+      "Faster energy project execution",
+    ],
+    card: {
+      eyebrow: "PREPARING A RENEWABLE ENERGY PROJECT?",
+      description:
+        "Learn about the 5-step process, fee structure, FAQ, and suitable client profiles on the service detail page.",
+      footnote: ADVISORY_FOOTNOTE,
+    },
+  },
+
+  masalah: {
+    eyebrow: "COMMON CHALLENGES",
+    title: "When Renewable Energy Projects Stall on Funding",
+    description:
+      "Many renewable energy and energy efficiency projects fail to proceed not because of technology, but because financing structure and documentation readiness are not yet mature.",
+    items: [
+      {
+        title: "Unclear Financing Structure",
+        description:
+          "Solar, wind, hydro, or biomass projects lack financing schemes aligned with risk profile, tenor, and project cash flow.",
+      },
+      {
+        title: "Limited Green Funding Access",
+        description:
+          "Companies struggle to identify and prepare for green loans, sustainability-linked financing, or impact investors.",
+      },
+      {
+        title: "Energy Efficiency Projects Hard to Justify",
+        description:
+          "Energy efficiency investments in factories or buildings lack financial ROI measurement — hindering internal and external funding approval.",
+      },
+      {
+        title: "Insufficient ESG & Documentation Readiness",
+        description:
+          "Sustainability reports, emission baselines, and due diligence documents do not yet meet green funding source standards.",
+      },
+    ],
+  },
+
+  solusi: {
+    eyebrow: "OUR SOLUTION",
+    title: "Strategic Green Financing Advisory",
+    description:
+      "Danawangsa Capital accompanies companies and project developers in designing renewable energy financing strategy — as strategic consultants, not fund disbursers.",
+    items: [
+      "Renewable energy project financing strategy (solar, wind, hydro, biomass, waste-to-energy)",
+      "Energy efficiency project support for industry and commercial buildings",
+      "Green financing and sustainability-linked financing structure design",
+      "Business matching with green funding sources and strategic investors",
+      "Investment document preparation, financial models, and project presentation materials",
+    ],
+    ctaLabel: "Discuss Your Energy Project",
+  },
+
+  manfaat: {
+    eyebrow: "KEY BENEFITS",
+    title: "What You Get",
+    items: [
+      {
+        title: "More Targeted Funding Access",
+        description:
+          "A map of relevant green funding sources aligned with your project profile and company capacity.",
+        icon: "wallet",
+      },
+      {
+        title: "Optimal Financing Structure",
+        description:
+          "Tenor, covenant, and cash flow schemes aligned with renewable energy project characteristics.",
+        icon: "zap",
+      },
+      {
+        title: "Faster Project Execution",
+        description:
+          "Documentation and strategy ready for presentation — accelerating due diligence and negotiations.",
+        icon: "bolt",
+      },
+      {
+        title: "Integrated ESG Compliance",
+        description:
+          "Financing approach aligned with sustainability targets and corporate ESG reporting.",
+        icon: "shield",
+      },
+    ],
+  },
+
+  proses: {
+    eyebrow: "OUR PROCESS",
+    title: "5 Steps We Accompany",
+    description:
+      "Each stage has clear deliverables — from initial assessment to financing closure.",
+    items: [
+      {
+        step: 1,
+        title: "Assessment & Scoping",
+        description:
+          "Initial evaluation of project profile, technical capacity, funding needs, and corporate ESG targets.",
+        deliverable: "Assessment summary & consultation scope",
+      },
+      {
+        step: 2,
+        title: "Financial Feasibility Study",
+        description:
+          "Project cash flow analysis, risk sensitivity, and comparison of viable financing schemes.",
+        deliverable: "Financial model & preliminary feasibility report",
+      },
+      {
+        step: 3,
+        title: "Financing Structure Design",
+        description:
+          "Developing green financing, sustainability-linked financing, or investor schemes as appropriate.",
+        deliverable: "Financing strategy document & fee proposal",
+      },
+      {
+        step: 4,
+        title: "Sourcing & Negotiation Support",
+        description:
+          "Coordinating project presentations, due diligence, and negotiations with green funding sources or investors.",
+        deliverable: "Pitch deck, data room checklist & action plan",
+      },
+      {
+        step: 5,
+        title: "Closing & Evaluation",
+        description:
+          "Supporting financing transaction closure and post-implementation strategy evaluation.",
+        deliverable: "Closing report & follow-up recommendations",
+      },
+    ],
+  },
+
+  strukturFee: renewableEnergyStrukturFee,
+
+  cocokUntuk: {
+    eyebrow: "SUITABLE FOR",
+    title: "Who Needs This Service?",
+    items: [
+      "Renewable energy project developers (solar, wind, hydro, biomass, waste-to-energy)",
+      "Industrial companies seeking to finance energy efficiency projects",
+      "Commercial building & property managers transitioning to clean energy",
+      "Corporations with net-zero targets or ESG commitments",
+      "Companies preparing green loans or sustainability-linked loans",
+      "Investors or consortia needing project financing structure advisory",
+    ],
+  },
+
+  faq: {
+    eyebrow: "GREEN FINANCING FAQ",
+    title: "Frequently Asked Questions",
+    items: [
+      {
+        id: "renewable-1",
+        question:
+          "Does Danawangsa Capital disburse funds for renewable energy projects?",
+        answer:
+          "No. We are strategic financing consultants — not a lending institution. We design strategy, prepare documents, and accompany green funding sourcing. Fund disbursement is entirely through relevant financial institutions or investors.",
+      },
+      {
+        id: "renewable-2",
+        question: "What types of renewable energy projects can you support?",
+        answer:
+          "We accompany financing consultation for solar (PV), wind, hydro, biomass, waste-to-energy, and energy efficiency projects in industry and buildings. Specific scope is tailored in the consultation proposal.",
+      },
+      {
+        id: "renewable-3",
+        question:
+          "What is sustainability-linked financing and can you support it?",
+        answer:
+          "Yes. Sustainability-linked financing (SLF) is a credit facility with margins tied to sustainability target achievement. We help design structure, ESG KPIs, and documentation required for this approach.",
+      },
+      {
+        id: "renewable-4",
+        question: "How long does energy project financing consultation take?",
+        answer:
+          "Initial assessment typically takes 1–2 weeks. Full process varies 4–8 weeks for mid-scale projects, up to 2–4 months for large-scale projects with multiple parties and deep due diligence.",
+      },
+      {
+        id: "renewable-5",
+        question: "Are energy efficiency projects included in this service?",
+        answer:
+          "Yes. We support energy efficiency project financing — from financial energy audits, ROI/payback calculations, to funding structuring for industrial or building retrofits.",
+      },
+      {
+        id: "renewable-6",
+        question: "Do you guarantee project funding approval?",
+        answer:
+          "No one can guarantee funding approval — decisions rest entirely with financial institutions or investors. However, we maximize chances with the right strategy, complete documentation, and professional accompaniment.",
+      },
+    ],
+  },
+
+  cta: createServiceCta(
+    "Design the Right Renewable Energy Financing Strategy",
+    "Tell us about your project profile and funding needs. Our advisor team is ready to respond within 24 hours.",
+  ),
+};

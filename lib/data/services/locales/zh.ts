@@ -1197,3 +1197,282 @@ export const businessFinancialAdvisoryService: ServicePageData = {
     "告诉我们您的商业与财务挑战。顾问团队将在24小时内回复。",
   ),
 };
+
+const renewableSlug = "pembiayaan-energi-terbarukan";
+const renewablePath = `/layanan/${renewableSlug}`;
+const renewableName = "可再生能源融资咨询";
+
+const renewableEnergyStrukturFee: ServicePageData["strukturFee"] = {
+  eyebrow: "费用结构",
+  title: "透明且基于交付成果",
+  description:
+    "咨询费用在提案和正式咨询协议中 upfront 说明——与第三方费用（评估、法律、技术尽职调查等）分开。",
+  items: [
+    {
+      id: "base",
+      title: "预付金 / 基础费用",
+      amount: "35–50%",
+      description:
+        "前期定金（不可退还），用于启动项目分析、初步尽职调查和绿色融资战略制定。",
+    },
+    {
+      id: "milestone",
+      title: "里程碑付款",
+      amount: "分期",
+      description:
+        "按阶段付款：可行性研究完成、融资结构获批、文件就绪、与资金来源谈判启动。",
+    },
+    {
+      id: "final",
+      title: "尾款 / 结清费用",
+      amount: "余额",
+      description:
+        "交付约定成果时结清：融资战略报告、投资者推介材料或约定里程碑达成。",
+      highlighted: true,
+    },
+    {
+      id: "success",
+      title: "成功费（可选）",
+      amount: "2–5%",
+      description:
+        "专用于绿色融资项目——仅在融资成功达成协议或按约定目标完成融资交易时支付。",
+    },
+  ],
+  footnote: FEE_FOOTNOTE,
+};
+
+export const renewableEnergyFinancingService: ServicePageData = {
+  slug: renewableSlug,
+  path: renewablePath,
+  navLabel: renewableName,
+  consultationModalType: "general",
+
+  meta: {
+    title: renewableName,
+    description:
+      "可再生能源项目融资与能效战略咨询——涵盖太阳能、风能、水电、生物质及垃圾发电。专业指导——非放贷机构。",
+  },
+
+  listing: {
+    category: "绿色融资顾问",
+    title: renewableName,
+    description:
+      "为可再生能源项目融资、工业能效及基于ESG的绿色融资提供战略设计与结构规划支持。",
+    badge: "新",
+  },
+
+  hero: {
+    badge: { label: "绿色融资顾问", variant: "amber" },
+    title: "可再生能源",
+    titleHighlight: "融资咨询",
+    description:
+      "可再生能源与能效项目融资的战略咨询伙伴——我们协助制定战略、设计结构并协调绿色资金来源，不直接放款。",
+    positioning: ADVISORY_POSITIONING,
+    secondaryCta: { label: "查看费用结构", href: `${renewablePath}#fee` },
+  },
+
+  teaser: {
+    badge: { label: "绿色融资", variant: "amber" },
+    title: "可再生能源",
+    titleHighlight: "融资咨询",
+    description:
+      "需要太阳能、风能、水电或能效项目融资的战略支持？我们协助设计最优结构并对接绿色资金来源。",
+    highlights: [
+      { label: "绿色融资战略", icon: "zap" },
+      { label: "能效项目", icon: "bolt" },
+      { label: "ESG合规", icon: "shield" },
+    ],
+    benefitBullets: [
+      "更优融资结构",
+      "更精准绿色资金对接",
+      "加速能源项目落地",
+    ],
+    card: {
+      eyebrow: "正在筹备可再生能源项目？",
+      description:
+        "了解5步流程、费用结构、常见问题及适合客户类型，请见服务详情页。",
+      footnote: ADVISORY_FOOTNOTE,
+    },
+  },
+
+  masalah: {
+    eyebrow: "常见挑战",
+    title: "当可再生能源项目因融资受阻",
+    description:
+      "许多可再生能源与能效项目未能推进，并非技术问题，而是融资结构与文件准备尚未成熟。",
+    items: [
+      {
+        title: "融资结构不清晰",
+        description:
+          "太阳能、风能、水电或生物质项目缺乏与风险特征、期限及项目现金流匹配的融资方案。",
+      },
+      {
+        title: "绿色资金渠道有限",
+        description:
+          "企业难以识别并准备绿色贷款、可持续发展挂钩融资或影响力投资者。",
+      },
+      {
+        title: "能效项目难以论证",
+        description:
+          "工厂或楼宇能效投资缺乏财务ROI测算——阻碍内部及外部融资审批。",
+      },
+      {
+        title: "ESG与文件准备不足",
+        description:
+          "可持续发展报告、排放基线及尽职调查文件尚未满足绿色资金来源要求。",
+      },
+    ],
+  },
+
+  solusi: {
+    eyebrow: "我们的方案",
+    title: "战略绿色融资顾问",
+    description:
+      "Danawangsa Capital 作为战略顾问（非资金方），协助企业与项目开发商设计可再生能源融资战略。",
+    items: [
+      "可再生能源项目融资战略（太阳能、风能、水电、生物质、垃圾发电）",
+      "工业与商业楼宇能效项目陪同",
+      "绿色融资与可持续发展挂钩融资结构设计",
+      "对接绿色资金来源与战略投资者",
+      "投资文件、财务模型及项目推介材料编制",
+    ],
+    ctaLabel: "讨论您的能源项目",
+  },
+
+  manfaat: {
+    eyebrow: "主要优势",
+    title: "您将获得",
+    items: [
+      {
+        title: "更精准资金对接",
+        description:
+          "与项目特征及企业能力匹配的绿色资金来源图谱。",
+        icon: "wallet",
+      },
+      {
+        title: "最优融资结构",
+        description:
+          "与可再生能源项目特征匹配的期限、契约及现金流方案。",
+        icon: "zap",
+      },
+      {
+        title: "加速项目落地",
+        description:
+          "文件与战略就绪可推介——加快尽职调查与谈判进程。",
+        icon: "bolt",
+      },
+      {
+        title: "ESG合规一体化",
+        description:
+          "与可持续发展目标及企业ESG报告一致的融资路径。",
+        icon: "shield",
+      },
+    ],
+  },
+
+  proses: {
+    eyebrow: "工作流程",
+    title: "我们陪同的5个步骤",
+    description: "每个阶段均有明确交付成果——从初步评估到融资关闭。",
+    items: [
+      {
+        step: 1,
+        title: "评估与范围界定",
+        description:
+          "初步评估项目特征、技术能力、资金需求及企业ESG目标。",
+        deliverable: "评估摘要与咨询范围",
+      },
+      {
+        step: 2,
+        title: "财务可行性研究",
+        description:
+          "项目现金流分析、风险敏感性及各可行融资方案比较。",
+        deliverable: "财务模型与初步可行性报告",
+      },
+      {
+        step: 3,
+        title: "融资结构设计",
+        description:
+          "制定绿色融资、可持续发展挂钩融资或投资者方案。",
+        deliverable: "融资战略文件与费用提案",
+      },
+      {
+        step: 4,
+        title: "资金对接与谈判陪同",
+        description:
+          "协调项目推介、尽职调查及与绿色资金来源或投资者谈判。",
+        deliverable: "推介材料、数据室清单与行动计划",
+      },
+      {
+        step: 5,
+        title: "关闭与评估",
+        description:
+          "陪同融资交易关闭及战略实施后的评估。",
+        deliverable: "关闭报告与后续建议",
+      },
+    ],
+  },
+
+  strukturFee: renewableEnergyStrukturFee,
+
+  cocokUntuk: {
+    eyebrow: "适合对象",
+    title: "谁需要此服务？",
+    items: [
+      "可再生能源项目开发商（太阳能、风能、水电、生物质、垃圾发电）",
+      "希望为能效项目融资的工业企业",
+      "向清洁能源转型的商业楼宇与物业管理方",
+      "有净零目标或ESG承诺的企业",
+      "筹备绿色贷款或可持续发展挂钩贷款的公司",
+      "需要项目融资结构顾问的投资者或联合体",
+    ],
+  },
+
+  faq: {
+    eyebrow: "绿色融资常见问题",
+    title: "常见问题",
+    items: [
+      {
+        id: "renewable-1",
+        question: "Danawangsa Capital 是否为可再生能源项目放款？",
+        answer:
+          "不是。我们是战略融资顾问——非放贷机构。我们制定战略、编制文件并陪同绿色资金对接。资金发放完全通过相关金融机构或投资者完成。",
+      },
+      {
+        id: "renewable-2",
+        question: "可陪同哪些类型的可再生能源项目？",
+        answer:
+          "我们陪同太阳能（光伏）、风能、水电、生物质、垃圾发电及工业与楼宇能效项目的融资咨询。具体范围在咨询提案中定制。",
+      },
+      {
+        id: "renewable-3",
+        question: "什么是可持续发展挂钩融资？能否提供支持？",
+        answer:
+          "可以。可持续发展挂钩融资（SLF）是与可持续发展目标挂钩的信贷额度。我们协助设计结构、ESG关键绩效指标及所需文件。",
+      },
+      {
+        id: "renewable-4",
+        question: "能源项目融资咨询通常需要多长时间？",
+        answer:
+          "初步评估通常需1–2周。中型项目完整流程约4–8周，大型多方可长达2–4个月并需深度尽职调查。",
+      },
+      {
+        id: "renewable-5",
+        question: "能效项目是否包含在本服务中？",
+        answer:
+          "包含。我们陪同能效项目融资——从财务能效审计、投资回报/回收期计算，到工业或楼宇改造融资结构设计。",
+      },
+      {
+        id: "renewable-6",
+        question: "是否保证项目获得融资？",
+        answer:
+          "无人能保证融资获批——决定权完全在金融机构或投资者。我们通过正确战略、完整文件及专业陪同最大化成功概率。",
+      },
+    ],
+  },
+
+  cta: createServiceCta(
+    "制定合适的可再生能源融资战略",
+    "告诉我们您的项目特征与资金需求。顾问团队将在24小时内回复。",
+  ),
+};

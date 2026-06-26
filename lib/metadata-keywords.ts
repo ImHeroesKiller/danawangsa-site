@@ -37,6 +37,13 @@ const SERVICE_KEYWORDS: Record<Locale, Record<string, string[]>> = {
       "konsultasi korporat",
       "danawangsa capital",
     ],
+    "pembiayaan-energi-terbarukan": [
+      "pembiayaan energi terbarukan",
+      "green financing",
+      "efisiensi energi",
+      "ESG financing",
+      "danawangsa capital",
+    ],
   },
   en: {
     "bridging-restrukturisasi": [
@@ -74,6 +81,13 @@ const SERVICE_KEYWORDS: Record<Locale, Record<string, string[]>> = {
       "strategic advisory",
       "danawangsa capital",
     ],
+    "pembiayaan-energi-terbarukan": [
+      "renewable energy financing",
+      "green financing",
+      "energy efficiency",
+      "ESG financing",
+      "danawangsa capital",
+    ],
   },
   zh: {
     "bridging-restrukturisasi": [
@@ -109,6 +123,13 @@ const SERVICE_KEYWORDS: Record<Locale, Record<string, string[]>> = {
       "财务顾问",
       "企业战略",
       "战略咨询",
+      "danawangsa capital",
+    ],
+    "pembiayaan-energi-terbarukan": [
+      "可再生能源融资",
+      "绿色融资",
+      "能效项目",
+      "ESG融资",
       "danawangsa capital",
     ],
   },

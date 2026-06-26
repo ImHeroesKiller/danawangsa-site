@@ -11,6 +11,7 @@ const SERVICE_KEYS = [
   "modalUsahaJaminanAsetService",
   "modalKerjaSkbdnService",
   "assetCollateralProgramService",
+  "renewableEnergyFinancingService",
   "businessFinancialAdvisoryService",
 ] as const;
 

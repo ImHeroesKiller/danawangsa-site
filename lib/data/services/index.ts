@@ -3,6 +3,7 @@ import { localizeHref } from "./locale-utils";
 import { assetCollateralProgramService } from "./asset-collateral-program";
 import { bridgingRestrukturisasiService } from "./bridging-restrukturisasi";
 import { businessFinancialAdvisoryService } from "./business-financial-advisory";
+import { renewableEnergyFinancingService } from "./pembiayaan-energi-terbarukan";
 import { getServicesForLocale } from "./locales";
 import { modalKerjaSkbdnService } from "./modal-kerja-skbdn";
 import { modalUsahaJaminanAsetService } from "./modal-usaha-jaminan-aset";
@@ -14,6 +15,7 @@ export const services: ServicePageData[] = [
   modalUsahaJaminanAsetService,
   modalKerjaSkbdnService,
   assetCollateralProgramService,
+  renewableEnergyFinancingService,
   businessFinancialAdvisoryService,
 ];
 
@@ -22,6 +24,7 @@ export { modalUsahaJaminanAsetService } from "./modal-usaha-jaminan-aset";
 export { modalKerjaSkbdnService } from "./modal-kerja-skbdn";
 export { assetCollateralProgramService } from "./asset-collateral-program";
 export { businessFinancialAdvisoryService } from "./business-financial-advisory";
+export { renewableEnergyFinancingService } from "./pembiayaan-energi-terbarukan";
 export { getServicesForLocale } from "./locales";
 export { applyLocaleToService, localizeHref } from "./locale-utils";
 
