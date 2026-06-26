@@ -255,6 +255,13 @@
       "return": "Return / 10% Fee",
       "collateralLink": "Linked Collateral"
     },
+    "tooltips": {
+      "collateral": "The Asset Owner pledges fixed assets as collateral to the Investor. Governed by Contract A — covering collateral rights, valuation, and returns.",
+      "funds": "The Investor deploys capital to the Fund User per the selected scheme. Governed by Contract B — 3-month cycle tenor with clear payment obligations.",
+      "return": "The Fund User repays principal + returns (10% One Time Fee per cycle) to the Investor. Cycles can be renewed up to 4× per year.",
+      "collateralLink": "Asset collateral from the Asset Owner secures the Fund User's transaction. On default, collateral execution follows the contract terms."
+    },
+    "tooltipHint": "Hover over flow labels or diagram lines. On mobile, tap a label for details.",
     "contracts": {
       "title": "Separate Legal Contracts",
       "contractA": {

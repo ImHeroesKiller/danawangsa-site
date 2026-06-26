@@ -255,6 +255,13 @@
       "return": "Return / Fee 10%",
       "collateralLink": "Jaminan Terkait"
     },
+    "tooltips": {
+      "collateral": "Pemilik Aset menempatkan aset tetap sebagai jaminan kepada Investor. Diatur dalam Kontrak A — mencakup hak jaminan, valuasi, dan imbal hasil.",
+      "funds": "Investor menyalurkan modal kepada Pengguna Dana sesuai skema yang dipilih. Diatur dalam Kontrak B — tenor siklus 3 bulan dengan kewajiban bayar jelas.",
+      "return": "Pengguna Dana mengembalikan pokok + imbal hasil (One Time Fee 10% per siklus) kepada Investor. Siklus dapat diperpanjang hingga 4× per tahun.",
+      "collateralLink": "Jaminan aset dari Pemilik Aset mengikat transaksi Pengguna Dana. Jika default, mekanisme eksekusi jaminan dijalankan sesuai kontrak."
+    },
+    "tooltipHint": "Arahkan kursor ke label alur atau garis diagram. Di mobile, ketuk label untuk detail.",
     "contracts": {
       "title": "Pemisahan Kontrak Legal",
       "contractA": {
