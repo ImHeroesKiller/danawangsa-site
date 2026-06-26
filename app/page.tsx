@@ -1,4 +1,5 @@
 import { BridgingSection } from "@/components/sections/bridging-section";
+import { PendanaanStrategisSection } from "@/components/sections/pendanaan-strategis-section";
 import { CtaSection } from "@/components/sections/cta-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { FeeSection } from "@/components/sections/fee-section";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <IntroSection />
       <ServicesSection />
       <BridgingSection />
+      <PendanaanStrategisSection />
       <ProcessSection />
       <FeeSection />
       <TestimonialsSection />
