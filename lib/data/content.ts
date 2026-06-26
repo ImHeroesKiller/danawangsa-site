@@ -17,19 +17,12 @@ import {
 import type {
   FaqItem,
   FeeItem,
-  NavLink,
   ProcessStep,
   Service,
   Testimonial,
   TrustStat,
   ValueProposition,
 } from "@/types";
-
-export const navLinks: NavLink[] = [
-  { label: "Solusi", href: "/#solutions" },
-  { label: "Layanan", href: "/layanan" },
-  { label: "Testimoni", href: "/#testimonials" },
-];
 
 export const trustStats: TrustStat[] = [
   { value: "10+", label: "Tahun Pengalaman" },
