@@ -1,40 +1,39 @@
 import type { ServicePageData } from "@/types/service";
 
-const ADVISORY_POSITIONING =
-  "Strategic business & financial consultant — not a bank, not a lending institution.";
+const ADVISORY_POSITIONING = "Strategic Business & Financial Consultant";
 
 const ADVISORY_FOOTNOTE =
-  "Not direct fund disbursement • We help design strategy & accompany the process";
+  "Strategic Business & Financial Consultant — designing strategy and accompanying your process";
 
 const FEE_FOOTNOTE =
-  "Full details will be set out in the official Consultation Agreement. Consultation fees are separate from bank, notary, appraisal, and legal costs.";
+  "Fee structure is tailored to project complexity and needs. Full details are discussed after initial assessment and set out in the official Consultation Agreement.";
 
 const generalStrukturFee: ServicePageData["strukturFee"] = {
   eyebrow: "FEE STRUCTURE",
-  title: "Transparent & Deliverable-Based",
+  title: "Transparent & Tailored",
   description:
-    "Consultation fees are explained upfront in the proposal and Consultation Agreement — separate from third-party costs.",
+    "Consultation fees are determined after assessment and explained upfront in the proposal and Consultation Agreement — separate from third-party costs.",
   items: [
     {
-      id: "base",
-      title: "Retainer / Base Fee",
-      amount: "35–50%",
+      id: "assessment",
+      title: "Assessment",
+      amount: "Tailored",
       description:
-        "Upfront deposit (non-refundable) to commence in-depth analysis, due diligence, and strategy development.",
+        "Fee determined after initial assessment of scope, complexity, and deliverables.",
     },
     {
-      id: "milestone",
-      title: "Milestone Payment",
-      amount: "Phased",
+      id: "advisory",
+      title: "Advisory",
+      amount: "Flexible",
       description:
-        "Payment per stage: analysis completed, strategy approved by client, negotiation or execution commenced.",
+        "Flexible payment aligned with project stages — analysis, strategy, and negotiation support.",
     },
     {
-      id: "final",
-      title: "Final / Settlement Fee",
-      amount: "Balance",
+      id: "closing",
+      title: "Closing",
+      amount: "Tailored",
       description:
-        "Final payment upon delivery of deliverables: final report, strategy documents, or agreed milestones achieved.",
+        "Final phase fees aligned with delivery of agreed milestones and project closure.",
       highlighted: true,
     },
   ],
@@ -64,9 +63,9 @@ function createStandardFaq(
     items: [
       {
         id: `${prefix}-1`,
-        question: `Does Danawangsa Capital disburse funds for ${serviceName}?`,
+        question: `What is Danawangsa Capital's role in ${serviceName}?`,
         answer:
-          "No. We are strategic consultants — not a lending institution. We design strategy and accompany negotiation processes with banks or partners. Fund disbursement is entirely through official financial institutions.",
+          "We are Strategic Business & Financial Consultants. We design strategy, prepare documentation, and accompany negotiation processes with banks or partners throughout your financing journey.",
       },
       {
         id: `${prefix}-2`,
@@ -76,9 +75,9 @@ function createStandardFaq(
       },
       {
         id: `${prefix}-3`,
-        question: "Do you guarantee credit approval from the bank?",
+        question: "How is the consulting fee structure determined?",
         answer:
-          "No one can guarantee credit approval — the decision rests entirely with the bank. However, we maximize your chances with the right strategy, complete documentation, and professional negotiation support.",
+          "Fee structure is tailored to project complexity and needs. Consulting fees will be discussed further after the initial assessment, before work begins.",
       },
       {
         id: `${prefix}-4`,
@@ -92,30 +91,30 @@ function createStandardFaq(
 
 const bridgingStrukturFee: ServicePageData["strukturFee"] = {
   eyebrow: "FEE STRUCTURE",
-  title: "Transparent & Results-Based",
+  title: "Transparent & Tailored",
   description:
-    "Bridging fees are explained upfront in the proposal and Consultation Agreement — separate from third-party costs.",
+    "Bridging consultation fees are determined after assessment and explained upfront in the proposal and Consultation Agreement — separate from third-party costs.",
   items: [
     {
-      id: "base",
-      title: "Retainer / Base Fee",
-      amount: "35–50%",
+      id: "assessment",
+      title: "Assessment",
+      amount: "Tailored",
       description:
-        "Upfront deposit (non-refundable) to commence in-depth analysis, due diligence, and bridging strategy development.",
+        "Fee determined after initial assessment of case scope, urgency, and complexity.",
     },
     {
-      id: "milestone",
-      title: "Milestone Payment",
-      amount: "Phased",
+      id: "advisory",
+      title: "Advisory",
+      amount: "Flexible",
       description:
-        "Payment per stage: analysis completed, strategy approved by client, bank negotiation commenced.",
+        "Flexible payment aligned with project stages — analysis, strategy design, and bank negotiation support.",
     },
     {
-      id: "success",
-      title: "Success Fee",
-      amount: "3–6%",
+      id: "closing",
+      title: "Closing",
+      amount: "Tailored",
       description:
-        "Specific to bridging & restructuring — only payable if funding is successfully disbursed or restructuring is approved by the bank.",
+        "Final phase fees aligned with delivery of agreed milestones and restructuring closure.",
       highlighted: true,
     },
   ],
@@ -131,7 +130,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
   meta: {
     title: "Bridging Finance & Financial Restructuring",
     description:
-      "Strategic bridging finance & financial restructuring consultation for companies. Professional support — not a lending institution. 1–2 day analysis for urgent cases.",
+      "Strategic bridging finance & financial restructuring consultation for companies. Professional strategic support with 1–2 day analysis for urgent cases.",
   },
 
   listing: {
@@ -147,7 +146,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
     title: "Bridging Finance &",
     titleHighlight: "Financial Restructuring",
     description:
-      "Consulting partner to address bank loan maturities — we design bridging finance & financial restructuring strategy and accompany negotiations, not disburse funds directly.",
+      "Consulting partner to address bank loan maturities — we design bridging finance & financial restructuring strategy and accompany negotiations at every stage.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: {
       label: "View Fee Structure",
@@ -160,7 +159,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
     title: "BRIDGING FINANCE &",
     titleHighlight: "Financial Restructuring",
     description:
-      "Bank loan approaching maturity? We help design bridging finance strategy and accompany financial restructuring — not direct fund disbursement.",
+      "Bank loan approaching maturity? We help design bridging finance strategy and accompany financial restructuring with professional support.",
     highlights: [
       { label: "Fast Analysis 1-2 Days", icon: "bolt" },
       { label: "Short-Term Strategy", icon: "clock" },
@@ -210,7 +209,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
 
   solusi: {
     eyebrow: "OUR SOLUTION",
-    title: "Bridging Finance Advisory — Not Fund Disbursement",
+    title: "Bridging Finance Advisory — Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital helps you design and execute bridging finance & financial restructuring strategy with professional support at every stage.",
     items: [
@@ -313,9 +312,9 @@ export const bridgingRestrukturisasiService: ServicePageData = {
     items: [
       {
         id: "b1",
-        question: "Does Danawangsa Capital disburse bridging funds directly?",
+        question: "What is Danawangsa Capital's role in bridging finance?",
         answer:
-          "No. We are strategic consultants — not a lending institution. We design bridging strategy and accompany negotiation with banks or third parties. Fund disbursement is entirely through official financial institutions.",
+          "We are Strategic Business & Financial Consultants. We design bridging strategy, prepare documentation, and accompany negotiation with banks or third parties throughout your restructuring journey.",
       },
       {
         id: "b2",
@@ -325,9 +324,9 @@ export const bridgingRestrukturisasiService: ServicePageData = {
       },
       {
         id: "b3",
-        question: "What is the success fee for bridging cases?",
+        question: "How are consultation fees determined for bridging cases?",
         answer:
-          "Success fee ranges 3–6% of the transaction value or loan successfully disbursed/restructured. This fee is only payable if agreed outcomes are achieved — explained transparently in the proposal before work begins.",
+          "Fees are determined after an initial assessment of your case scope and complexity. We provide a transparent proposal with flexible payment aligned with project stages before work begins.",
       },
       {
         id: "b4",
@@ -373,7 +372,7 @@ export const modalUsahaJaminanAsetService: ServicePageData = {
   meta: {
     title: modalUsahaName,
     description:
-      "Strategic business capital financing consultation with asset collateral — working capital planning, expansion, and optimal collateral structure. Professional support, not a lending institution.",
+      "Strategic business capital financing consultation with asset collateral — working capital planning, expansion, and optimal collateral structure. Professional strategic support.",
   },
 
   listing: {
@@ -388,7 +387,7 @@ export const modalUsahaJaminanAsetService: ServicePageData = {
     title: "Business Capital Financing",
     titleHighlight: "with Asset Collateral",
     description:
-      "Consulting partner to design business capital financing strategy — we analyze financial position, optimize asset collateral, and accompany bank negotiations, not disburse funds directly.",
+      "Consulting partner to design business capital financing strategy — we analyze financial position, optimize asset collateral, and accompany bank negotiations at every stage.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "View Fee Structure", href: `${modalUsahaPath}#fee` },
   },
@@ -448,7 +447,7 @@ export const modalUsahaJaminanAsetService: ServicePageData = {
 
   solusi: {
     eyebrow: "OUR SOLUTION",
-    title: "Strategy Consultation — Not Fund Disbursement",
+    title: "Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital helps design business capital financing strategy with asset collateral tailored to your business profile.",
     items: [
@@ -565,7 +564,7 @@ export const modalKerjaSkbdnService: ServicePageData = {
   meta: {
     title: skbdnName,
     description:
-      "SKBDN-based working capital financing strategy consultation for suppliers, contractors, and trading. Analysis & negotiation support — not a lending institution.",
+      "SKBDN-based working capital financing strategy consultation for suppliers, contractors, and trading. Professional analysis and negotiation support.",
   },
 
   listing: {
@@ -580,7 +579,7 @@ export const modalKerjaSkbdnService: ServicePageData = {
     title: "Working Capital Financing",
     titleHighlight: "SKBDN-Based",
     description:
-      "Consulting partner to design SKBDN-based working capital structure — we analyze project needs, prepare documents, and accompany bank negotiations, not disburse funds directly.",
+      "Consulting partner to design SKBDN-based working capital structure — we analyze project needs, prepare documents, and accompany bank negotiations at every stage.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "View Fee Structure", href: `${skbdnPath}#fee` },
   },
@@ -640,7 +639,7 @@ export const modalKerjaSkbdnService: ServicePageData = {
 
   solusi: {
     eyebrow: "OUR SOLUTION",
-    title: "Strategy Consultation — Not Fund Disbursement",
+    title: "Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital helps design efficient SKBDN-based working capital structure for your project business.",
     items: [
@@ -757,7 +756,7 @@ export const assetCollateralProgramService: ServicePageData = {
   meta: {
     title: assetName,
     description:
-      "Collateral Partnership Scheme consultation — connecting Asset Owners, Investors, and Fund Users through a tripartite structure & separate legal contracts. Not a lending institution.",
+      "Collateral Partnership Scheme consultation — connecting Asset Owners, Investors, and Fund Users through a tripartite structure and separate legal contracts. Strategic Business & Financial Consultant.",
   },
 
   listing: {
@@ -772,7 +771,7 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "Asset Collateral",
     titleHighlight: "Program",
     description:
-      "Consulting partner to design Collateral Partnership Schemes — we structure tripartite relationships between Asset Owners, Investors, and Fund Users with separate legal contracts, not disburse funds directly.",
+      "Consulting partner to design Collateral Partnership Schemes — we structure tripartite relationships between Asset Owners, Investors, and Fund Users with separate legal contracts and professional accompaniment.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "View Fee Structure", href: `${assetPath}#fee` },
   },
@@ -784,7 +783,7 @@ export const assetCollateralProgramService: ServicePageData = {
     description:
       "Need fast liquidity or want to monetize assets? We help design collateral partnership schemes via two pathways — Liquidation & Fresh Money — with professional support.",
     highlights: [
-      { label: "10% Fee per 3-Month Cycle", icon: "wallet" },
+      { label: "Structured Returns per Cycle", icon: "wallet" },
       { label: "Up to 4× per Year", icon: "trending-up" },
       { label: "Fast Disbursement", icon: "bolt" },
     ],
@@ -834,7 +833,7 @@ export const assetCollateralProgramService: ServicePageData = {
     eyebrow: "OUR SOLUTION",
     title: "Collateral Partnership Scheme — Two Main Pathways",
     description:
-      "Danawangsa Capital designs and accompanies Collateral Partnership Schemes with a tripartite structure tailored to each party's needs — not direct fund disbursement.",
+      "Danawangsa Capital designs and accompanies Collateral Partnership Schemes with a tripartite structure tailored to each party's needs — as Strategic Business & Financial Consultants.",
     items: [
       "Asset/Collateral Liquidation Scheme — structured utilization of assets or collateral through a liquidation scheme with clear timeline and returns",
       "Fresh Money Scheme — fresh money structure with asset collateral for short-term liquidity needs of Fund Users",
@@ -850,9 +849,9 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "Collateral Partnership Scheme Advantages",
     items: [
       {
-        title: "One Time Fee 10% per Cycle",
+        title: "Structured Returns per Investment Cycle",
         description:
-          "Transparent return structure — 10% per 3-month cycle, enabling clear planning for Investors and Asset Owners.",
+          "Transparent return structure per investment cycle, enabling clear planning for Investors and Asset Owners.",
         icon: "wallet",
       },
       {
@@ -916,35 +915,35 @@ export const assetCollateralProgramService: ServicePageData = {
 
   strukturFee: {
     eyebrow: "FEE STRUCTURE",
-    title: "One Time Fee 10% per Cycle",
+    title: "Structured Returns per Investment Cycle",
     description:
-      "Scheme fees are calculated per 3-month cycle — transparent, measurable, and explained upfront before execution.",
+      "Scheme returns are structured per investment cycle — transparent, measurable, and explained upfront before execution.",
     items: [
       {
-        id: "cycle-fee",
-        title: "One Time Fee per Cycle",
-        amount: "10%",
+        id: "cycle-returns",
+        title: "Per-Cycle Returns",
+        amount: "Tailored",
         description:
-          "Charged once per 3-month cycle on the agreed transaction or collateral value — applies to each cycle renewal.",
+          "Structured returns per investment cycle based on agreed transaction or collateral value — applies to each cycle renewal.",
         highlighted: true,
       },
       {
         id: "annual-potential",
-        title: "Annual Potential",
-        amount: "4× / Year",
+        title: "Renewal Potential",
+        amount: "Flexible",
         description:
-          "With 3-month cycles, the scheme can be renewed up to 4 times per year — 10% fee applies per active cycle.",
+          "With structured 3-month cycles, the scheme can be renewed up to 4 times per year — returns apply per active cycle.",
       },
       {
         id: "consultation",
         title: "Danawangsa Consultation Fee",
-        amount: "Separate",
+        amount: "Tailored",
         description:
-          "Strategy, legal, and execution support fees are set in the Consultation Agreement — separate from partnership scheme fees between parties.",
+          "Strategy, legal, and execution support fees are set in the Consultation Agreement — separate from partnership scheme returns between parties.",
       },
     ],
     footnote:
-      "Full fee details for the scheme and consultation are set out in the official proposal and agreements. Danawangsa Capital is a strategic consultant — not a fund disbursing party.",
+      "Full details for the scheme and consultation are set out in the official proposal and agreements. Danawangsa Capital is a Strategic Business & Financial Consultant — designing strategy and accompanying your process.",
   },
 
   cocokUntuk: {
@@ -952,7 +951,7 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "Three Parties in the Collateral Partnership Scheme",
     items: [
       "Asset Owners — owners of land, buildings, commercial property, or productive assets seeking monetization without selling",
-      "Investors — individuals or institutions seeking structured returns from collateral assets (10% per 3-month cycle)",
+      "Investors — individuals or institutions seeking structured returns from collateral assets per investment cycle",
       "Fund Users — companies or SMEs needing fast liquidity with asset collateral via Fresh Money or Liquidation Scheme",
     ],
   },
@@ -963,9 +962,9 @@ export const assetCollateralProgramService: ServicePageData = {
     items: [
       {
         id: "aset-1",
-        question: "Does Danawangsa Capital disburse funds in this scheme?",
+        question: "What is Danawangsa Capital's role in this scheme?",
         answer:
-          "No. We are strategic consultants who design structures, draft contracts, and accompany the process. Fund disbursement occurs directly between Investors and Fund Users per the agreed agreements.",
+          "We are Strategic Business & Financial Consultants who design structures, draft contracts, and accompany the process. Capital flows between Investors and Fund Users per the agreed agreements, with our professional guidance throughout.",
       },
       {
         id: "aset-2",
@@ -990,7 +989,7 @@ export const assetCollateralProgramService: ServicePageData = {
         id: "aset-5",
         question: "Can the scheme be renewed beyond one cycle?",
         answer:
-          "Yes. Each cycle runs 3 months and can be renewed up to 4 times per year. The 10% One Time Fee applies per active cycle, with consent from all three parties.",
+          "Yes. Each cycle runs 3 months and can be renewed up to 4 times per year. Structured returns apply per active cycle, with consent from all three parties.",
       },
       {
         id: "aset-6",
@@ -1020,7 +1019,7 @@ export const businessFinancialAdvisoryService: ServicePageData = {
   meta: {
     title: advisoryName,
     description:
-      "Business & Financial Advisory for business development, financial planning, and profitability improvement. Strategic consultation — not a lending institution.",
+      "Business & Financial Advisory for business development, financial planning, and profitability improvement. Strategic Business & Financial Consultant.",
   },
 
   listing: {
@@ -1035,7 +1034,7 @@ export const businessFinancialAdvisoryService: ServicePageData = {
     title: "Business & Financial",
     titleHighlight: "Advisory",
     description:
-      "Consulting partner for holistic business & financial strategy — we analyze company conditions, design strategic recommendations, and accompany implementation, not disburse funds directly.",
+      "Consulting partner for holistic business & financial strategy — we analyze company conditions, design strategic recommendations, and accompany implementation at every stage.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "View Fee Structure", href: `${advisoryPath}#fee` },
   },
@@ -1095,7 +1094,7 @@ export const businessFinancialAdvisoryService: ServicePageData = {
 
   solusi: {
     eyebrow: "OUR SOLUTION",
-    title: "Strategic Advisory — Not Fund Disbursement",
+    title: "Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital provides Business & Financial Advisory tailored to your company's specific conditions and goals.",
     items: [
@@ -1205,38 +1204,31 @@ const renewableName = "Renewable Energy Financing Advisory";
 
 const renewableEnergyStrukturFee: ServicePageData["strukturFee"] = {
   eyebrow: "FEE STRUCTURE",
-  title: "Transparent & Deliverable-Based",
+  title: "Transparent & Tailored",
   description:
-    "Consultation fees are explained upfront in the proposal and Consultation Agreement — separate from third-party costs (appraisal, legal, technical due diligence, etc.).",
+    "Consultation fees are determined after assessment and explained upfront in the proposal and Consultation Agreement — separate from third-party costs (appraisal, legal, technical due diligence, etc.).",
   items: [
     {
-      id: "base",
-      title: "Retainer / Base Fee",
-      amount: "35–50%",
+      id: "assessment",
+      title: "Assessment",
+      amount: "Tailored",
       description:
-        "Upfront deposit (non-refundable) to commence project analysis, initial due diligence, and green financing strategy development.",
+        "Fee determined after initial assessment of project scope, technical profile, and financing complexity.",
     },
     {
-      id: "milestone",
-      title: "Milestone Payment",
-      amount: "Phased",
+      id: "advisory",
+      title: "Advisory",
+      amount: "Flexible",
       description:
-        "Payment per stage: feasibility study completed, financing structure approved, documentation ready, funding source negotiations commenced.",
+        "Flexible payment aligned with project stages — feasibility study, financing structure design, and funding source negotiations.",
     },
     {
-      id: "final",
-      title: "Final / Settlement Fee",
-      amount: "Balance",
+      id: "closing",
+      title: "Closing",
+      amount: "Tailored",
       description:
-        "Settlement upon delivery of agreed deliverables: financing strategy report, investor pitch deck, or agreed milestone achieved.",
+        "Final phase fees aligned with delivery of agreed milestones and financing closure.",
       highlighted: true,
-    },
-    {
-      id: "success",
-      title: "Success Fee (Optional)",
-      amount: "2–5%",
-      description:
-        "Specific to green financing projects — only payable if funding is successfully agreed or the financing transaction closes per agreed targets.",
     },
   ],
   footnote: FEE_FOOTNOTE,
@@ -1251,7 +1243,7 @@ export const renewableEnergyFinancingService: ServicePageData = {
   meta: {
     title: renewableName,
     description:
-      "Strategic advisory for renewable energy project financing and energy efficiency — solar, wind, hydro, biomass, and waste-to-energy. Professional support — not a lending institution.",
+      "Strategic advisory for renewable energy project financing and energy efficiency — solar, wind, hydro, biomass, and waste-to-energy. Professional strategic support.",
   },
 
   listing: {
@@ -1267,7 +1259,7 @@ export const renewableEnergyFinancingService: ServicePageData = {
     title: "Renewable Energy",
     titleHighlight: "Financing Advisory",
     description:
-      "Strategic consulting partner for designing and accompanying renewable energy and energy efficiency project financing — we help structure strategy and coordinate with green funding sources, not disburse funds directly.",
+      "Strategic consulting partner for designing and accompanying renewable energy and energy efficiency project financing — we help structure strategy and coordinate with green funding sources at every stage.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "View Fee Structure", href: `${renewablePath}#fee` },
   },
@@ -1329,7 +1321,7 @@ export const renewableEnergyFinancingService: ServicePageData = {
     eyebrow: "OUR SOLUTION",
     title: "Strategic Green Financing Advisory",
     description:
-      "Danawangsa Capital accompanies companies and project developers in designing renewable energy financing strategy — as strategic consultants, not fund disbursers.",
+      "Danawangsa Capital accompanies companies and project developers in designing renewable energy financing strategy — as Strategic Business & Financial Consultants.",
     items: [
       "Renewable energy project financing strategy (solar, wind, hydro, biomass, waste-to-energy)",
       "Energy efficiency project support for industry and commercial buildings",
@@ -1437,9 +1429,9 @@ export const renewableEnergyFinancingService: ServicePageData = {
       {
         id: "renewable-1",
         question:
-          "Does Danawangsa Capital disburse funds for renewable energy projects?",
+          "What is Danawangsa Capital's role in renewable energy project financing?",
         answer:
-          "No. We are strategic financing consultants — not a lending institution. We design strategy, prepare documents, and accompany green funding sourcing. Fund disbursement is entirely through relevant financial institutions or investors.",
+          "We are Strategic Business & Financial Consultants. We design strategy, prepare documents, and accompany green funding sourcing throughout your project financing journey.",
       },
       {
         id: "renewable-2",

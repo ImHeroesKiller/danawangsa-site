@@ -1,5 +1,11 @@
 import type { ServicePageData } from "@/types/service";
 
+import {
+  ADVISORY_FOOTNOTE,
+  ADVISORY_POSITIONING,
+  generalStrukturFee,
+} from "./shared-content";
+
 export const bridgingRestrukturisasiService: ServicePageData = {
   slug: "bridging-restrukturisasi",
   path: "/layanan/bridging-restrukturisasi",
@@ -9,7 +15,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
   meta: {
     title: "Bridging Finance & Financial Restructuring",
     description:
-      "Konsultasi strategi bridging finance & financial restructuring untuk perusahaan. Pendampingan profesional — bukan lembaga pembiayaan. Analisis 1–2 hari untuk kasus urgent.",
+      "Konsultasi strategi Bridging Finance & Financial Restructuring untuk perusahaan. Strategic Business & Financial Consultant — analisis 1–2 hari untuk kasus urgent.",
   },
 
   listing: {
@@ -25,9 +31,8 @@ export const bridgingRestrukturisasiService: ServicePageData = {
     title: "Bridging Finance &",
     titleHighlight: "Financial Restructuring",
     description:
-      "Partner konsultasi untuk mengatasi jatuh tempo pinjaman bank — kami merancang strategi bridging finance & financial restructuring dan mendampingi negosiasi, bukan menyalurkan dana langsung.",
-    positioning:
-      "Konsultan bisnis & keuangan strategis — bukan bank, bukan lembaga pembiayaan.",
+      "Strategic Business & Financial Consultant untuk mengatasi jatuh tempo pinjaman — kami merancang strategi Bridging Finance & Financial Restructuring dan mendampingi negosiasi secara profesional.",
+    positioning: ADVISORY_POSITIONING,
     secondaryCta: {
       label: "Lihat Struktur Fee",
       href: "/layanan/bridging-restrukturisasi#fee",
@@ -39,7 +44,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
     title: "BRIDGING FINANCE &",
     titleHighlight: "Financial Restructuring",
     description:
-      "Pinjaman bank mendekati jatuh tempo? Kami membantu merancang strategi bridging finance dan mendampingi financial restructuring — bukan menyalurkan dana langsung.",
+      "Pinjaman bank mendekati jatuh tempo? Kami membantu merancang strategi Bridging Finance dan mendampingi Financial Restructuring secara profesional.",
     highlights: [
       { label: "Analisis Cepat 1-2 Hari", icon: "bolt" },
       { label: "Strategi Jangka Pendek", icon: "clock" },
@@ -55,7 +60,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
       description:
         "Pelajari proses 5 langkah, struktur fee, FAQ, dan kriteria klien yang cocok — semuanya di halaman detail layanan.",
       footnote:
-        "Bukan penyaluran dana langsung • Kami bantu rancang strategi & dampingi proses",
+        ADVISORY_FOOTNOTE,
     },
   },
 
@@ -90,7 +95,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
 
   solusi: {
     eyebrow: "SOLUSI KAMI",
-    title: "Bridging Finance Advisory — Bukan Penyaluran Dana",
+    title: "Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital membantu Anda merancang dan mengeksekusi strategi bridging finance & financial restructuring dengan pendampingan profesional di setiap tahap.",
     items: [
@@ -172,38 +177,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
     ],
   },
 
-  strukturFee: {
-    eyebrow: "STRUKTUR FEE",
-    title: "Transparan & Berbasis Hasil",
-    description:
-      "Fee bridging dijelaskan di awal dalam proposal dan Perjanjian Konsultasi — terpisah dari biaya pihak ketiga.",
-    items: [
-      {
-        id: "base",
-        title: "Retainer / Base Fee",
-        amount: "35–50%",
-        description:
-          "DP di awal (non-refundable) untuk memulai analisis mendalam, due diligence, dan penyusunan strategi bridging.",
-      },
-      {
-        id: "milestone",
-        title: "Milestone Payment",
-        amount: "Bertahap",
-        description:
-          "Pembayaran per tahap: analisis selesai, strategi disetujui klien, negosiasi bank dimulai.",
-      },
-      {
-        id: "success",
-        title: "Success Fee",
-        amount: "3–6%",
-        description:
-          "Khusus bridging & restrukturisasi — hanya dibayar jika pendanaan berhasil dicairkan atau restrukturisasi disetujui bank.",
-        highlighted: true,
-      },
-    ],
-    footnote:
-      "Detail lengkap akan dituangkan dalam Perjanjian Konsultasi resmi. Fee konsultasi terpisah dari biaya bank, notaris, appraisal, dan legal.",
-  },
+  strukturFee: generalStrukturFee,
 
   cocokUntuk: {
     eyebrow: "COCOK UNTUK",
@@ -225,9 +199,9 @@ export const bridgingRestrukturisasiService: ServicePageData = {
       {
         id: "b1",
         question:
-          "Apakah Danawangsa Capital menyalurkan dana bridging langsung?",
+          "Apa peran Danawangsa Capital dalam Bridging Finance & Financial Restructuring?",
         answer:
-          "Tidak. Kami adalah konsultan strategis — bukan lembaga pembiayaan. Kami merancang strategi bridging dan mendampingi proses negosiasi dengan bank atau pihak ketiga. Penyaluran dana sepenuhnya melalui lembaga keuangan resmi.",
+          "Danawangsa Capital adalah Strategic Business & Financial Consultant yang merancang strategi bridging, menyusun dokumentasi, dan mendampingi proses negosiasi dengan mitra pendanaan serta pihak terkait.",
       },
       {
         id: "b2",
@@ -237,9 +211,9 @@ export const bridgingRestrukturisasiService: ServicePageData = {
       },
       {
         id: "b3",
-        question: "Berapa success fee untuk kasus bridging?",
+        question: "Bagaimana struktur fee konsultasi bridging ditentukan?",
         answer:
-          "Success fee berkisar 3–6% dari nilai transaksi atau pinjaman yang berhasil dicairkan/direstrukturisasi. Fee ini hanya dibayar jika hasil yang disepakati tercapai — dijelaskan transparan di proposal sebelum pekerjaan dimulai.",
+          "Struktur fee disesuaikan dengan kompleksitas dan kebutuhan proyek. Biaya konsultasi akan dibahas lebih lanjut setelah proses assessment awal, sebelum pekerjaan dimulai.",
       },
       {
         id: "b4",
@@ -268,7 +242,6 @@ export const bridgingRestrukturisasiService: ServicePageData = {
     description:
       "Ceritakan situasi pinjaman bank Anda. Tim advisor kami siap merespons dalam 1×24 jam dengan analisis awal dan rekomendasi langkah selanjutnya.",
     secondaryCta: { label: "Lihat Layanan Lainnya", href: "/layanan" },
-    footnote:
-      "Bukan penyaluran dana langsung • Kami bantu rancang strategi & dampingi proses",
+    footnote: ADVISORY_FOOTNOTE,
   },
 };

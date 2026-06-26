@@ -43,7 +43,7 @@
   <text x="120" y="450" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="#FFFFFF" fill-opacity="0.75">Strategic Business &amp; Financial Advisory</text>
 
   <!-- Positioning note -->
-  <text x="120" y="495" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="400" fill="#D4AF37" fill-opacity="0.85">Konsultan bisnis &amp; keuangan strategis — bukan lembaga pembiayaan</text>
+  <text x="120" y="495" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="400" fill="#D4AF37" fill-opacity="0.85">Strategic Business &amp; Financial Consultant</text>
 
   <!-- Footer badge -->
   <rect x="120" y="540" width="290" height="36" rx="18" fill="#D4AF37" fill-opacity="0.1" stroke="#D4AF37" stroke-opacity="0.35"/>

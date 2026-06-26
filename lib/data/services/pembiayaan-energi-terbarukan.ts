@@ -4,51 +4,12 @@ import {
   ADVISORY_FOOTNOTE,
   ADVISORY_POSITIONING,
   createServiceCta,
-  FEE_FOOTNOTE,
+  generalStrukturFee,
 } from "./shared-content";
 
 const slug = "pembiayaan-energi-terbarukan";
 const path = `/layanan/${slug}`;
 const name = "Konsultasi Pembiayaan Energi Terbarukan";
-
-const renewableEnergyStrukturFee: ServicePageData["strukturFee"] = {
-  eyebrow: "STRUKTUR FEE",
-  title: "Transparan & Berbasis Deliverable",
-  description:
-    "Fee konsultasi dijelaskan di awal dalam proposal dan Perjanjian Konsultasi — terpisah dari biaya pihak ketiga (appraisal, legal, due diligence teknis, dll.).",
-  items: [
-    {
-      id: "base",
-      title: "Retainer / Base Fee",
-      amount: "35–50%",
-      description:
-        "DP di awal (non-refundable) untuk memulai analisis proyek, due diligence awal, dan penyusunan strategi pembiayaan hijau.",
-    },
-    {
-      id: "milestone",
-      title: "Milestone Payment",
-      amount: "Bertahap",
-      description:
-        "Pembayaran per tahap: studi kelayakan selesai, struktur pembiayaan disetujui, dokumentasi siap, negosiasi dengan sumber pendanaan dimulai.",
-    },
-    {
-      id: "final",
-      title: "Final / Pelunasan Fee",
-      amount: "Sisa",
-      description:
-        "Pelunasan saat deliverable diserahkan: laporan strategi pembiayaan, dokumen pitch deck investor, atau milestone yang disepakati tercapai.",
-      highlighted: true,
-    },
-    {
-      id: "success",
-      title: "Success Fee (Opsional)",
-      amount: "2–5%",
-      description:
-        "Khusus proyek pembiayaan hijau — hanya dibayar jika pendanaan berhasil disepakati atau transaksi pembiayaan berhasil ditutup sesuai target yang disepakati di awal.",
-    },
-  ],
-  footnote: FEE_FOOTNOTE,
-};
 
 export const renewableEnergyFinancingService: ServicePageData = {
   slug,
@@ -59,7 +20,7 @@ export const renewableEnergyFinancingService: ServicePageData = {
   meta: {
     title: name,
     description:
-      "Konsultasi strategis pembiayaan energi terbarukan dan efisiensi energi untuk proyek solar, wind, hydro, biomass, dan waste-to-energy. Pendampingan profesional — bukan lembaga pembiayaan.",
+      "Konsultasi strategis pembiayaan energi terbarukan dan efisiensi energi untuk proyek solar, wind, hydro, biomass, dan waste-to-energy. Strategic Business & Financial Consultant.",
   },
 
   listing: {
@@ -75,7 +36,7 @@ export const renewableEnergyFinancingService: ServicePageData = {
     title: "Konsultasi Pembiayaan",
     titleHighlight: "Energi Terbarukan",
     description:
-      "Partner konsultasi strategis untuk merancang dan mendampingi pembiayaan proyek energi terbarukan serta efisiensi energi — kami bantu susun strategi, struktur, dan koordinasi dengan sumber pendanaan hijau, bukan menyalurkan dana langsung.",
+      "Strategic Business & Financial Consultant untuk merancang dan mendampingi pembiayaan proyek energi terbarukan serta efisiensi energi — penyusunan strategi, struktur, dan koordinasi dengan sumber pendanaan hijau.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "Lihat Struktur Fee", href: `${path}#fee` },
   },
@@ -137,7 +98,7 @@ export const renewableEnergyFinancingService: ServicePageData = {
     eyebrow: "SOLUSI KAMI",
     title: "Strategic Green Financing Advisory",
     description:
-      "Danawangsa Capital mendampingi perusahaan dan pengembang proyek dalam merancang strategi pembiayaan energi terbarukan — sebagai konsultan strategis, bukan penyalur dana.",
+      "Danawangsa Capital mendampingi perusahaan dan pengembang proyek sebagai Strategic Business & Financial Consultant dalam merancang strategi pembiayaan energi terbarukan.",
     items: [
       "Strategi pembiayaan proyek energi terbarukan (solar, wind, hydro, biomass, waste-to-energy)",
       "Pendampingan proyek efisiensi energi di industri dan gedung komersial",
@@ -223,7 +184,7 @@ export const renewableEnergyFinancingService: ServicePageData = {
     ],
   },
 
-  strukturFee: renewableEnergyStrukturFee,
+  strukturFee: generalStrukturFee,
 
   cocokUntuk: {
     eyebrow: "COCOK UNTUK",
@@ -245,9 +206,9 @@ export const renewableEnergyFinancingService: ServicePageData = {
       {
         id: "renewable-1",
         question:
-          "Apakah Danawangsa Capital menyalurkan dana untuk proyek energi terbarukan?",
+          "Apa peran Danawangsa Capital dalam pembiayaan energi terbarukan?",
         answer:
-          "Tidak. Kami adalah konsultan strategis pembiayaan — bukan lembaga pembiayaan. Kami merancang strategi, menyusun dokumen, dan mendampingi proses sourcing pendanaan hijau. Penyaluran dana sepenuhnya melalui lembaga keuangan atau investor yang relevan.",
+          "Danawangsa Capital adalah Strategic Business & Financial Consultant yang merancang strategi, menyusun dokumen, dan mendampingi proses sourcing pendanaan hijau bersama mitra pendanaan serta pihak terkait.",
       },
       {
         id: "renewable-2",

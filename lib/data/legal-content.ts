@@ -25,7 +25,7 @@ export const privacyPolicyContent: LegalPageContent = {
       title: "1. Pendahuluan",
       paragraphs: [
         "Danawangsa Capital («kami») adalah firma konsultasi bisnis & keuangan strategis. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi informasi pribadi yang Anda berikan melalui website, formulir konsultasi, komunikasi email, WhatsApp, atau pertemuan bisnis.",
-        "Kebijakan ini berlaku untuk seluruh layanan konsultasi kami. Kami bukan lembaga pembiayaan, bank, atau pemberi kredit — data yang kami kumpulkan digunakan semata-mata untuk keperluan konsultasi dan pendampingan strategis.",
+        "Kebijakan ini berlaku untuk seluruh layanan konsultasi kami sebagai Strategic Business & Financial Consultant. Data yang kami kumpulkan digunakan semata-mata untuk keperluan konsultasi dan pendampingan strategis.",
       ],
     },
     {
@@ -115,7 +115,7 @@ export const termsOfServiceContent: LegalPageContent = {
       title: "1. Definisi & Posisi Layanan",
       paragraphs: [
         "Danawangsa Capital menyediakan layanan konsultasi bisnis & keuangan strategis, termasuk analisis, perencanaan strategi, penyusunan rekomendasi, dan pendampingan negosiasi dengan pihak ketiga (bank, investor, mitra legal, dll.).",
-        "Kami secara tegas bukan lembaga pembiayaan, bank, multifinance, atau pemberi kredit. Kami tidak mencairkan dana, tidak memberikan pinjaman, dan tidak menjamin persetujuan kredit dari pihak ketiga mana pun.",
+        "Danawangsa Capital adalah Strategic Business & Financial Consultant yang menyediakan layanan advisory dan pendampingan profesional. Keputusan pendanaan, kredit, dan investasi sepenuhnya menjadi tanggung jawab klien dan pihak ketiga terkait.",
       ],
     },
     {
@@ -138,16 +138,15 @@ export const termsOfServiceContent: LegalPageContent = {
     },
     {
       id: "pembayaran",
-      title: "4. Pembayaran, Retainer & Milestone",
+      title: "4. Pembayaran & Struktur Fee",
       paragraphs: [
-        "Struktur fee konsultasi dijelaskan secara transparan dalam proposal dan Perjanjian Konsultasi resmi sebelum pekerjaan dimulai. Komponen fee umum meliputi:",
+        "Struktur fee konsultasi disesuaikan dengan kompleksitas dan kebutuhan proyek. Biaya konsultasi akan dibahas lebih lanjut setelah proses assessment awal, kemudian dijelaskan dalam proposal dan Perjanjian Konsultasi resmi sebelum pekerjaan dimulai.",
       ],
       bullets: [
-        "Retainer / Base Fee (35–50%): pembayaran di awal, non-refundable, untuk memulai analisis dan penyusunan strategi.",
-        "Milestone Payment: pembayaran bertahap sesuai progres pekerjaan (analisis, strategi, negosiasi).",
-        "Final / Pelunasan Fee: dibayar saat deliverable diserahkan atau milestone akhir tercapai.",
-        "Success Fee (khusus Bridging & Restrukturisasi, 3–6%): hanya dibayar jika hasil yang disepakati tercapai.",
-        "Fee konsultasi terpisah dari biaya pihak ketiga (bank, notaris, appraisal, legal, dll.).",
+        "Tahap Assessment: biaya awal untuk analisis kebutuhan dan scope proyek.",
+        "Tahap Pendampingan: skema pembayaran fleksibel yang disesuaikan dengan tahapan pekerjaan konsultasi.",
+        "Tahap Penyelesaian: komponen fee final berdasarkan deliverable dan kompleksitas proyek.",
+        "Fee konsultasi terpisah dari biaya pihak ketiga (notaris, appraisal, legal, dll.).",
       ],
     },
     {
@@ -194,7 +193,7 @@ export const termsOfServiceContent: LegalPageContent = {
       title: "9. Pengakhiran Layanan",
       bullets: [
         "Salah satu pihak dapat mengakhiri perjanjian sesuai ketentuan dalam Perjanjian Konsultasi dengan pemberitahuan tertulis.",
-        "Fee retainer yang telah dibayar untuk pekerjaan yang telah dilakukan bersifat non-refundable.",
+        "Fee konsultasi yang telah dibayar untuk pekerjaan yang telah dilakukan mengikuti ketentuan dalam Perjanjian Konsultasi.",
         "Pekerjaan yang belum diselesaikan akan dihentikan sesuai milestone terakhir yang tercapai, kecuali disepakati lain secara tertulis.",
       ],
     },

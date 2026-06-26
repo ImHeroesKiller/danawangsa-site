@@ -1,40 +1,39 @@
 import type { ServicePageData } from "@/types/service";
 
-const ADVISORY_POSITIONING =
-  "战略商业与财务顾问——非银行，非放贷机构。";
+const ADVISORY_POSITIONING = "Strategic Business & Financial Consultant";
 
 const ADVISORY_FOOTNOTE =
-  "非直接资金发放 • 我们协助制定策略并全程陪同";
+  "Strategic Business & Financial Consultant — 制定战略并全程专业陪同";
 
 const FEE_FOOTNOTE =
   "完整条款将载于正式咨询服务协议。咨询费用与银行、公证、评估及法律费用分开计算。";
 
 const generalStrukturFee: ServicePageData["strukturFee"] = {
   eyebrow: "费用结构",
-  title: "透明且按交付成果计费",
+  title: "透明且量身定制",
   description:
-    "咨询费用在提案与咨询服务协议中事先说明——与第三方费用分开。",
+    "咨询费用在评估后确定，并于提案与咨询服务协议中事先说明——与第三方费用分开。",
   items: [
     {
-      id: "base",
-      title: "预付金 / 基础费用",
-      amount: "35–50%",
+      id: "assessment",
+      title: "评估",
+      amount: "定制",
       description:
-        "前期定金（不可退还），用于启动深度分析、尽职调查及策略制定。",
+        "根据范围、复杂程度及交付成果，在初步评估后确定费用。",
     },
     {
-      id: "milestone",
-      title: "里程碑付款",
-      amount: "分期",
+      id: "advisory",
+      title: "顾问",
+      amount: "灵活",
       description:
-        "按阶段付款：分析完成、客户批准策略、启动谈判或执行。",
+        "付款方式灵活，与项目阶段对齐——分析、策略及谈判陪同。",
     },
     {
-      id: "final",
-      title: "尾款 / 结算费用",
-      amount: "余额",
+      id: "closing",
+      title: "结案",
+      amount: "定制",
       description:
-        "交付成果时支付尾款：最终报告、策略文件或达成约定里程碑。",
+        "结案阶段费用与约定里程碑交付及项目收尾对齐。",
       highlighted: true,
     },
   ],
@@ -64,9 +63,9 @@ function createStandardFaq(
     items: [
       {
         id: `${prefix}-1`,
-        question: `Danawangsa Capital 是否为${serviceName}直接发放资金？`,
+        question: `Danawangsa Capital 在${serviceName}中的角色是什么？`,
         answer:
-          "否。我们是战略顾问——非放贷机构。我们制定策略并陪同与银行或合作伙伴的谈判流程。资金发放完全通过正规金融机构进行。",
+          "我们是 Strategic Business & Financial Consultant。我们制定策略、编制文件，并在您整个融资过程中陪同与银行或合作伙伴的谈判。",
       },
       {
         id: `${prefix}-2`,
@@ -76,9 +75,9 @@ function createStandardFaq(
       },
       {
         id: `${prefix}-3`,
-        question: "你们是否保证银行批准信贷？",
+        question: "咨询费用结构如何确定？",
         answer:
-          "无人能保证银行批准信贷——决定权完全在银行。然而，我们通过正确策略、完整文件及专业谈判陪同，最大化您的获批机会。",
+          "费用结构根据项目复杂程度与需求量身定制。咨询费用将在初步评估后进一步讨论，并在开工前确定。",
       },
       {
         id: `${prefix}-4`,
@@ -92,30 +91,30 @@ function createStandardFaq(
 
 const bridgingStrukturFee: ServicePageData["strukturFee"] = {
   eyebrow: "费用结构",
-  title: "透明且按成果计费",
+  title: "透明且量身定制",
   description:
-    "过桥融资费用在提案与咨询服务协议中事先说明——与第三方费用分开。",
+    "过桥咨询费用在评估后确定，并于提案与咨询服务协议中事先说明——与第三方费用分开。",
   items: [
     {
-      id: "base",
-      title: "预付金 / 基础费用",
-      amount: "35–50%",
+      id: "assessment",
+      title: "评估",
+      amount: "定制",
       description:
-        "前期定金（不可退还），用于启动深度分析、尽职调查及过桥策略制定。",
+        "根据案例范围、紧急程度及复杂程度，在初步评估后确定费用。",
     },
     {
-      id: "milestone",
-      title: "里程碑付款",
-      amount: "分期",
+      id: "advisory",
+      title: "顾问",
+      amount: "灵活",
       description:
-        "按阶段付款：分析完成、客户批准策略、启动银行谈判。",
+        "付款方式灵活，与项目阶段对齐——分析、策略制定及银行谈判陪同。",
     },
     {
-      id: "success",
-      title: "成功费用",
-      amount: "3–6%",
+      id: "closing",
+      title: "结案",
+      amount: "定制",
       description:
-        "专用于过桥与重组——仅在资金成功发放或银行批准重组时支付。",
+        "结案阶段费用与约定里程碑交付及重组收尾对齐。",
       highlighted: true,
     },
   ],
@@ -131,7 +130,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
   meta: {
     title: "过桥融资与财务重组",
     description:
-      "为企业提供的过桥融资与财务重组战略咨询。专业陪同——非放贷机构。紧急案例1–2天完成分析。",
+      "为企业提供的过桥融资与财务重组战略咨询。专业战略陪同，紧急案例1–2天完成分析。",
   },
 
   listing: {
@@ -147,7 +146,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
     title: "过桥融资与",
     titleHighlight: "财务重组",
     description:
-      "应对银行贷款到期的咨询伙伴——我们制定过桥融资与财务重组策略并陪同谈判，非直接发放资金。",
+      "应对银行贷款到期的咨询伙伴——我们制定过桥融资与财务重组策略并全程陪同谈判。",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: {
       label: "查看费用结构",
@@ -160,7 +159,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
     title: "过桥融资与",
     titleHighlight: "财务重组",
     description:
-      "银行贷款即将到期？我们协助制定过桥融资策略并陪同财务重组——非直接资金发放。",
+      "银行贷款即将到期？我们协助制定过桥融资策略并陪同财务重组，提供专业战略支持。",
     highlights: [
       { label: "快速分析1-2天", icon: "bolt" },
       { label: "短期策略", icon: "clock" },
@@ -210,7 +209,7 @@ export const bridgingRestrukturisasiService: ServicePageData = {
 
   solusi: {
     eyebrow: "我们的解决方案",
-    title: "过桥融资顾问——非资金发放",
+    title: "过桥融资顾问——Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital 协助您制定并执行过桥融资与财务重组策略，每个阶段均有专业陪同。",
     items: [
@@ -313,9 +312,9 @@ export const bridgingRestrukturisasiService: ServicePageData = {
     items: [
       {
         id: "b1",
-        question: "Danawangsa Capital 是否直接发放过桥资金？",
+        question: "Danawangsa Capital 在过桥融资中的角色是什么？",
         answer:
-          "否。我们是战略顾问——非放贷机构。我们制定过桥策略并陪同与银行或第三方的谈判。资金发放完全通过正规金融机构进行。",
+          "我们是 Strategic Business & Financial Consultant。我们制定过桥策略、编制文件，并在整个重组过程中陪同与银行或第三方的谈判。",
       },
       {
         id: "b2",
@@ -325,9 +324,9 @@ export const bridgingRestrukturisasiService: ServicePageData = {
       },
       {
         id: "b3",
-        question: "过桥案例的成功费用是多少？",
+        question: "过桥案例的咨询费用如何确定？",
         answer:
-          "成功费用为成功发放/重组贷款或交易金额的3–6%。仅在达成约定成果时支付——在工作开始前于提案中透明说明。",
+          "费用在初步评估案例范围与复杂程度后确定。我们会在工作开始前提供透明提案，付款方式灵活并与项目阶段对齐。",
       },
       {
         id: "b4",
@@ -373,7 +372,7 @@ export const modalUsahaJaminanAsetService: ServicePageData = {
   meta: {
     title: modalUsahaName,
     description:
-      "资产抵押经营性资金融资战略咨询——营运资金规划、业务扩张及最优抵押结构。专业陪同，非放贷机构。",
+      "资产抵押经营性资金融资战略咨询——营运资金规划、业务扩张及最优抵押结构。专业战略陪同。",
   },
 
   listing: {
@@ -388,7 +387,7 @@ export const modalUsahaJaminanAsetService: ServicePageData = {
     title: "经营性资金融资",
     titleHighlight: "资产抵押",
     description:
-      "经营性资金融资策略咨询伙伴——我们分析财务状况、优化资产抵押并陪同银行谈判，非直接发放资金。",
+      "经营性资金融资策略咨询伙伴——我们分析财务状况、优化资产抵押并全程陪同银行谈判。",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "查看费用结构", href: `${modalUsahaPath}#fee` },
   },
@@ -448,7 +447,7 @@ export const modalUsahaJaminanAsetService: ServicePageData = {
 
   solusi: {
     eyebrow: "我们的解决方案",
-    title: "战略咨询——非资金发放",
+    title: "Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital 协助制定符合您业务画像的资产抵押经营性资金融资策略。",
     items: [
@@ -565,7 +564,7 @@ export const modalKerjaSkbdnService: ServicePageData = {
   meta: {
     title: skbdnName,
     description:
-      "为供应商、承包商及贸易企业提供的SKBDN营运资金融资战略咨询。分析与谈判陪同——非放贷机构。",
+      "为供应商、承包商及贸易企业提供的SKBDN营运资金融资战略咨询。专业分析与谈判陪同。",
   },
 
   listing: {
@@ -580,7 +579,7 @@ export const modalKerjaSkbdnService: ServicePageData = {
     title: "营运资金融资",
     titleHighlight: "基于SKBDN",
     description:
-      "SKBDN营运资金结构咨询伙伴——我们分析项目需求、编制文件并陪同银行谈判，非直接发放资金。",
+      "SKBDN营运资金结构咨询伙伴——我们分析项目需求、编制文件并全程陪同银行谈判。",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "查看费用结构", href: `${skbdnPath}#fee` },
   },
@@ -640,7 +639,7 @@ export const modalKerjaSkbdnService: ServicePageData = {
 
   solusi: {
     eyebrow: "我们的解决方案",
-    title: "战略咨询——非资金发放",
+    title: "Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital 协助为您的项目业务设计高效的SKBDN营运资金结构。",
     items: [
@@ -757,7 +756,7 @@ export const assetCollateralProgramService: ServicePageData = {
   meta: {
     title: assetName,
     description:
-      "抵押合伙方案咨询——通过三方结构与独立法律合同连接资产所有者、投资者与资金使用者。非放贷机构。",
+      "抵押合伙方案咨询——通过三方结构与独立法律合同连接资产所有者、投资者与资金使用者。Strategic Business & Financial Consultant。",
   },
 
   listing: {
@@ -772,7 +771,7 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "资产抵押",
     titleHighlight: "计划",
     description:
-      "抵押合伙方案咨询伙伴——我们构建资产所有者、投资者与资金使用者之间的三方关系及独立法律合同，非直接发放资金。",
+      "抵押合伙方案咨询伙伴——我们构建资产所有者、投资者与资金使用者之间的三方关系及独立法律合同，并提供专业全程陪同。",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "查看费用结构", href: `${assetPath}#fee` },
   },
@@ -784,7 +783,7 @@ export const assetCollateralProgramService: ServicePageData = {
     description:
       "需要快速流动性或希望盘活资产？我们协助设计抵押合伙方案，两大路径——清算与新鲜资金——专业陪同。",
     highlights: [
-      { label: "每周期3个月收费10%", icon: "wallet" },
+      { label: "每周期结构化回报", icon: "wallet" },
       { label: "每年最多4次", icon: "trending-up" },
       { label: "快速放款", icon: "bolt" },
     ],
@@ -834,7 +833,7 @@ export const assetCollateralProgramService: ServicePageData = {
     eyebrow: "我们的解决方案",
     title: "抵押合伙方案——两大路径",
     description:
-      "Danawangsa Capital 设计并陪同抵押合伙方案，按各方需求构建三方结构——非直接资金发放。",
+      "Danawangsa Capital 设计并陪同抵押合伙方案，按各方需求构建三方结构——作为 Strategic Business & Financial Consultant。",
     items: [
       "资产/抵押品清算方案——通过结构化清算流程利用资产或抵押品，时间表与回报清晰",
       "新鲜资金方案——以资产抵押为资金使用者提供短期流动性",
@@ -850,9 +849,9 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "抵押合伙方案优势",
     items: [
       {
-        title: "每周期一次性收费10%",
+        title: "每投资周期结构化回报",
         description:
-          "透明回报结构——每3个月周期10%，便于投资者与资产所有者规划。",
+          "每投资周期透明回报结构，便于投资者与资产所有者规划。",
         icon: "wallet",
       },
       {
@@ -916,35 +915,35 @@ export const assetCollateralProgramService: ServicePageData = {
 
   strukturFee: {
     eyebrow: "费用结构",
-    title: "每周期一次性收费10%",
+    title: "每投资周期结构化回报",
     description:
-      "方案费用按3个月周期计算——透明、可衡量，执行前事先说明。",
+      "方案回报按投资周期结构化——透明、可衡量，执行前事先说明。",
     items: [
       {
-        id: "cycle-fee",
-        title: "每周期一次性费用",
-        amount: "10%",
+        id: "cycle-returns",
+        title: "每周期回报",
+        amount: "定制",
         description:
-          "每3个月周期按约定交易或抵押价值收取一次——每次续期均适用。",
+          "按约定交易或抵押价值，每投资周期结构化回报——每次续期均适用。",
         highlighted: true,
       },
       {
         id: "annual-potential",
-        title: "年度潜力",
-        amount: "每年4次",
+        title: "续期潜力",
+        amount: "灵活",
         description:
-          "3个月为一周期，每年最多可续4次——每个活跃周期收取10%费用。",
+          "3个月为一周期，每年最多可续4次——每个活跃周期适用结构化回报。",
       },
       {
         id: "consultation",
         title: "Danawangsa咨询费",
-        amount: "另行约定",
+        amount: "定制",
         description:
-          "战略、法律及执行陪同费用在咨询服务协议中约定——与各方之间的合伙方案费用分开。",
+          "战略、法律及执行陪同费用在咨询服务协议中约定——与各方之间的合伙方案回报分开。",
       },
     ],
     footnote:
-      "方案与咨询费用的完整条款载于正式提案与协议。Danawangsa Capital为战略顾问——非资金发放方。",
+      "方案与咨询的完整条款载于正式提案与协议。Danawangsa Capital 为 Strategic Business & Financial Consultant — 制定战略并全程专业陪同。",
   },
 
   cocokUntuk: {
@@ -952,7 +951,7 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "抵押合伙方案三方",
     items: [
       "资产所有者——拥有土地、建筑、商业地产或生产性资产，希望在不出售的情况下变现",
-      "投资者——寻求抵押资产结构化回报的个人或机构（每3个月周期10%）",
+      "投资者——寻求抵押资产每投资周期结构化回报的个人或机构",
       "资金使用者——通过新鲜资金或清算方案、以资产抵押获得快速流动性的企业或中小企业",
     ],
   },
@@ -963,9 +962,9 @@ export const assetCollateralProgramService: ServicePageData = {
     items: [
       {
         id: "aset-1",
-        question: "Danawangsa Capital是否在本方案中发放资金？",
+        question: "Danawangsa Capital 在本方案中的角色是什么？",
         answer:
-          "否。我们是战略顾问，负责设计方案、起草合同并陪同流程。资金由投资者与资金使用者按约定协议直接往来。",
+          "我们是 Strategic Business & Financial Consultant，负责设计方案、起草合同并陪同流程。资金按约定协议在投资者与资金使用者之间往来，我们全程提供专业指导。",
       },
       {
         id: "aset-2",
@@ -989,7 +988,7 @@ export const assetCollateralProgramService: ServicePageData = {
         id: "aset-5",
         question: "方案可否续期超过一个周期？",
         answer:
-          "可以。每周期3个月，每年最多可续4次。每个活跃周期收取10%一次性费用，须三方同意。",
+          "可以。每周期3个月，每年最多可续4次。每个活跃周期适用结构化回报，须三方同意。",
       },
       {
         id: "aset-6",
@@ -1019,7 +1018,7 @@ export const businessFinancialAdvisoryService: ServicePageData = {
   meta: {
     title: advisoryName,
     description:
-      "商业与财务顾问服务——业务发展、财务规划及盈利能力提升。战略咨询，非放贷机构。",
+      "商业与财务顾问服务——业务发展、财务规划及盈利能力提升。Strategic Business & Financial Consultant。",
   },
 
   listing: {
@@ -1034,7 +1033,7 @@ export const businessFinancialAdvisoryService: ServicePageData = {
     title: "商业与财务",
     titleHighlight: "顾问",
     description:
-      "全方位商业与财务战略咨询伙伴——我们分析企业状况、制定战略建议并陪同实施，非直接发放资金。",
+      "全方位商业与财务战略咨询伙伴——我们分析企业状况、制定战略建议并全程陪同实施。",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "查看费用结构", href: `${advisoryPath}#fee` },
   },
@@ -1094,7 +1093,7 @@ export const businessFinancialAdvisoryService: ServicePageData = {
 
   solusi: {
     eyebrow: "我们的解决方案",
-    title: "战略顾问——非资金发放",
+    title: "Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital 提供符合您企业具体情况与目标的商业与财务顾问服务。",
     items: [
@@ -1204,38 +1203,31 @@ const renewableName = "可再生能源融资咨询";
 
 const renewableEnergyStrukturFee: ServicePageData["strukturFee"] = {
   eyebrow: "费用结构",
-  title: "透明且基于交付成果",
+  title: "透明且量身定制",
   description:
-    "咨询费用在提案和正式咨询协议中 upfront 说明——与第三方费用（评估、法律、技术尽职调查等）分开。",
+    "咨询费用在评估后确定，并于提案与正式咨询协议中事先说明——与第三方费用（评估、法律、技术尽职调查等）分开。",
   items: [
     {
-      id: "base",
-      title: "预付金 / 基础费用",
-      amount: "35–50%",
+      id: "assessment",
+      title: "评估",
+      amount: "定制",
       description:
-        "前期定金（不可退还），用于启动项目分析、初步尽职调查和绿色融资战略制定。",
+        "根据项目范围、技术特征及融资复杂程度，在初步评估后确定费用。",
     },
     {
-      id: "milestone",
-      title: "里程碑付款",
-      amount: "分期",
+      id: "advisory",
+      title: "顾问",
+      amount: "灵活",
       description:
-        "按阶段付款：可行性研究完成、融资结构获批、文件就绪、与资金来源谈判启动。",
+        "付款方式灵活，与项目阶段对齐——可行性研究、融资结构设计及资金来源谈判。",
     },
     {
-      id: "final",
-      title: "尾款 / 结清费用",
-      amount: "余额",
+      id: "closing",
+      title: "结案",
+      amount: "定制",
       description:
-        "交付约定成果时结清：融资战略报告、投资者推介材料或约定里程碑达成。",
+        "结案阶段费用与约定里程碑交付及融资关闭对齐。",
       highlighted: true,
-    },
-    {
-      id: "success",
-      title: "成功费（可选）",
-      amount: "2–5%",
-      description:
-        "专用于绿色融资项目——仅在融资成功达成协议或按约定目标完成融资交易时支付。",
     },
   ],
   footnote: FEE_FOOTNOTE,
@@ -1250,7 +1242,7 @@ export const renewableEnergyFinancingService: ServicePageData = {
   meta: {
     title: renewableName,
     description:
-      "可再生能源项目融资与能效战略咨询——涵盖太阳能、风能、水电、生物质及垃圾发电。专业指导——非放贷机构。",
+      "可再生能源项目融资与能效战略咨询——涵盖太阳能、风能、水电、生物质及垃圾发电。专业战略指导。",
   },
 
   listing: {
@@ -1266,7 +1258,7 @@ export const renewableEnergyFinancingService: ServicePageData = {
     title: "可再生能源",
     titleHighlight: "融资咨询",
     description:
-      "可再生能源与能效项目融资的战略咨询伙伴——我们协助制定战略、设计结构并协调绿色资金来源，不直接放款。",
+      "可再生能源与能效项目融资的战略咨询伙伴——我们协助制定战略、设计结构并全程协调绿色资金来源。",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "查看费用结构", href: `${renewablePath}#fee` },
   },
@@ -1328,7 +1320,7 @@ export const renewableEnergyFinancingService: ServicePageData = {
     eyebrow: "我们的方案",
     title: "战略绿色融资顾问",
     description:
-      "Danawangsa Capital 作为战略顾问（非资金方），协助企业与项目开发商设计可再生能源融资战略。",
+      "Danawangsa Capital 作为 Strategic Business & Financial Consultant，协助企业与项目开发商设计可再生能源融资战略。",
     items: [
       "可再生能源项目融资战略（太阳能、风能、水电、生物质、垃圾发电）",
       "工业与商业楼宇能效项目陪同",
@@ -1434,9 +1426,9 @@ export const renewableEnergyFinancingService: ServicePageData = {
     items: [
       {
         id: "renewable-1",
-        question: "Danawangsa Capital 是否为可再生能源项目放款？",
+        question: "Danawangsa Capital 在可再生能源项目融资中的角色是什么？",
         answer:
-          "不是。我们是战略融资顾问——非放贷机构。我们制定战略、编制文件并陪同绿色资金对接。资金发放完全通过相关金融机构或投资者完成。",
+          "我们是 Strategic Business & Financial Consultant。我们制定战略、编制文件，并在整个项目融资过程中陪同绿色资金对接。",
       },
       {
         id: "renewable-2",

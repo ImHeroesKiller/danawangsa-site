@@ -1,40 +1,39 @@
 import type { ServicePageData } from "@/types/service";
 
-export const ADVISORY_POSITIONING =
-  "Konsultan bisnis & keuangan strategis — bukan bank, bukan lembaga pembiayaan.";
+export const ADVISORY_POSITIONING = "Strategic Business & Financial Consultant";
 
 export const ADVISORY_FOOTNOTE =
-  "Bukan penyaluran dana langsung • Kami bantu rancang strategi & dampingi proses";
+  "Strategic Business & Financial Consultant — merancang strategi & mendampingi proses Anda";
 
 export const FEE_FOOTNOTE =
-  "Detail lengkap akan dituangkan dalam Perjanjian Konsultasi resmi. Fee konsultasi terpisah dari biaya bank, notaris, appraisal, dan legal.";
+  "Struktur fee disesuaikan dengan kompleksitas dan kebutuhan proyek. Detail lengkap dibahas setelah proses assessment awal dan dituangkan dalam Perjanjian Konsultasi resmi.";
 
 export const generalStrukturFee: ServicePageData["strukturFee"] = {
   eyebrow: "STRUKTUR FEE",
-  title: "Transparan & Berbasis Deliverable",
+  title: "Fleksibel & Disesuaikan dengan Proyek",
   description:
-    "Fee konsultasi dijelaskan di awal dalam proposal dan Perjanjian Konsultasi — terpisah dari biaya pihak ketiga.",
+    "Struktur fee disesuaikan dengan kompleksitas dan kebutuhan proyek. Biaya konsultasi akan dibahas lebih lanjut setelah proses assessment.",
   items: [
     {
-      id: "base",
-      title: "Retainer / Base Fee",
-      amount: "35–50%",
+      id: "assessment",
+      title: "Tahap Assessment",
+      amount: "Disesuaikan",
       description:
-        "DP di awal (non-refundable) untuk memulai analisis mendalam, due diligence, dan penyusunan strategi.",
+        "Biaya awal untuk analisis kebutuhan, scope proyek, dan rekomendasi strategis.",
     },
     {
-      id: "milestone",
-      title: "Milestone Payment",
-      amount: "Bertahap",
+      id: "advisory",
+      title: "Tahap Pendampingan",
+      amount: "Fleksibel",
       description:
-        "Pembayaran per tahap: analisis selesai, strategi disetujui klien, negosiasi atau eksekusi dimulai.",
+        "Skema pembayaran yang fleksibel dan disesuaikan dengan tahapan pekerjaan konsultasi.",
     },
     {
-      id: "final",
-      title: "Final / Pelunasan Fee",
-      amount: "Sisa",
+      id: "closing",
+      title: "Tahap Penyelesaian",
+      amount: "Disesuaikan",
       description:
-        "Pelunasan saat deliverable diserahkan: laporan final, dokumen strategi, atau milestone yang disepakati tercapai.",
+        "Komponen fee final ditentukan berdasarkan deliverable dan kompleksitas proyek.",
       highlighted: true,
     },
   ],
@@ -64,9 +63,9 @@ export function createStandardFaq(
     items: [
       {
         id: `${prefix}-1`,
-        question: `Apakah Danawangsa Capital menyalurkan dana untuk ${serviceName}?`,
+        question: `Apa peran Danawangsa Capital dalam ${serviceName}?`,
         answer:
-          "Tidak. Kami adalah konsultan strategis — bukan lembaga pembiayaan. Kami merancang strategi dan mendampingi proses negosiasi dengan bank atau mitra. Penyaluran dana sepenuhnya melalui lembaga keuangan resmi.",
+          "Danawangsa Capital adalah Strategic Business & Financial Consultant yang merancang strategi, menyusun rekomendasi, dan mendampingi proses negosiasi dengan mitra pendanaan serta pihak terkait.",
       },
       {
         id: `${prefix}-2`,
@@ -76,9 +75,9 @@ export function createStandardFaq(
       },
       {
         id: `${prefix}-3`,
-        question: "Apakah Anda menjamin persetujuan kredit dari bank?",
+        question: "Bagaimana struktur fee konsultasi ditentukan?",
         answer:
-          "Tidak ada yang bisa menjamin persetujuan kredit — keputusan sepenuhnya di tangan bank. Namun, kami memaksimalkan peluang dengan strategi yang tepat, dokumentasi lengkap, dan pendampingan negosiasi profesional.",
+          "Struktur fee disesuaikan dengan kompleksitas dan kebutuhan proyek. Biaya konsultasi akan dibahas lebih lanjut setelah proses assessment awal, sebelum pekerjaan dimulai.",
       },
       {
         id: `${prefix}-4`,

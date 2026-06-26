@@ -1,6 +1,7 @@
 import type { ServicePageData } from "@/types/service";
 
 import {
+  ADVISORY_FOOTNOTE,
   ADVISORY_POSITIONING,
   createServiceCta,
   createStandardFaq,
@@ -20,7 +21,7 @@ export const modalKerjaSkbdnService: ServicePageData = {
   meta: {
     title: name,
     description:
-      "Konsultasi strategi pembiayaan modal kerja berbasis SKBDN untuk supplier, kontraktor, dan trading. Pendampingan analisis & negosiasi — bukan lembaga pembiayaan.",
+      "Konsultasi strategi pembiayaan modal kerja berbasis SKBDN untuk supplier, kontraktor, dan trading. Strategic Business & Financial Consultant.",
   },
 
   listing: {
@@ -35,7 +36,7 @@ export const modalKerjaSkbdnService: ServicePageData = {
     title: "Pembiayaan Modal Kerja",
     titleHighlight: "Berbasis SKBDN",
     description:
-      "Partner konsultasi untuk merancang struktur modal kerja berbasis SKBDN — kami analisis kebutuhan proyek, susun dokumen, dan dampingi negosiasi dengan bank, bukan menyalurkan dana langsung.",
+      "Strategic Business & Financial Consultant untuk merancang struktur modal kerja berbasis SKBDN — analisis kebutuhan proyek, penyusunan dokumen, dan pendampingan negosiasi profesional.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "Lihat Struktur Fee", href: `${path}#fee` },
   },
@@ -61,7 +62,7 @@ export const modalKerjaSkbdnService: ServicePageData = {
       description:
         "Pelajari proses 5 langkah, struktur fee, FAQ, dan profil klien yang cocok di halaman detail layanan.",
       footnote:
-        "Bukan penyaluran dana langsung • Kami bantu rancang strategi & dampingi proses",
+        ADVISORY_FOOTNOTE,
     },
   },
 
@@ -96,7 +97,7 @@ export const modalKerjaSkbdnService: ServicePageData = {
 
   solusi: {
     eyebrow: "SOLUSI KAMI",
-    title: "Konsultasi Strategi — Bukan Penyaluran Dana",
+    title: "Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital membantu merancang struktur modal kerja berbasis SKBDN yang efisien untuk bisnis proyek Anda.",
     items: [

@@ -12,7 +12,7 @@ export const privacyPolicyContent: LegalPageContent = {
       title: "1. Introduction",
       paragraphs: [
         "Danawangsa Capital («we») is a strategic business & financial consulting firm. This Privacy Policy explains how we collect, use, store, and protect personal information you provide through our website, consultation forms, email, WhatsApp, or business meetings.",
-        "This policy applies to all of our consulting services. We are not a financing institution, bank, or lender — data we collect is used solely for consulting and strategic advisory purposes.",
+        "This policy applies to all of our consulting services as a Strategic Business & Financial Consultant. Data we collect is used solely for consulting and strategic advisory purposes.",
       ],
     },
     {
@@ -102,7 +102,7 @@ export const consultationTermsContent: LegalPageContent = {
       title: "1. Definitions & Service Position",
       paragraphs: [
         "Danawangsa Capital provides strategic business & financial consulting services, including analysis, strategy planning, recommendation development, and accompaniment in negotiations with third parties (banks, investors, legal partners, etc.).",
-        "We are expressly not a financing institution, bank, multifinance company, or lender. We do not disburse funds, provide loans, or guarantee credit approval from any third party.",
+        "Danawangsa Capital is a Strategic Business & Financial Consultant providing professional advisory and accompaniment services. Funding, credit, and investment decisions remain entirely the responsibility of the client and relevant third parties.",
       ],
     },
     {
@@ -125,16 +125,15 @@ export const consultationTermsContent: LegalPageContent = {
     },
     {
       id: "pembayaran",
-      title: "4. Payment, Retainer & Milestones",
+      title: "4. Payment & Fee Structure",
       paragraphs: [
-        "Consulting fee structure is explained transparently in the proposal and official Consultation Agreement before work begins. Common fee components include:",
+        "Consulting fee structure is tailored to project complexity and needs. Fees will be discussed further after the initial assessment, then explained in the proposal and official Consultation Agreement before work begins.",
       ],
       bullets: [
-        "Retainer / Base Fee (35–50%): upfront payment, non-refundable, to commence analysis and strategy development.",
-        "Milestone Payment: phased payment according to work progress (analysis, strategy, negotiation).",
-        "Final / Settlement Fee: paid when deliverables are submitted or final milestones are achieved.",
-        "Success Fee (Bridging & Restructuring only, 3–6%): payable only if agreed outcomes are achieved.",
-        "Consulting fees are separate from third-party costs (bank, notary, appraisal, legal, etc.).",
+        "Assessment Phase: initial fee for needs analysis and project scope.",
+        "Advisory Phase: flexible payment scheme aligned with consulting work stages.",
+        "Closing Phase: final fee component based on deliverables and project complexity.",
+        "Consulting fees are separate from third-party costs (notary, appraisal, legal, etc.).",
       ],
     },
     {
@@ -181,7 +180,7 @@ export const consultationTermsContent: LegalPageContent = {
       title: "9. Termination of Services",
       bullets: [
         "Either party may terminate the agreement according to the terms in the Consultation Agreement with written notice.",
-        "Retainer fees already paid for work performed are non-refundable.",
+        "Consulting fees already paid for work performed follow the terms in the Consultation Agreement.",
         "Incomplete work will be stopped according to the last achieved milestone, unless otherwise agreed in writing.",
       ],
     },

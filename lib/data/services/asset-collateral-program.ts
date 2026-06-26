@@ -1,10 +1,47 @@
 import type { ServicePageData } from "@/types/service";
 
-import { ADVISORY_POSITIONING, createServiceCta } from "./shared-content";
+import {
+  ADVISORY_FOOTNOTE,
+  ADVISORY_POSITIONING,
+  createServiceCta,
+  FEE_FOOTNOTE,
+} from "./shared-content";
 
 const slug = "asset-collateral-program";
 const path = `/layanan/${slug}`;
 const name = "Asset Collateral Program";
+
+const collateralStrukturFee: ServicePageData["strukturFee"] = {
+  eyebrow: "STRUKTUR FEE",
+  title: "Fleksibel & Disesuaikan dengan Proyek",
+  description:
+    "Struktur fee konsultasi disesuaikan dengan kompleksitas skema kemitraan. Biaya akan dibahas lebih lanjut setelah proses assessment.",
+  items: [
+    {
+      id: "scheme",
+      title: "Struktur Skema Kemitraan",
+      amount: "Disesuaikan",
+      description:
+        "Imbal hasil terstruktur per siklus investasi — dirancang transparan dan disepakati ketiga pihak sebelum eksekusi.",
+      highlighted: true,
+    },
+    {
+      id: "cycle",
+      title: "Siklus Program",
+      amount: "Fleksibel",
+      description:
+        "Skema berjalan per siklus dengan potensi perpanjangan — disesuaikan kebutuhan Pemilik Aset, Investor, dan Pengguna Dana.",
+    },
+    {
+      id: "consultation",
+      title: "Fee Konsultasi Danawangsa",
+      amount: "Disesuaikan",
+      description:
+        "Fee pendampingan strategi, legal, dan eksekusi diatur dalam Perjanjian Konsultasi setelah assessment awal.",
+    },
+  ],
+  footnote: FEE_FOOTNOTE,
+};
 
 export const assetCollateralProgramService: ServicePageData = {
   slug,
@@ -15,7 +52,7 @@ export const assetCollateralProgramService: ServicePageData = {
   meta: {
     title: name,
     description:
-      "Konsultasi Collateral Partnership Scheme — menghubungkan Pemilik Aset, Investor, dan Pengguna Dana melalui struktur tripartit & kontrak legal terpisah. Bukan lembaga pembiayaan.",
+      "Konsultasi Collateral Partnership Scheme — menghubungkan Pemilik Aset, Investor, dan Pengguna Dana melalui struktur tripartit & kontrak legal terpisah. Strategic Business & Financial Consultant.",
   },
 
   listing: {
@@ -30,7 +67,7 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "Asset Collateral",
     titleHighlight: "Program",
     description:
-      "Partner konsultasi untuk merancang Collateral Partnership Scheme — kami strukturkan hubungan tripartit antara Pemilik Aset, Investor, dan Pengguna Dana dengan kontrak legal terpisah, bukan menyalurkan dana langsung.",
+      "Strategic Business & Financial Consultant untuk merancang Collateral Partnership Scheme — struktur tripartit antara Pemilik Aset, Investor, dan Pengguna Dana dengan kontrak legal terpisah.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "Lihat Struktur Fee", href: `${path}#fee` },
   },
@@ -42,8 +79,8 @@ export const assetCollateralProgramService: ServicePageData = {
     description:
       "Butuh likuiditas cepat atau ingin monetisasi aset? Kami bantu merancang skema kemitraan jaminan dengan dua jalur — Liquidation & Fresh Money — melalui pendampingan profesional.",
     highlights: [
-      { label: "Fee 10% per Siklus 3 Bulan", icon: "wallet" },
-      { label: "Potensi 4× per Tahun", icon: "trending-up" },
+      { label: "Imbal Hasil Terstruktur per Siklus", icon: "wallet" },
+      { label: "Potensi Perpanjangan Siklus", icon: "trending-up" },
       { label: "Pencairan Cepat", icon: "bolt" },
     ],
     benefitBullets: [
@@ -55,8 +92,7 @@ export const assetCollateralProgramService: ServicePageData = {
       eyebrow: "MAKSIMALKAN NILAI ASET ANDA?",
       description:
         "Pelajari proses 5 langkah, struktur fee, FAQ, dan profil klien yang cocok di halaman detail layanan.",
-      footnote:
-        "Bukan penyaluran dana langsung • Kami bantu rancang strategi & dampingi proses",
+      footnote: ADVISORY_FOOTNOTE,
     },
   },
 
@@ -74,7 +110,7 @@ export const assetCollateralProgramService: ServicePageData = {
       {
         title: "Pengguna Dana Butuh Pencairan Cepat",
         description:
-          "Kebutuhan modal mendesak tidak terlayani karena proses bank konvensional lambat atau plafon kredit terbatas.",
+          "Kebutuhan modal mendesak tidak terlayani karena proses pembiayaan konvensional lambat atau plafon kredit terbatas.",
       },
       {
         title: "Investor Mencari Imbal Hasil Terukur",
@@ -93,7 +129,7 @@ export const assetCollateralProgramService: ServicePageData = {
     eyebrow: "SOLUSI KAMI",
     title: "Collateral Partnership Scheme — Dua Jalur Utama",
     description:
-      "Danawangsa Capital merancang dan mendampingi Collateral Partnership Scheme dengan struktur tripartit yang disesuaikan kebutuhan masing-masing pihak — bukan penyaluran dana langsung.",
+      "Danawangsa Capital merancang dan mendampingi Collateral Partnership Scheme dengan struktur tripartit yang disesuaikan kebutuhan masing-masing pihak sebagai Strategic Business & Financial Consultant.",
     items: [
       "Asset/Collateral Liquidation Scheme — pemanfaatan aset atau jaminan melalui skema likuidasi terstruktur dengan timeline dan imbal hasil yang jelas",
       "Fresh Money Scheme — struktur fresh money dengan jaminan aset untuk kebutuhan likuiditas jangka pendek Pengguna Dana",
@@ -109,15 +145,15 @@ export const assetCollateralProgramService: ServicePageData = {
     title: "Keunggulan Collateral Partnership Scheme",
     items: [
       {
-        title: "One Time Fee 10% per Siklus",
+        title: "Imbal Hasil Terstruktur per Siklus",
         description:
-          "Struktur imbal hasil transparan — 10% per siklus 3 bulan, memudahkan perencanaan bagi Investor dan Pemilik Aset.",
+          "Struktur imbal hasil transparan per siklus investasi — memudahkan perencanaan bagi Investor dan Pemilik Aset.",
         icon: "wallet",
       },
       {
-        title: "Potensi 4× per Tahun",
+        title: "Potensi Perpanjangan Siklus",
         description:
-          "Dengan siklus 3 bulan, skema berpotensi diperpanjang hingga 4 kali dalam setahun — memaksimalkan rotasi modal dan pendapatan.",
+          "Skema berpotensi diperpanjang dalam beberapa siklus per tahun — memaksimalkan rotasi modal dan pendapatan.",
         icon: "trending-up",
       },
       {
@@ -167,51 +203,20 @@ export const assetCollateralProgramService: ServicePageData = {
         step: 5,
         title: "Monitoring Siklus & Perpanjangan",
         description:
-          "Pemantauan siklus 3 bulan, evaluasi performa, dan rekomendasi perpanjangan hingga 4 siklus per tahun.",
+          "Pemantauan siklus program, evaluasi performa, dan rekomendasi perpanjangan sesuai kesepakatan ketiga pihak.",
         deliverable: "Laporan monitoring & rekomendasi siklus berikutnya",
       },
     ],
   },
 
-  strukturFee: {
-    eyebrow: "STRUKTUR FEE",
-    title: "One Time Fee 10% per Cycle",
-    description:
-      "Fee skema dihitung per siklus 3 bulan — transparan, terukur, dan dijelaskan di awal sebelum eksekusi.",
-    items: [
-      {
-        id: "cycle-fee",
-        title: "One Time Fee per Cycle",
-        amount: "10%",
-        description:
-          "Dibebankan sekali per siklus 3 bulan atas nilai transaksi atau jaminan yang disepakati — berlaku untuk setiap perpanjangan siklus.",
-        highlighted: true,
-      },
-      {
-        id: "annual-potential",
-        title: "Potensi Tahunan",
-        amount: "4× / Tahun",
-        description:
-          "Dengan siklus 3 bulan, skema dapat diperpanjang hingga 4 kali setahun — fee 10% berlaku per siklus yang aktif.",
-      },
-      {
-        id: "consultation",
-        title: "Fee Konsultasi Danawangsa",
-        amount: "Terpisah",
-        description:
-          "Fee pendampingan strategi, legal, dan eksekusi diatur dalam Perjanjian Konsultasi — terpisah dari fee skema kemitraan antar pihak.",
-      },
-    ],
-    footnote:
-      "Detail lengkap fee skema dan konsultasi dituangkan dalam proposal dan perjanjian resmi. Danawangsa Capital adalah konsultan strategis — bukan pihak yang menyalurkan dana.",
-  },
+  strukturFee: collateralStrukturFee,
 
   cocokUntuk: {
     eyebrow: "COCOK UNTUK",
     title: "Tiga Pihak dalam Collateral Partnership Scheme",
     items: [
       "Pemilik Aset — pemilik tanah, bangunan, properti komersial, atau aset produktif yang ingin monetisasi tanpa menjual",
-      "Investor — individu atau institusi yang mencari imbal hasil terstruktur dari aset jaminan (10% per siklus 3 bulan)",
+      "Investor — individu atau institusi yang mencari imbal hasil terstruktur dari aset jaminan per siklus investasi",
       "Pengguna Dana — perusahaan atau UMKM yang membutuhkan likuiditas cepat dengan jaminan aset melalui Fresh Money atau Liquidation Scheme",
     ],
   },
@@ -223,9 +228,9 @@ export const assetCollateralProgramService: ServicePageData = {
       {
         id: "aset-1",
         question:
-          "Apakah Danawangsa Capital menyalurkan dana dalam skema ini?",
+          "Apa peran Danawangsa Capital dalam Collateral Partnership Scheme?",
         answer:
-          "Tidak. Kami adalah konsultan strategis yang merancang struktur, menyusun kontrak, dan mendampingi proses. Penyaluran dana dilakukan langsung antar Investor dan Pengguna Dana sesuai perjanjian yang disepakati.",
+          "Danawangsa Capital adalah Strategic Business & Financial Consultant yang merancang struktur, menyusun kontrak, dan mendampingi proses kemitraan antar Pemilik Aset, Investor, dan Pengguna Dana.",
       },
       {
         id: "aset-2",
@@ -244,13 +249,13 @@ export const assetCollateralProgramService: ServicePageData = {
         id: "aset-4",
         question: "Bagaimana risiko jaminan dan eksekusi ditangani?",
         answer:
-          "Risiko diminimalkan melalui due diligence aset, valuasi independen, dan klausul eksekusi jaminan dalam kontrak. Kami tidak menjamin hasil investasi — namun memastikan struktur, dokumentasi, dan proses sesuai praktik terbaik.",
+          "Risiko diminimalkan melalui due diligence aset, valuasi independen, dan klausul eksekusi jaminan dalam kontrak. Kami memastikan struktur, dokumentasi, dan proses sesuai praktik terbaik.",
       },
       {
         id: "aset-5",
         question: "Apakah skema bisa diperpanjang lebih dari satu siklus?",
         answer:
-          "Ya. Setiap siklus berjalan 3 bulan dan dapat diperpanjang hingga 4 kali per tahun. Fee 10% One Time Fee berlaku per siklus yang aktif, dengan persetujuan ketiga pihak.",
+          "Ya. Skema berjalan per siklus dan dapat diperpanjang sesuai kesepakatan ketiga pihak, dengan struktur imbal hasil yang transparan per siklus aktif.",
       },
       {
         id: "aset-6",

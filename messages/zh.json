@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "siteDescription": "为企业主提供战略性商业与财务咨询。在资产优化、融资结构和信贷重组方面提供专业指导——非放贷机构。",
+    "siteDescription": "Strategic Business & Financial Consultant，为企业主提供专业商业与财务咨询，涵盖资产优化、融资结构与信贷重组。",
     "keywords": [
       "商业咨询",
       "财务咨询",
@@ -57,9 +57,9 @@
     "company": "公司",
     "legal": "法律",
     "contact": "联系",
-    "taglineExtension": "非放贷机构——我们协助制定商业与财务战略。",
+    "taglineExtension": "Strategic Business & Financial Consultant — 为您制定商业与财务战略。",
     "copyright": "© 2026 Danawangsa Capital — Strategic Advisory",
-    "disclaimer": "战略性商业与财务顾问——非银行，非放贷机构。",
+    "disclaimer": "Strategic Business & Financial Consultant",
     "allServices": "全部服务",
     "contactUs": "联系我们",
     "whatsapp": "WhatsApp"
@@ -68,7 +68,7 @@
     "titleLine1": "TURNING ASSETS",
     "titleLine2": "INTO OPPORTUNITIES",
     "description": "为企业主和管理层提供战略咨询合作伙伴——制定财务战略、优化资产，并通过专业网络协助融资流程。",
-    "positioning": "战略性商业与财务顾问——非银行，非放贷机构。",
+    "positioning": "Strategic Business & Financial Consultant",
     "ctaSecondary": "查看咨询方案"
   },
   "trustBar": {
@@ -88,7 +88,7 @@
     "badge": "战略方案",
     "title": "BRIDGING FINANCE &",
     "titleHighlight": "Financial Restructuring",
-    "description": "银行贷款即将到期？我们协助制定过桥融资战略并支持财务重组——非直接资金发放。",
+    "description": "银行贷款即将到期？我们协助制定过桥融资战略并专业支持财务重组。",
     "highlights": {
       "fastAnalysis": "快速分析 1-2 天",
       "shortTermStrategy": "短期战略",
@@ -102,7 +102,7 @@
     "card": {
       "eyebrow": "需要立即协助？",
       "description": "了解五步流程、费用结构、常见问题及适合客户标准——均在服务详情页。",
-      "footnote": "非直接资金发放 • 我们协助制定战略并陪同流程"
+      "footnote": "Strategic Business & Financial Consultant — 制定战略并全程专业陪同"
     }
   },
   "testimonialsSection": {
@@ -116,7 +116,7 @@
     "titleLine2": "您的企业财务战略了吗？",
     "description": "告诉我们您的业务挑战。顾问团队将在 24 小时内回复并推荐后续步骤。",
     "chatWhatsApp": "WhatsApp 咨询",
-    "strategicAdvisory": "战略顾问 — 非放贷机构"
+    "strategicAdvisory": "Strategic Business & Financial Consultant"
   },
   "consultation": {
     "general": {
@@ -195,13 +195,13 @@
     "privacyTitle": "隐私政策",
     "termsTitle": "咨询服务条款与条件",
     "footerNote": "Danawangsa Capital — Strategic Business & Financial Advisory。",
-    "footerDisclaimer": "非放贷机构。如有更多问题，请",
+    "footerDisclaimer": "Strategic Business & Financial Consultant。如有更多问题，请",
     "footerContactLink": "联系我们"
   },
   "layanan": {
     "badge": "咨询服务",
     "title": "战略咨询方案",
-    "description": "商业与财务战略专业指导——非放贷机构。",
+    "description": "以 Strategic Business & Financial Consultant 身份提供商业与财务战略专业指导。",
     "viewDetail": "查看服务详情",
     "moreServicesPrefix": "其他咨询服务请见",
     "moreServicesLink": "首页",
@@ -309,13 +309,13 @@
     "flows": {
       "collateral": "资产抵押",
       "funds": "资金流向",
-      "return": "回报 / 10% 费用",
+      "return": "回报 / 结构化收益",
       "collateralLink": "关联抵押"
     },
     "tooltips": {
       "collateral": "资产所有者将固定资产作为抵押品提供给投资者。受合同 A 约束——涵盖抵押权利、估值及回报。",
       "funds": "投资者按所选方案向资金使用者投放资金。受合同 B 约束——3个月周期，付款义务明确。",
-      "return": "资金使用者向投资者偿还本金及回报（每周期一次性收费10%）。每年最多可续4个周期。",
+      "return": "资金使用者向投资者偿还本金及每周期结构化收益。周期可根据三方协议续展。",
       "collateralLink": "资产所有者的抵押品担保资金使用者的交易。违约时按合同条款执行抵押。"
     },
     "tooltipHint": "将鼠标悬停在流向标签或图表线条上。移动端请点击标签查看详情。",

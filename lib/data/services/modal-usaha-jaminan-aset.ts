@@ -1,6 +1,7 @@
 import type { ServicePageData } from "@/types/service";
 
 import {
+  ADVISORY_FOOTNOTE,
   ADVISORY_POSITIONING,
   createServiceCta,
   createStandardFaq,
@@ -20,7 +21,7 @@ export const modalUsahaJaminanAsetService: ServicePageData = {
   meta: {
     title: name,
     description:
-      "Konsultasi strategi pembiayaan modal usaha dengan jaminan aset — perencanaan modal kerja, ekspansi, dan struktur jaminan optimal. Pendampingan profesional, bukan lembaga pembiayaan.",
+      "Konsultasi strategi pembiayaan modal usaha dengan jaminan aset — perencanaan modal kerja, ekspansi, dan struktur jaminan optimal. Strategic Business & Financial Consultant.",
   },
 
   listing: {
@@ -35,7 +36,7 @@ export const modalUsahaJaminanAsetService: ServicePageData = {
     title: "Pembiayaan Modal Usaha",
     titleHighlight: "dengan Jaminan Aset",
     description:
-      "Partner konsultasi untuk merancang strategi pembiayaan modal usaha — kami analisis posisi keuangan, optimalisasi jaminan aset, dan dampingi negosiasi dengan bank, bukan menyalurkan dana langsung.",
+      "Strategic Business & Financial Consultant untuk merancang strategi pembiayaan modal usaha — analisis posisi keuangan, optimalisasi jaminan aset, dan pendampingan negosiasi profesional.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "Lihat Struktur Fee", href: `${path}#fee` },
   },
@@ -61,7 +62,7 @@ export const modalUsahaJaminanAsetService: ServicePageData = {
       description:
         "Pelajari proses 5 langkah, struktur fee, FAQ, dan profil klien yang cocok di halaman detail layanan.",
       footnote:
-        "Bukan penyaluran dana langsung • Kami bantu rancang strategi & dampingi proses",
+        ADVISORY_FOOTNOTE,
     },
   },
 
@@ -96,7 +97,7 @@ export const modalUsahaJaminanAsetService: ServicePageData = {
 
   solusi: {
     eyebrow: "SOLUSI KAMI",
-    title: "Konsultasi Strategi — Bukan Penyaluran Dana",
+    title: "Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital membantu merancang strategi pembiayaan modal usaha dengan jaminan aset yang disesuaikan profil bisnis Anda.",
     items: [

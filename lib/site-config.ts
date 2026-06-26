@@ -6,7 +6,7 @@ export const siteConfig = {
   name: "Danawangsa Capital",
   tagline: "Strategic Business & Financial Advisory",
   description:
-    "Konsultasi strategis bisnis & keuangan untuk pemilik usaha. Pendampingan profesional dalam optimalisasi aset, struktur pendanaan, dan restrukturisasi kredit — bukan lembaga pembiayaan.",
+    "Strategic Business & Financial Consultant untuk pemilik usaha. Pendampingan profesional dalam optimalisasi aset, struktur pendanaan, dan restrukturisasi kredit.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://danawangsa-capital.vercel.app",
   phone: process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "0812-1414-4214",
   phoneRaw: process.env.NEXT_PUBLIC_CONTACT_PHONE_RAW ?? "6281214144214",

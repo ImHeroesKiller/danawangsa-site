@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "siteDescription": "Strategic business & financial consulting for business owners. Professional guidance in asset optimization, funding structure, and credit restructuring — not a lending institution.",
+    "siteDescription": "Strategic Business & Financial Consultant for business owners. Professional guidance in asset optimization, funding structure, and credit restructuring.",
     "keywords": [
       "business consulting",
       "financial consulting",
@@ -57,9 +57,9 @@
     "company": "Company",
     "legal": "Legal",
     "contact": "Contact",
-    "taglineExtension": "Not a lending institution — we help design business & financial strategy.",
+    "taglineExtension": "Strategic Business & Financial Consultant — designing your business & financial strategy.",
     "copyright": "© 2026 Danawangsa Capital — Strategic Advisory",
-    "disclaimer": "Strategic business & financial consultant — not a bank, not a lending institution.",
+    "disclaimer": "Strategic Business & Financial Consultant",
     "allServices": "All Services",
     "contactUs": "Contact Us",
     "whatsapp": "WhatsApp"
@@ -68,7 +68,7 @@
     "titleLine1": "TURNING ASSETS",
     "titleLine2": "INTO OPPORTUNITIES",
     "description": "Strategic consulting partner for business owners & management — designing financial strategy, optimizing assets, and supporting funding processes through a professional network.",
-    "positioning": "Strategic business & financial consultant — not a bank, not a lending institution.",
+    "positioning": "Strategic Business & Financial Consultant",
     "ctaSecondary": "View Consulting Solutions"
   },
   "trustBar": {
@@ -88,7 +88,7 @@
     "badge": "STRATEGIC SOLUTION",
     "title": "BRIDGING FINANCE &",
     "titleHighlight": "Financial Restructuring",
-    "description": "Bank loan approaching maturity? We help design bridging finance strategy and support financial restructuring — not direct fund disbursement.",
+    "description": "Bank loan approaching maturity? We help design Bridging Finance strategy and support Financial Restructuring professionally.",
     "highlights": {
       "fastAnalysis": "Fast Analysis 1-2 Days",
       "shortTermStrategy": "Short-Term Strategy",
@@ -102,7 +102,7 @@
     "card": {
       "eyebrow": "NEED IMMEDIATE SUPPORT?",
       "description": "Learn the 5-step process, fee structure, FAQ, and ideal client criteria — all on the service detail page.",
-      "footnote": "Not direct fund disbursement • We help design strategy & support the process"
+      "footnote": "Strategic Business & Financial Consultant — designing strategy and accompanying your process"
     }
   },
   "testimonialsSection": {
@@ -116,7 +116,7 @@
     "titleLine2": "Your Business Financial Strategy?",
     "description": "Tell us your business challenges. Our advisor team will respond within 24 hours with recommended next steps.",
     "chatWhatsApp": "Chat on WhatsApp",
-    "strategicAdvisory": "Strategic Advisory — Not a Lending Institution"
+    "strategicAdvisory": "Strategic Business & Financial Consultant"
   },
   "consultation": {
     "general": {
@@ -146,7 +146,7 @@
     "bridging": {
       "eyebrow": "BRIDGING & RESTRUCTURING STRATEGY",
       "title": "Specialized Consultation",
-      "footnote": "We help design strategy & support the process • Not fund disbursement",
+      "footnote": "Strategic Business & Financial Consultant — designing strategy and accompanying your process",
       "fields": {
         "companyName": "COMPANY NAME",
         "whatsapp": "WHATSAPP NO.",
@@ -195,13 +195,13 @@
     "privacyTitle": "Privacy Policy",
     "termsTitle": "Consultation Service Terms & Conditions",
     "footerNote": "Danawangsa Capital — Strategic Business & Financial Advisory.",
-    "footerDisclaimer": "Not a lending institution. For further questions,",
+    "footerDisclaimer": "Strategic Business & Financial Consultant. For further questions,",
     "footerContactLink": "contact us"
   },
   "layanan": {
     "badge": "CONSULTING SERVICES",
     "title": "Strategic Consulting Solutions",
-    "description": "Professional guidance for business & financial strategy — not a lending institution.",
+    "description": "Professional guidance for business & financial strategy as a Strategic Business & Financial Consultant.",
     "viewDetail": "View Service Details",
     "moreServicesPrefix": "Other consulting services are available on the",
     "moreServicesLink": "homepage",
@@ -309,13 +309,13 @@
     "flows": {
       "collateral": "Asset Collateral",
       "funds": "Fund Flow",
-      "return": "Return / 10% Fee",
+      "return": "Return / Structured Returns",
       "collateralLink": "Linked Collateral"
     },
     "tooltips": {
       "collateral": "The Asset Owner pledges fixed assets as collateral to the Investor. Governed by Contract A — covering collateral rights, valuation, and returns.",
       "funds": "The Investor deploys capital to the Fund User per the selected scheme. Governed by Contract B — 3-month cycle tenor with clear payment obligations.",
-      "return": "The Fund User repays principal + returns (10% One Time Fee per cycle) to the Investor. Cycles can be renewed up to 4× per year.",
+      "return": "The Fund User repays principal + structured returns per cycle to the Investor. Cycles can be renewed per agreement among all three parties.",
       "collateralLink": "Asset collateral from the Asset Owner secures the Fund User's transaction. On default, collateral execution follows the contract terms."
     },
     "tooltipHint": "Hover over flow labels or diagram lines. On mobile, tap a label for details.",

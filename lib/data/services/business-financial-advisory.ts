@@ -1,6 +1,7 @@
 import type { ServicePageData } from "@/types/service";
 
 import {
+  ADVISORY_FOOTNOTE,
   ADVISORY_POSITIONING,
   createServiceCta,
   createStandardFaq,
@@ -20,7 +21,7 @@ export const businessFinancialAdvisoryService: ServicePageData = {
   meta: {
     title: name,
     description:
-      "Business & Financial Advisory untuk pengembangan bisnis, perencanaan keuangan, dan peningkatan profitabilitas. Konsultasi strategis — bukan lembaga pembiayaan.",
+      "Business & Financial Advisory untuk pengembangan bisnis, perencanaan keuangan, dan peningkatan profitabilitas. Strategic Business & Financial Consultant.",
   },
 
   listing: {
@@ -35,7 +36,7 @@ export const businessFinancialAdvisoryService: ServicePageData = {
     title: "Business & Financial",
     titleHighlight: "Advisory",
     description:
-      "Partner konsultasi untuk strategi bisnis & keuangan holistik — kami analisis kondisi perusahaan, rancang rekomendasi strategis, dan dampingi implementasi, bukan menyalurkan dana langsung.",
+      "Strategic Business & Financial Consultant untuk strategi bisnis & keuangan holistik — analisis kondisi perusahaan, rekomendasi strategis, dan pendampingan implementasi profesional.",
     positioning: ADVISORY_POSITIONING,
     secondaryCta: { label: "Lihat Struktur Fee", href: `${path}#fee` },
   },
@@ -61,7 +62,7 @@ export const businessFinancialAdvisoryService: ServicePageData = {
       description:
         "Pelajari proses 5 langkah, struktur fee, FAQ, dan profil klien yang cocok di halaman detail layanan.",
       footnote:
-        "Bukan penyaluran dana langsung • Kami bantu rancang strategi & dampingi proses",
+        ADVISORY_FOOTNOTE,
     },
   },
 
@@ -96,7 +97,7 @@ export const businessFinancialAdvisoryService: ServicePageData = {
 
   solusi: {
     eyebrow: "SOLUSI KAMI",
-    title: "Strategic Advisory — Bukan Penyaluran Dana",
+    title: "Strategic Business & Financial Consultant",
     description:
       "Danawangsa Capital memberikan Business & Financial Advisory yang disesuaikan dengan kondisi dan tujuan spesifik perusahaan Anda.",
     items: [

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "siteDescription": "Konsultasi strategis bisnis & keuangan untuk pemilik usaha. Pendampingan profesional dalam optimalisasi aset, struktur pendanaan, dan restrukturisasi kredit — bukan lembaga pembiayaan.",
+    "siteDescription": "Strategic Business & Financial Consultant untuk pemilik usaha. Pendampingan profesional dalam optimalisasi aset, struktur pendanaan, dan restrukturisasi kredit.",
     "keywords": [
       "konsultasi bisnis",
       "konsultasi keuangan",
@@ -57,9 +57,9 @@
     "company": "Perusahaan",
     "legal": "Legal",
     "contact": "Kontak",
-    "taglineExtension": "Bukan lembaga pembiayaan — kami membantu merancang strategi bisnis & keuangan.",
+    "taglineExtension": "Strategic Business & Financial Consultant — merancang strategi bisnis & keuangan Anda.",
     "copyright": "© 2026 Danawangsa Capital — Strategic Advisory",
-    "disclaimer": "Konsultan bisnis & keuangan strategis — bukan bank, bukan lembaga pembiayaan.",
+    "disclaimer": "Strategic Business & Financial Consultant",
     "allServices": "Semua Layanan",
     "contactUs": "Hubungi Kami",
     "whatsapp": "WhatsApp"
@@ -68,7 +68,7 @@
     "titleLine1": "TURNING ASSETS",
     "titleLine2": "INTO OPPORTUNITIES",
     "description": "Partner konsultasi strategis untuk pemilik usaha & manajemen — merancang strategi keuangan, mengoptimalkan aset, dan mendampingi proses pendanaan melalui jaringan profesional.",
-    "positioning": "Konsultan bisnis & keuangan strategis — bukan bank, bukan lembaga pembiayaan.",
+    "positioning": "Strategic Business & Financial Consultant",
     "ctaSecondary": "Lihat Solusi Konsultasi"
   },
   "trustBar": {
@@ -88,7 +88,7 @@
     "badge": "SOLUSI STRATEGIS",
     "title": "BRIDGING FINANCE &",
     "titleHighlight": "Financial Restructuring",
-    "description": "Pinjaman bank mendekati jatuh tempo? Kami membantu merancang strategi bridging finance dan mendampingi financial restructuring — bukan menyalurkan dana langsung.",
+    "description": "Pinjaman bank mendekati jatuh tempo? Kami membantu merancang strategi Bridging Finance dan mendampingi Financial Restructuring secara profesional.",
     "highlights": {
       "fastAnalysis": "Analisis Cepat 1-2 Hari",
       "shortTermStrategy": "Strategi Jangka Pendek",
@@ -102,7 +102,7 @@
     "card": {
       "eyebrow": "BUTUH PENDAMPATAN SEGERA?",
       "description": "Pelajari proses 5 langkah, struktur fee, FAQ, dan kriteria klien yang cocok — semuanya di halaman detail layanan.",
-      "footnote": "Bukan penyaluran dana langsung • Kami bantu rancang strategi & dampingi proses"
+      "footnote": "Strategic Business & Financial Consultant — merancang strategi & mendampingi proses Anda"
     }
   },
   "testimonialsSection": {
@@ -116,7 +116,7 @@
     "titleLine2": "Strategi Keuangan Bisnis Anda?",
     "description": "Ceritakan tantangan bisnis Anda. Tim advisor kami akan merespons dalam 1×24 jam dengan rekomendasi langkah selanjutnya.",
     "chatWhatsApp": "Chat WhatsApp",
-    "strategicAdvisory": "Strategic Advisory — Bukan Lembaga Pembiayaan"
+    "strategicAdvisory": "Strategic Business & Financial Consultant"
   },
   "consultation": {
     "general": {
@@ -146,7 +146,7 @@
     "bridging": {
       "eyebrow": "STRATEGI BRIDGING & RESTRUKTURISASI",
       "title": "Konsultasi Khusus",
-      "footnote": "Kami bantu rancang strategi & dampingi proses • Bukan penyaluran dana",
+      "footnote": "Strategic Business & Financial Consultant — merancang strategi & mendampingi proses Anda",
       "fields": {
         "companyName": "NAMA PERUSAHAAN",
         "whatsapp": "NO. WHATSAPP",
@@ -195,13 +195,13 @@
     "privacyTitle": "Kebijakan Privasi",
     "termsTitle": "Syarat & Ketentuan Layanan Konsultasi",
     "footerNote": "Danawangsa Capital — Strategic Business & Financial Advisory.",
-    "footerDisclaimer": "Bukan lembaga pembiayaan. Untuk pertanyaan lebih lanjut,",
+    "footerDisclaimer": "Strategic Business & Financial Consultant. Untuk pertanyaan lebih lanjut,",
     "footerContactLink": "hubungi kami"
   },
   "layanan": {
     "badge": "LAYANAN KONSULTASI",
     "title": "Solusi Konsultasi Strategis",
-    "description": "Pendampingan profesional untuk strategi bisnis & keuangan — bukan lembaga pembiayaan.",
+    "description": "Pendampingan profesional untuk strategi bisnis & keuangan sebagai Strategic Business & Financial Consultant.",
     "viewDetail": "Lihat Detail Layanan",
     "moreServicesPrefix": "Layanan konsultasi lainnya tersedia di",
     "moreServicesLink": "halaman utama",
@@ -309,13 +309,13 @@
     "flows": {
       "collateral": "Jaminan Aset",
       "funds": "Alur Dana",
-      "return": "Return / Fee 10%",
+      "return": "Return / Imbal Hasil Terstruktur",
       "collateralLink": "Jaminan Terkait"
     },
     "tooltips": {
       "collateral": "Pemilik Aset menempatkan aset tetap sebagai jaminan kepada Investor. Diatur dalam Kontrak A — mencakup hak jaminan, valuasi, dan imbal hasil.",
       "funds": "Investor menyalurkan modal kepada Pengguna Dana sesuai skema yang dipilih. Diatur dalam Kontrak B — tenor siklus 3 bulan dengan kewajiban bayar jelas.",
-      "return": "Pengguna Dana mengembalikan pokok + imbal hasil (One Time Fee 10% per siklus) kepada Investor. Siklus dapat diperpanjang hingga 4× per tahun.",
+      "return": "Pengguna Dana mengembalikan pokok + imbal hasil terstruktur per siklus kepada Investor. Siklus dapat diperpanjang sesuai kesepakatan ketiga pihak.",
       "collateralLink": "Jaminan aset dari Pemilik Aset mengikat transaksi Pengguna Dana. Jika default, mekanisme eksekusi jaminan dijalankan sesuai kontrak."
     },
     "tooltipHint": "Arahkan kursor ke label alur atau garis diagram. Di mobile, ketuk label untuk detail.",
