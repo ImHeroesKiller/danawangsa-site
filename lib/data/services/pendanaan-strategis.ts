@@ -1,8 +1,8 @@
 import type { ServicePageData } from "@/types/service";
 
 export const pendanaanStrategisService: ServicePageData = {
-  slug: "konsultasi-pendanaan-strategis",
-  path: "/layanan/konsultasi-pendanaan-strategis",
+  slug: "pendanaan-strategis",
+  path: "/layanan/pendanaan-strategis",
   navLabel: "Konsultasi Pendanaan Strategis",
   consultationModalType: "general",
 

@@ -3,7 +3,7 @@
 import { ServiceTeaserSection } from "@/components/sections/service-teaser-section";
 import { pendanaanStrategisService } from "@/lib/data/services";
 
-/** Homepage teaser — full detail at /layanan/konsultasi-pendanaan-strategis */
+/** Homepage teaser — full detail at /layanan/pendanaan-strategis */
 export function PendanaanStrategisSection() {
   return (
     <ServiceTeaserSection

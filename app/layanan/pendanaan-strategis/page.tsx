@@ -12,6 +12,6 @@ export const metadata = createPageMetadata({
   imageAlt: `${meta.title} — ${siteConfig.name}`,
 });
 
-export default function KonsultasiPendanaanStrategisPage() {
+export default function PendanaanStrategisPage() {
   return <ServiceDetailContent service={pendanaanStrategisService} />;
 }
