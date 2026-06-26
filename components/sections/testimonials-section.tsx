@@ -6,7 +6,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="border-y border-white/10 bg-surface py-14"
+      className="scroll-mt-24 border-y border-white/10 bg-surface py-14"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <SectionHeader

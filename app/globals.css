@@ -144,10 +144,3 @@ body {
   border-color: rgba(212, 175, 55, 0.5);
 }
 
-.positioning-not {
-  border-left: 3px solid rgba(239, 68, 68, 0.5);
-}
-
-.positioning-yes {
-  border-left: 3px solid #d4af37;
-}

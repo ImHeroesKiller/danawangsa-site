@@ -5,7 +5,7 @@ import { ServiceNav } from "@/components/layanan/service-nav";
 import { Breadcrumb } from "@/components/shared/breadcrumb";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { services } from "@/lib/data/services";
+import { getServiceDetailPath, services } from "@/lib/data/services";
 import { createPageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site-config";
 
@@ -42,7 +42,7 @@ export default function LayananPage() {
       <div className="mt-12 space-y-5">
         {services.map((service) => (
           <article
-            key={service.path}
+            key={service.slug}
             className="premium-card rounded-3xl p-7 sm:p-8"
           >
             <div className="flex flex-wrap items-start justify-between gap-3">
@@ -63,7 +63,7 @@ export default function LayananPage() {
             </p>
             <Button className="mt-6" asChild>
               <Link
-                href={service.path}
+                href={getServiceDetailPath(service.slug)}
                 className="inline-flex items-center gap-2"
               >
                 Lihat Detail Layanan

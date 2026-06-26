@@ -214,7 +214,10 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
         </div>
       </section>
 
-      <section id="fee" className="mx-auto max-w-5xl px-5 py-14 sm:px-6">
+      <section
+        id="fee"
+        className="mx-auto max-w-5xl scroll-mt-24 px-5 py-14 sm:px-6"
+      >
         <SectionHeader
           eyebrow={service.strukturFee.eyebrow}
           title={service.strukturFee.title}

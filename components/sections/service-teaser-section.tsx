@@ -43,7 +43,10 @@ export function ServiceTeaserSection({
   const { teaser, path, consultationModalType } = service;
 
   return (
-    <section id={sectionId} className="mx-auto max-w-7xl px-5 pb-16 sm:px-6">
+    <section
+      id={sectionId}
+      className="mx-auto max-w-7xl scroll-mt-24 px-5 pb-16 pt-2 sm:px-6"
+    >
       <div className="rounded-3xl border border-gold/30 bg-surface p-8 md:p-10">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-12">
           <div className="lg:w-1/2">

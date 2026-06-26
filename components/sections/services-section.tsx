@@ -9,7 +9,10 @@ import { getServiceDetailPath, services } from "@/lib/data/services";
 /** Concise services overview — detail pages hold full process, fee, and FAQ */
 export function ServicesSection() {
   return (
-    <section id="solutions" className="mx-auto max-w-7xl px-5 pb-16 sm:px-6">
+    <section
+      id="solutions"
+      className="mx-auto max-w-7xl scroll-mt-24 px-5 pb-16 pt-4 sm:px-6"
+    >
       <SectionHeader
         eyebrow="SOLUSI KONSULTASI STRATEGIS"
         title="Pilih Layanan yang Sesuai Kebutuhan"

@@ -8,6 +8,7 @@ interface SiteNavLinkProps {
   className?: string;
   onClick?: () => void;
   external?: boolean;
+  isActive?: boolean;
 }
 
 /** Shared navigation link — used in Navbar and Footer */
@@ -17,12 +18,17 @@ export function SiteNavLink({
   className,
   onClick,
   external,
+  isActive = false,
 }: SiteNavLinkProps) {
   const isExternal =
-    external ?? (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:"));
+    external ??
+    (href.startsWith("http") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("tel:"));
 
   const classes = cn(
-    "transition-colors hover:text-gold",
+    "transition-colors",
+    isActive ? "font-medium text-gold" : "text-white/75 hover:text-gold",
     className,
   );
 
@@ -34,6 +40,7 @@ export function SiteNavLink({
         onClick={onClick}
         target={href.startsWith("http") ? "_blank" : undefined}
         rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+        aria-current={isActive ? "page" : undefined}
       >
         {children}
       </a>
@@ -41,7 +48,12 @@ export function SiteNavLink({
   }
 
   return (
-    <Link href={href} className={classes} onClick={onClick}>
+    <Link
+      href={href}
+      className={classes}
+      onClick={onClick}
+      aria-current={isActive ? "page" : undefined}
+    >
       {children}
     </Link>
   );

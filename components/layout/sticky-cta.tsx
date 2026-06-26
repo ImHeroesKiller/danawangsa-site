@@ -38,7 +38,7 @@ export function StickyCTA() {
   return (
     <div
       className={cn(
-        "sticky-cta-bar fixed bottom-0 left-0 right-0 z-40 border-t border-white/10 bg-background/95 px-4 py-3 backdrop-blur-xl md:hidden",
+        "sticky-cta-bar fixed bottom-0 left-0 right-0 z-40 border-t border-white/10 bg-background/95 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-xl md:hidden",
         visible && "visible",
       )}
     >
