@@ -1,23 +1,44 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 import { useConsultation } from "@/components/consultation/consultation-context";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Logo } from "@/components/layout/logo";
 import { SiteNavLink } from "@/components/layout/site-nav-link";
 import { Button } from "@/components/ui/button";
-import { footerLegalLinks, mainNavLinks } from "@/lib/data/navigation";
+import {
+  getFooterLegalLinks,
+  mainNavLinkDefs,
+  type NavLinkKey,
+} from "@/lib/data/navigation";
+import { usePathname } from "@/lib/i18n/navigation";
 import { isLegalNavLinkActive, isMainNavLinkActive } from "@/lib/nav-utils";
-import { siteConfig } from "@/lib/site-config";
+import type { Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
+
+const NAV_LABEL_KEYS: Record<NavLinkKey, string> = {
+  home: "home",
+  services: "services",
+  process: "process",
+  testimonials: "testimonials",
+  allServices: "allServices",
+  contactUs: "contactUs",
+};
 
 export function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { openConsultation } = useConsultation();
+  const tNav = useTranslations("nav");
+  const tCommon = useTranslations("common");
+  const tFooter = useTranslations("footer");
+  const locale = useLocale() as Locale;
+
+  const legalLinks = getFooterLegalLinks(locale);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 25);
@@ -31,6 +52,12 @@ export function Navbar() {
 
   const closeMobile = () => setMobileOpen(false);
 
+  const getNavLabel = (key: NavLinkKey) => {
+    if (key === "allServices") return tFooter("allServices");
+    if (key === "contactUs") return tFooter("contactUs");
+    return tNav(NAV_LABEL_KEYS[key]);
+  };
+
   return (
     <nav
       className={cn(
@@ -43,12 +70,12 @@ export function Navbar() {
           <Logo />
 
           <div className="hidden items-center gap-x-1 lg:flex">
-            {mainNavLinks.map((link) => {
-              const isActive = isMainNavLinkActive(pathname, link);
+            {mainNavLinkDefs.map((link) => {
+              const isActive = isMainNavLinkActive(pathname, link.key, link.href);
 
               return (
                 <SiteNavLink
-                  key={link.href + link.label}
+                  key={link.href + link.key}
                   href={link.href}
                   isActive={isActive}
                   className={cn(
@@ -56,13 +83,14 @@ export function Navbar() {
                     isActive && "bg-gold/10",
                   )}
                 >
-                  {link.label}
+                  {getNavLabel(link.key)}
                 </SiteNavLink>
               );
             })}
           </div>
 
           <div className="flex items-center gap-x-3">
+            <LanguageSwitcher className="hidden sm:flex" />
             <Button
               size="sm"
               className="hidden sm:inline-flex"
@@ -73,12 +101,12 @@ export function Navbar() {
                 })
               }
             >
-              {siteConfig.ctaLabel}
+              {tCommon("ctaLabel")}
             </Button>
             <button
               type="button"
               className="flex h-10 w-10 items-center justify-center rounded-xl text-white/80 transition-colors hover:bg-white/10 hover:text-white lg:hidden"
-              aria-label={mobileOpen ? "Tutup menu" : "Buka menu"}
+              aria-label={mobileOpen ? tNav("closeMenu") : tNav("openMenu")}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((prev) => !prev)}
             >
@@ -95,12 +123,12 @@ export function Navbar() {
       {mobileOpen && (
         <div className="mobile-menu max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-white/10 bg-background lg:hidden">
           <div className="flex flex-col gap-y-1 px-5 py-4 text-sm">
-            {mainNavLinks.map((link) => {
-              const isActive = isMainNavLinkActive(pathname, link);
+            {mainNavLinkDefs.map((link) => {
+              const isActive = isMainNavLinkActive(pathname, link.key, link.href);
 
               return (
                 <SiteNavLink
-                  key={link.href + link.label}
+                  key={link.href + link.key}
                   href={link.href}
                   isActive={isActive}
                   className={cn(
@@ -111,11 +139,12 @@ export function Navbar() {
                   )}
                   onClick={closeMobile}
                 >
-                  {link.label}
+                  {getNavLabel(link.key)}
                 </SiteNavLink>
               );
             })}
             <div className="mx-4 my-2 h-px bg-white/10" />
+            <LanguageSwitcher className="mx-4" />
             <Button
               className="mx-4"
               onClick={() => {
@@ -126,13 +155,13 @@ export function Navbar() {
                 closeMobile();
               }}
             >
-              {siteConfig.ctaLabel}
+              {tCommon("ctaLabel")}
             </Button>
             <div className="mx-4 my-2 h-px bg-white/10" />
             <p className="px-4 text-[10px] tracking-wider text-white/30">
-              LEGAL
+              {tNav("legalSection")}
             </p>
-            {footerLegalLinks.map((link) => {
+            {legalLinks.map((link) => {
               const isActive = isLegalNavLinkActive(pathname, link.href);
 
               return (

@@ -1,22 +1,30 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 
 import { SectionHeader } from "@/components/shared/section-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { getServiceDetailPath, services } from "@/lib/data/services";
+import { Link } from "@/lib/i18n/navigation";
+import { getServiceDetailPath, getServices } from "@/lib/data/services";
+import type { Locale } from "@/i18n/routing";
 
 /** Concise services overview — detail pages hold full process, fee, and FAQ */
 export function ServicesSection() {
+  const locale = useLocale() as Locale;
+  const t = useTranslations("servicesSection");
+  const services = getServices(locale);
+
   return (
     <section
       id="solutions"
       className="mx-auto max-w-7xl scroll-mt-24 px-5 pb-16 pt-4 sm:px-6"
     >
       <SectionHeader
-        eyebrow="SOLUSI KONSULTASI STRATEGIS"
-        title="Pilih Layanan yang Sesuai Kebutuhan"
-        description="Ringkasan layanan utama. Proses lengkap, struktur fee, dan FAQ tersedia di halaman detail masing-masing."
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        description={t("description")}
         showDivider
       />
 
@@ -57,7 +65,7 @@ export function ServicesSection() {
                   href={detailPath}
                   className="inline-flex items-center gap-2"
                 >
-                  Lihat Detail Layanan
+                  {t("viewDetail")}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
@@ -69,7 +77,7 @@ export function ServicesSection() {
       <div className="mt-8 text-center">
         <Button variant="outline" asChild>
           <Link href="/layanan" className="inline-flex items-center gap-2">
-            Lihat Semua Layanan
+            {t("viewAll")}
             <ArrowRight className="h-4 w-4" />
           </Link>
         </Button>

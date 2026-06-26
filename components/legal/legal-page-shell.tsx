@@ -1,8 +1,11 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
 
 import { LegalNav } from "@/components/legal/legal-nav";
 import { Breadcrumb } from "@/components/shared/breadcrumb";
 import type { LegalPageContent } from "@/lib/data/legal-content";
+import { Link } from "@/lib/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 
 interface LegalPageShellProps {
@@ -11,21 +14,26 @@ interface LegalPageShellProps {
 
 /** Shared layout wrapper for all legal/document pages */
 export function LegalPageShell({ content }: LegalPageShellProps) {
+  const t = useTranslations("legal");
+  const tBreadcrumb = useTranslations("breadcrumb");
+
   return (
     <article className="mx-auto max-w-3xl px-5 py-12 sm:px-6 sm:py-16">
       <Breadcrumb
         items={[
-          { label: "Beranda", href: "/" },
+          { label: tBreadcrumb("home"), href: "/" },
           {
             label:
-              content.slug === "privasi" ? "Privasi" : "Syarat Konsultasi",
+              content.slug === "privasi"
+                ? tBreadcrumb("privacy")
+                : tBreadcrumb("terms"),
           },
         ]}
       />
       <LegalNav />
 
       <header className="mt-10 border-b border-white/10 pb-8">
-        <Badge className="mb-4">DOKUMEN LEGAL</Badge>
+        <Badge className="mb-4">{t("documentBadge")}</Badge>
         <h1 className="heading-serif text-3xl font-semibold tracking-tight sm:text-4xl">
           {content.title}
         </h1>
@@ -33,7 +41,7 @@ export function LegalPageShell({ content }: LegalPageShellProps) {
           {content.subtitle}
         </p>
         <p className="mt-3 text-xs text-white/40">
-          Terakhir diperbarui: {content.lastUpdated}
+          {t("lastUpdated")} {content.lastUpdated}
         </p>
       </header>
 
@@ -73,11 +81,11 @@ export function LegalPageShell({ content }: LegalPageShellProps) {
 
       <footer className="mt-12 rounded-3xl border border-gold/20 bg-gold/5 p-6 text-center text-sm text-white/60">
         <p>
-          Danawangsa Capital — Strategic Business & Financial Advisory.
+          {t("footerNote")}
           <br />
-          Bukan lembaga pembiayaan. Untuk pertanyaan lebih lanjut,{" "}
+          {t("footerDisclaimer")}{" "}
           <Link href="/#cta-section" className="text-gold hover:underline">
-            hubungi kami
+            {t("footerContactLink")}
           </Link>
           .
         </p>

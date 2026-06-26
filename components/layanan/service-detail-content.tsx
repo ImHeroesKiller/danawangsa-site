@@ -10,7 +10,7 @@ import {
   Zap,
   type LucideIcon,
 } from "lucide-react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import { useConsultation } from "@/components/consultation/consultation-context";
 import { ServiceNav } from "@/components/layanan/service-nav";
@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/site-config";
+import { Link } from "@/lib/i18n/navigation";
 import type { ServiceIconKey, ServicePageData } from "@/types/service";
 
 const SERVICE_ICONS: Record<ServiceIconKey, LucideIcon> = {
@@ -43,6 +43,8 @@ interface ServiceDetailContentProps {
 
 export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
   const { openConsultation } = useConsultation();
+  const tBreadcrumb = useTranslations("breadcrumb");
+  const tCommon = useTranslations("common");
 
   return (
     <div className="pb-16">
@@ -50,8 +52,8 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
         <div className="mx-auto max-w-5xl px-5 py-12 sm:px-6 sm:py-16">
           <Breadcrumb
             items={[
-              { label: "Beranda", href: "/" },
-              { label: "Layanan", href: "/layanan" },
+              { label: tBreadcrumb("home"), href: "/" },
+              { label: tBreadcrumb("services"), href: "/layanan" },
               { label: service.navLabel },
             ]}
           />
@@ -86,7 +88,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
                   })
                 }
               >
-                {siteConfig.ctaLabel}
+                {tCommon("ctaLabel")}
               </Button>
               {service.hero.secondaryCta && (
                 <Button variant="outline" size="lg" asChild>
@@ -146,7 +148,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
                 openConsultation(service.consultationModalType)
               }
             >
-              {service.solusi.ctaLabel ?? "Diskusikan Kasus Anda"}
+              {service.solusi.ctaLabel ?? tCommon("discussYourCase")}
             </Button>
             <RiskReversal className="mt-3" />
           </div>
@@ -202,7 +204,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
                     </p>
                     <p className="text-xs text-gold/80">
                       <span className="font-semibold text-gold">
-                        Deliverable:
+                        {tCommon("deliverable")}
                       </span>{" "}
                       {step.deliverable}
                     </p>
@@ -307,7 +309,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
                 })
               }
             >
-              {siteConfig.ctaLabel}
+              {tCommon("ctaLabel")}
             </Button>
             {service.cta.secondaryCta && (
               <Button variant="outline" size="lg" asChild>

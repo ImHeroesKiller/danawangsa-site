@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ArrowLeft, Home, Layers } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
+import { Link, usePathname } from "@/lib/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 interface ServiceNavProps {
@@ -14,15 +14,17 @@ interface ServiceNavProps {
 /** Navigation for service detail pages */
 export function ServiceNav({ currentLabel }: ServiceNavProps) {
   const pathname = usePathname();
+  const t = useTranslations("serviceNav");
+  const tCommon = useTranslations("common");
 
   const links = [
-    { href: "/", label: "Beranda", icon: Home },
-    { href: "/layanan", label: "Semua Layanan", icon: Layers },
+    { href: "/", label: t("home"), icon: Home },
+    { href: "/layanan", label: t("allServices"), icon: Layers },
   ];
 
   return (
     <nav
-      aria-label="Navigasi layanan"
+      aria-label={t("ariaLabel")}
       className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
     >
       <Button
@@ -36,7 +38,7 @@ export function ServiceNav({ currentLabel }: ServiceNavProps) {
           className="inline-flex items-center gap-2 text-white/60 hover:text-gold"
         >
           <ArrowLeft className="h-4 w-4" />
-          Kembali ke Layanan
+          {tCommon("backToServices")}
         </Link>
       </Button>
 

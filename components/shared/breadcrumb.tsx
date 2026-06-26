@@ -1,6 +1,9 @@
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
+"use client";
 
+import { ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+
+import { Link } from "@/lib/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 export interface BreadcrumbItem {
@@ -15,8 +18,10 @@ interface BreadcrumbProps {
 
 /** Simple breadcrumb — dark theme with gold accent on current page */
 export function Breadcrumb({ items, className }: BreadcrumbProps) {
+  const t = useTranslations("breadcrumb");
+
   return (
-    <nav aria-label="Breadcrumb" className={cn("mb-6", className)}>
+    <nav aria-label={t("ariaLabel")} className={cn("mb-6", className)}>
       <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-xs text-white/50 sm:text-sm">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;

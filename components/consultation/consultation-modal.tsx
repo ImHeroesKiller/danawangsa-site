@@ -2,6 +2,7 @@
 
 import { useCallback, useState, useTransition } from "react";
 import { AlertCircle, Check, Loader2 } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
 import {
   submitBridgingRequest,
@@ -21,18 +22,22 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { trackConsultationFormSuccess } from "@/lib/analytics";
-import { consultationTopics } from "@/lib/data/content";
+import { consultationTopicKeys } from "@/lib/data/content";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
+import type { Locale } from "@/i18n/routing";
 
 type FormStatus = "idle" | "success" | "error";
 
 export function ConsultationModal() {
+  const locale = useLocale() as Locale;
   const { isOpen, modalType, closeConsultation } = useConsultation();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [isPending, startTransition] = useTransition();
+  const t = useTranslations("consultation");
+  const tCommon = useTranslations("common");
 
   const resetFormState = useCallback(() => {
     setStatus("idle");
@@ -96,7 +101,7 @@ export function ConsultationModal() {
               <Check className="h-7 w-7 text-gold" />
             </div>
             <h3 className="mb-1.5 text-xl font-semibold tracking-tight">
-              Permintaan Konsultasi Diterima
+              {t("success.title")}
             </h3>
             <p className="mx-auto max-w-xs text-sm leading-relaxed text-white/70">
               {message}
@@ -106,7 +111,7 @@ export function ConsultationModal() {
               className="mt-7 w-full sm:w-auto"
               onClick={() => handleOpenChange(false)}
             >
-              Tutup
+              {t("close")}
             </Button>
           </div>
         ) : modalType === "bridging" ? (
@@ -114,32 +119,35 @@ export function ConsultationModal() {
             <div className="mb-4 flex items-start justify-between gap-3">
               <DialogHeader>
                 <p className="text-xs tracking-wider text-amber-400">
-                  STRATEGI BRIDGING & RESTRUKTURISASI
+                  {t("bridging.eyebrow")}
                 </p>
-                <DialogTitle>Konsultasi Khusus</DialogTitle>
+                <DialogTitle>{t("bridging.title")}</DialogTitle>
               </DialogHeader>
               <DialogCloseButton />
             </div>
 
-            {status === "error" && message && (
-              <FormAlert message={message} />
-            )}
+            {status === "error" && message && <FormAlert message={message} />}
 
             <form action={handleBridgingSubmit} className="space-y-4">
+              <input type="hidden" name="locale" value={locale} />
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                  <Label htmlFor="companyName">NAMA PERUSAHAAN</Label>
+                  <Label htmlFor="companyName">
+                    {t("bridging.fields.companyName")}
+                  </Label>
                   <Input
                     id="companyName"
                     name="companyName"
-                    placeholder="PT Maju Bersama"
+                    placeholder={t("bridging.placeholders.companyName")}
                     aria-invalid={!!fieldErrors.companyName}
                     disabled={isPending}
                   />
                   <FieldError message={fieldErrors.companyName} />
                 </div>
                 <div>
-                  <Label htmlFor="bridging-whatsapp">NO. WHATSAPP</Label>
+                  <Label htmlFor="bridging-whatsapp">
+                    {t("bridging.fields.whatsapp")}
+                  </Label>
                   <Input
                     id="bridging-whatsapp"
                     name="whatsapp"
@@ -154,7 +162,7 @@ export function ConsultationModal() {
                 </div>
               </div>
               <div>
-                <Label htmlFor="bridging-email">EMAIL</Label>
+                <Label htmlFor="bridging-email">{t("bridging.fields.email")}</Label>
                 <Input
                   id="bridging-email"
                   name="email"
@@ -168,31 +176,32 @@ export function ConsultationModal() {
                 <FieldError message={fieldErrors.email} />
               </div>
               <div>
-                <Label htmlFor="bank">BANK YANG MENGALAMI JATUH TEMPO</Label>
+                <Label htmlFor="bank">{t("bridging.fields.bank")}</Label>
                 <Input
                   id="bank"
                   name="bank"
-                  placeholder="Bank Mandiri / BRI / BCA / dll"
+                  placeholder={t("bridging.placeholders.bank")}
                   aria-invalid={!!fieldErrors.bank}
                   disabled={isPending}
                 />
                 <FieldError message={fieldErrors.bank} />
               </div>
               <div>
-                <Label htmlFor="loanAmount">ESTIMASI NILAI PINJAMAN</Label>
+                <Label htmlFor="loanAmount">
+                  {t("bridging.fields.loanAmount")}
+                </Label>
                 <Input
                   id="loanAmount"
                   name="loanAmount"
-                  placeholder="Rp 350.000.000"
+                  placeholder={t("bridging.placeholders.loanAmount")}
                   aria-invalid={!!fieldErrors.loanAmount}
                   disabled={isPending}
                 />
                 <FieldError message={fieldErrors.loanAmount} />
               </div>
-              <SubmitButton isPending={isPending} />
+              <SubmitButton isPending={isPending} label={t("submit")} loadingLabel={t("submitting")} />
               <p className="text-center text-[10px] text-white/40">
-                Kami bantu rancang strategi & dampingi proses • Bukan penyaluran
-                dana
+                {t("bridging.footnote")}
               </p>
             </form>
           </div>
@@ -202,27 +211,26 @@ export function ConsultationModal() {
               <div className="mb-5 flex items-start justify-between gap-3">
                 <DialogHeader>
                   <p className="text-xs tracking-[2.5px] text-gold">
-                    DANAWANGSA CAPITAL
+                    {t("general.eyebrow")}
                   </p>
-                  <DialogTitle>Konsultasi Awal Gratis</DialogTitle>
+                  <DialogTitle>{t("general.title")}</DialogTitle>
                   <p className="mt-1 text-xs text-white/45">
-                    {siteConfig.tagline}
+                    {tCommon("tagline")}
                   </p>
                 </DialogHeader>
                 <DialogCloseButton />
               </div>
 
-              {status === "error" && message && (
-                <FormAlert message={message} />
-              )}
+              {status === "error" && message && <FormAlert message={message} />}
 
               <form action={handleGeneralSubmit} className="space-y-4">
+                <input type="hidden" name="locale" value={locale} />
                 <div>
-                  <Label htmlFor="name">NAMA LENGKAP / PERUSAHAAN</Label>
+                  <Label htmlFor="name">{t("general.fields.name")}</Label>
                   <Input
                     id="name"
                     name="name"
-                    placeholder="PT Maju Bersama"
+                    placeholder={t("general.placeholders.name")}
                     autoComplete="organization"
                     aria-invalid={!!fieldErrors.name}
                     disabled={isPending}
@@ -231,7 +239,7 @@ export function ConsultationModal() {
                 </div>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
-                    <Label htmlFor="whatsapp">NO. WHATSAPP</Label>
+                    <Label htmlFor="whatsapp">{t("general.fields.whatsapp")}</Label>
                     <Input
                       id="whatsapp"
                       name="whatsapp"
@@ -245,7 +253,7 @@ export function ConsultationModal() {
                     <FieldError message={fieldErrors.whatsapp} />
                   </div>
                   <div>
-                    <Label htmlFor="email">EMAIL</Label>
+                    <Label htmlFor="email">{t("general.fields.email")}</Label>
                     <Input
                       id="email"
                       name="email"
@@ -260,7 +268,7 @@ export function ConsultationModal() {
                   </div>
                 </div>
                 <div>
-                  <Label htmlFor="topic">TOPIK KONSULTASI</Label>
+                  <Label htmlFor="topic">{t("general.fields.topic")}</Label>
                   <select
                     id="topic"
                     name="topic"
@@ -273,11 +281,11 @@ export function ConsultationModal() {
                     )}
                   >
                     <option value="" disabled>
-                      Pilih topik
+                      {t("general.placeholders.topic")}
                     </option>
-                    {consultationTopics.map((topic) => (
-                      <option key={topic} value={topic}>
-                        {topic}
+                    {consultationTopicKeys.map((topicKey) => (
+                      <option key={topicKey} value={topicKey}>
+                        {t(`general.topics.${topicKey}`)}
                       </option>
                     ))}
                   </select>
@@ -285,22 +293,22 @@ export function ConsultationModal() {
                 </div>
                 <div>
                   <Label htmlFor="description">
-                    DESKRIPSI SINGKAT MASALAH / KEBUTUHAN
+                    {t("general.fields.description")}
                   </Label>
                   <Textarea
                     id="description"
                     name="description"
-                    placeholder="Contoh: Butuh solusi untuk pinjaman bank yang akan jatuh tempo dalam 2 minggu..."
+                    placeholder={t("general.placeholders.description")}
                     aria-invalid={!!fieldErrors.description}
                     disabled={isPending}
                   />
                   <FieldError message={fieldErrors.description} />
                 </div>
-                <SubmitButton isPending={isPending} />
+                <SubmitButton isPending={isPending} label={t("submit")} loadingLabel={t("submitting")} />
               </form>
             </div>
             <div className="border-t border-white/10 bg-black/40 px-5 py-3.5 text-center text-[10px] text-white/40 sm:px-6">
-              Data dilindungi • Hanya untuk keperluan konsultasi
+              {t("general.footerNote")}
             </div>
           </>
         )}
@@ -321,16 +329,24 @@ function FormAlert({ message }: { message: string }) {
   );
 }
 
-function SubmitButton({ isPending }: { isPending: boolean }) {
+function SubmitButton({
+  isPending,
+  label,
+  loadingLabel,
+}: {
+  isPending: boolean;
+  label: string;
+  loadingLabel: string;
+}) {
   return (
     <Button type="submit" className="w-full" disabled={isPending}>
       {isPending ? (
         <>
           <Loader2 className="h-4 w-4 animate-spin" />
-          Mengirim...
+          {loadingLabel}
         </>
       ) : (
-        "KIRIM PERMINTAAN KONSULTASI"
+        label
       )}
     </Button>
   );

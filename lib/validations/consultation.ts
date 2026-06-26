@@ -1,67 +1,97 @@
 import { z } from "zod";
 
-import { consultationTopics } from "@/lib/data/content";
+import { consultationTopicKeys } from "@/lib/data/content";
 
-const whatsappSchema = z
-  .string()
-  .trim()
-  .min(10, "Nomor WhatsApp minimal 10 digit")
-  .max(16, "Nomor WhatsApp terlalu panjang")
-  .regex(
-    /^(\+?62|0)[0-9]{8,13}$/,
-    "Format WhatsApp tidak valid (contoh: 081214144214)",
-  );
-
-const emailSchema = z
-  .string()
-  .trim()
-  .email("Alamat email tidak valid")
-  .max(120, "Email terlalu panjang");
-
-/** General consultation form schema */
-export const generalConsultationSchema = z.object({
-  name: z
+export function createGeneralConsultationSchema(messages: {
+  whatsappMin: string;
+  whatsappMax: string;
+  whatsappFormat: string;
+  emailInvalid: string;
+  emailMax: string;
+  nameMin: string;
+  nameMax: string;
+  topicRequired: string;
+  descriptionMin: string;
+  descriptionMax: string;
+}) {
+  const whatsappSchema = z
     .string()
     .trim()
-    .min(2, "Nama / perusahaan minimal 2 karakter")
-    .max(120, "Nama / perusahaan terlalu panjang"),
-  whatsapp: whatsappSchema,
-  email: emailSchema,
-  topic: z.enum(consultationTopics, {
-    message: "Pilih topik konsultasi",
-  }),
-  description: z
-    .string()
-    .trim()
-    .min(10, "Deskripsi minimal 10 karakter")
-    .max(2000, "Deskripsi maksimal 2000 karakter"),
-});
+    .min(10, messages.whatsappMin)
+    .max(16, messages.whatsappMax)
+    .regex(/^(\+?62|0)[0-9]{8,13}$/, messages.whatsappFormat);
 
-/** Bridging consultation form schema */
-export const bridgingConsultationSchema = z.object({
-  companyName: z
+  const emailSchema = z
     .string()
     .trim()
-    .min(2, "Nama perusahaan minimal 2 karakter")
-    .max(120, "Nama perusahaan terlalu panjang"),
-  whatsapp: whatsappSchema,
-  email: emailSchema,
-  bank: z
-    .string()
-    .trim()
-    .min(2, "Nama bank wajib diisi")
-    .max(80, "Nama bank terlalu panjang"),
-  loanAmount: z
-    .string()
-    .trim()
-    .min(3, "Estimasi nilai pinjaman wajib diisi")
-    .max(50, "Estimasi nilai pinjaman terlalu panjang"),
-});
+    .email(messages.emailInvalid)
+    .max(120, messages.emailMax);
 
-export type GeneralConsultationInput = z.infer<typeof generalConsultationSchema>;
-export type BridgingConsultationInput = z.infer<
-  typeof bridgingConsultationSchema
->;
+  return z.object({
+    name: z
+      .string()
+      .trim()
+      .min(2, messages.nameMin)
+      .max(120, messages.nameMax),
+    whatsapp: whatsappSchema,
+    email: emailSchema,
+    topic: z.enum(consultationTopicKeys, {
+      message: messages.topicRequired,
+    }),
+    description: z
+      .string()
+      .trim()
+      .min(10, messages.descriptionMin)
+      .max(2000, messages.descriptionMax),
+  });
+}
+
+export function createBridgingConsultationSchema(messages: {
+  whatsappMin: string;
+  whatsappMax: string;
+  whatsappFormat: string;
+  emailInvalid: string;
+  emailMax: string;
+  companyNameMin: string;
+  companyNameMax: string;
+  bankMin: string;
+  bankMax: string;
+  loanAmountMin: string;
+  loanAmountMax: string;
+}) {
+  const whatsappSchema = z
+    .string()
+    .trim()
+    .min(10, messages.whatsappMin)
+    .max(16, messages.whatsappMax)
+    .regex(/^(\+?62|0)[0-9]{8,13}$/, messages.whatsappFormat);
+
+  const emailSchema = z
+    .string()
+    .trim()
+    .email(messages.emailInvalid)
+    .max(120, messages.emailMax);
+
+  return z.object({
+    companyName: z
+      .string()
+      .trim()
+      .min(2, messages.companyNameMin)
+      .max(120, messages.companyNameMax),
+    whatsapp: whatsappSchema,
+    email: emailSchema,
+    bank: z
+      .string()
+      .trim()
+      .min(2, messages.bankMin)
+      .max(80, messages.bankMax),
+    loanAmount: z
+      .string()
+      .trim()
+      .min(3, messages.loanAmountMin)
+      .max(50, messages.loanAmountMax),
+  });
+}
 
 /** Flatten Zod errors into field → message map for the UI */
 export function formatZodErrors(

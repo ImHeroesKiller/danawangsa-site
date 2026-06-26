@@ -1,34 +1,59 @@
-import { services } from "@/lib/data/services";
-import { legalNavLinks } from "@/lib/data/legal-content";
+import type { Locale } from "@/i18n/routing";
+import { getServices } from "@/lib/data/services";
+import { getLegalNavLinks } from "@/lib/data/legal";
 import { getWhatsAppUrl, siteConfig } from "@/lib/site-config";
 import type { NavLink } from "@/types";
 
-/** Primary header navigation — keep lean and consistent with footer */
-export const mainNavLinks: NavLink[] = [
-  { label: "Beranda", href: "/" },
-  { label: "Layanan", href: "/layanan" },
-  { label: "Proses Kerja", href: "/layanan" },
-  { label: "Testimoni", href: "/#testimonials" },
+export type NavLinkKey =
+  | "home"
+  | "services"
+  | "process"
+  | "testimonials"
+  | "allServices"
+  | "contactUs";
+
+interface NavLinkDefinition {
+  key: NavLinkKey;
+  href: string;
+}
+
+/** Primary header navigation — labels resolved via next-intl in components */
+export const mainNavLinkDefs: NavLinkDefinition[] = [
+  { key: "home", href: "/" },
+  { key: "services", href: "/layanan" },
+  { key: "process", href: "/layanan" },
+  { key: "testimonials", href: "/#testimonials" },
 ];
 
-export const footerServiceLinks: NavLink[] = [
-  ...services.map((service) => ({
-    label: service.listing.title,
-    href: service.path,
-  })),
-  { label: "Semua Layanan", href: "/layanan" },
+export function getFooterServiceLinks(locale: Locale): NavLink[] {
+  const services = getServices(locale);
+
+  return [
+    ...services.map((service) => ({
+      label: service.listing.title,
+      href: `/layanan/${service.slug}`,
+    })),
+    { label: "allServices", href: "/layanan" },
+  ];
+}
+
+export const footerCompanyLinkDefs: NavLinkDefinition[] = [
+  { key: "process", href: "/layanan" },
+  { key: "testimonials", href: "/#testimonials" },
+  { key: "contactUs", href: "/#cta-section" },
 ];
 
-export const footerCompanyLinks: NavLink[] = [
-  { label: "Proses Kerja", href: "/layanan" },
-  { label: "Testimoni", href: "/#testimonials" },
-  { label: "Hubungi Kami", href: "/#cta-section" },
-];
+export function getFooterLegalLinks(locale: Locale): NavLink[] {
+  return getLegalNavLinks(locale).map((link) => ({
+    label: link.label,
+    href: link.href.replace(`/${locale}`, "") || "/",
+  }));
+}
 
-export const footerLegalLinks: NavLink[] = [...legalNavLinks];
-
-export const footerContactLinks: NavLink[] = [
-  { label: siteConfig.phone, href: `tel:+${siteConfig.phoneRaw}` },
-  { label: siteConfig.email, href: `mailto:${siteConfig.email}` },
-  { label: "WhatsApp", href: getWhatsAppUrl() },
-];
+export function getFooterContactLinks(): NavLink[] {
+  return [
+    { label: siteConfig.phone, href: `tel:+${siteConfig.phoneRaw}` },
+    { label: siteConfig.email, href: `mailto:${siteConfig.email}` },
+    { label: "WhatsApp", href: getWhatsAppUrl() },
+  ];
+}

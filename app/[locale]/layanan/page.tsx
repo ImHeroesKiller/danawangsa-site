@@ -1,42 +1,57 @@
-import Link from "next/link";
 import { ArrowRight, FileText } from "lucide-react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { ServiceNav } from "@/components/layanan/service-nav";
 import { Breadcrumb } from "@/components/shared/breadcrumb";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { getServiceDetailPath, services } from "@/lib/data/services";
+import { Link } from "@/lib/i18n/navigation";
+import { getServiceDetailPath, getServices } from "@/lib/data/services";
 import { createPageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site-config";
+import type { Locale } from "@/i18n/routing";
 
-export const metadata = createPageMetadata({
-  title: `Layanan Konsultasi • ${siteConfig.name}`,
-  description:
-    "Daftar layanan konsultasi Danawangsa Capital — Bridging Finance, pembiayaan modal usaha, SKBDN, Asset Collateral Program, dan Business & Financial Advisory.",
-  path: "/layanan",
-  imageAlt: `Layanan Konsultasi — ${siteConfig.name}`,
-});
+type LayananPageProps = {
+  params: Promise<{ locale: string }>;
+};
 
-export default function LayananPage() {
+export async function generateMetadata({ params }: LayananPageProps) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata.layanan" });
+
+  return createPageMetadata({
+    locale: locale as Locale,
+    title: `${t("title")} • ${siteConfig.name}`,
+    description: t("description"),
+    path: `/${locale}/layanan`,
+    imageAlt: t("imageAlt"),
+  });
+}
+
+export default async function LayananPage({ params }: LayananPageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("layanan");
+  const tBreadcrumb = await getTranslations("breadcrumb");
+  const services = getServices(locale as Locale);
+
   return (
     <div className="mx-auto max-w-5xl px-5 py-12 sm:px-6 sm:py-16">
       <Breadcrumb
         items={[
-          { label: "Beranda", href: "/" },
-          { label: "Layanan" },
+          { label: tBreadcrumb("home"), href: "/" },
+          { label: tBreadcrumb("services") },
         ]}
       />
       <ServiceNav />
 
       <header className="mt-10 text-center">
-        <Badge className="mb-4">LAYANAN KONSULTASI</Badge>
+        <Badge className="mb-4">{t("badge")}</Badge>
         <h1 className="heading-serif text-3xl font-semibold tracking-tight sm:text-4xl">
-          Solusi Konsultasi Strategis
+          {t("title")}
         </h1>
-        <p className="mx-auto mt-4 max-w-xl text-white/65">
-          Pendampingan profesional untuk strategi bisnis & keuangan — bukan
-          lembaga pembiayaan.
-        </p>
+        <p className="mx-auto mt-4 max-w-xl text-white/65">{t("description")}</p>
       </header>
 
       <div className="mt-12 space-y-5">
@@ -66,7 +81,7 @@ export default function LayananPage() {
                 href={getServiceDetailPath(service.slug)}
                 className="inline-flex items-center gap-2"
               >
-                Lihat Detail Layanan
+                {t("viewDetail")}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
@@ -76,9 +91,9 @@ export default function LayananPage() {
 
       <div className="mt-10 rounded-3xl border border-white/10 bg-surface p-6 text-center text-sm text-white/55">
         <FileText className="mx-auto mb-3 h-6 w-6 text-gold/60" />
-        Layanan konsultasi lainnya tersedia di{" "}
+        {t("moreServicesPrefix")}{" "}
         <Link href="/#solutions" className="text-gold hover:underline">
-          halaman utama
+          {t("moreServicesLink")}
         </Link>
         .
       </div>

@@ -1,11 +1,12 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ArrowLeft, FileText, Shield } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
-import { legalNavLinks } from "@/lib/data/legal-content";
+import { getLegalNavLinks } from "@/lib/data/legal";
+import { Link, usePathname } from "@/lib/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
 const linkIcons: Record<string, typeof Shield> = {
@@ -16,21 +17,37 @@ const linkIcons: Record<string, typeof Shield> = {
 /** Cross-navigation between legal pages + back to homepage */
 export function LegalNav() {
   const pathname = usePathname();
+  const locale = useLocale() as Locale;
+  const t = useTranslations("legalNav");
+  const tCommon = useTranslations("common");
+
+  const legalLinks = getLegalNavLinks(locale).map((link) => ({
+    ...link,
+    href: link.href.replace(`/${locale}`, "") || "/",
+  }));
 
   return (
     <nav
-      aria-label="Navigasi halaman legal"
+      aria-label={t("ariaLabel")}
       className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
     >
-      <Button variant="ghost" size="sm" className="w-fit px-0 hover:bg-transparent" asChild>
-        <Link href="/" className="inline-flex items-center gap-2 text-white/60 hover:text-gold">
+      <Button
+        variant="ghost"
+        size="sm"
+        className="w-fit px-0 hover:bg-transparent"
+        asChild
+      >
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-white/60 hover:text-gold"
+        >
           <ArrowLeft className="h-4 w-4" />
-          Kembali ke Beranda
+          {tCommon("backToHome")}
         </Link>
       </Button>
 
       <div className="flex flex-wrap gap-2">
-        {legalNavLinks.map((link) => {
+        {legalLinks.map((link) => {
           const Icon = linkIcons[link.href] ?? FileText;
           const isActive = pathname === link.href;
 

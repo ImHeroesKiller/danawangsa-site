@@ -1,4 +1,7 @@
-import { siteConfig } from "@/lib/site-config";
+"use client";
+
+import { useTranslations } from "next-intl";
+
 import { cn } from "@/lib/utils";
 
 interface RiskReversalProps {
@@ -6,9 +9,11 @@ interface RiskReversalProps {
 }
 
 export function RiskReversal({ className }: RiskReversalProps) {
+  const t = useTranslations("common");
+
   return (
     <p className={cn("text-xs text-white/45", className)}>
-      {siteConfig.riskReversal}
+      {t("riskReversal")}
     </p>
   );
 }

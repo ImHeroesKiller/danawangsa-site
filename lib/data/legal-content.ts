@@ -219,3 +219,9 @@ export const termsOfServiceContent: LegalPageContent = {
     },
   ],
 };
+
+export {
+  getLegalNavLinks,
+  getPrivacyContent,
+  getTermsContent,
+} from "./legal";

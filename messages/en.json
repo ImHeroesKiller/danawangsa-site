@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "siteDescription": "Strategic business & financial consulting for business owners. Professional guidance in asset optimization, funding structure, and credit restructuring — not a lending institution.",
+    "keywords": [
+      "business consulting",
+      "financial consulting",
+      "strategic advisory",
+      "danawangsa capital",
+      "credit restructuring",
+      "bridging strategy"
+    ],
+    "ogImageAlt": "Danawangsa Capital — Strategic Business & Financial Advisory",
+    "layanan": {
+      "title": "Consulting Services",
+      "description": "Danawangsa Capital consulting services — Bridging Finance, working capital financing, SKBDN, Asset Collateral Program, and Business & Financial Advisory.",
+      "imageAlt": "Consulting Services — Danawangsa Capital"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "process": "Our Process",
+    "testimonials": "Testimonials",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "legalSection": "LEGAL",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Consultation Terms"
+  },
+  "footer": {
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "contact": "Contact",
+    "taglineExtension": "Not a lending institution — we help design business & financial strategy.",
+    "copyright": "© 2026 Danawangsa Capital — Strategic Advisory",
+    "disclaimer": "Strategic business & financial consultant — not a bank, not a lending institution.",
+    "allServices": "All Services",
+    "contactUs": "Contact Us",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "titleLine1": "TURNING ASSETS",
+    "titleLine2": "INTO OPPORTUNITIES",
+    "description": "Strategic consulting partner for business owners & management — designing financial strategy, optimizing assets, and supporting funding processes through a professional network.",
+    "positioning": "Strategic business & financial consultant — not a bank, not a lending institution.",
+    "ctaSecondary": "View Consulting Solutions"
+  },
+  "trustBar": {
+    "experience": "Years of Experience",
+    "casesHandled": "Cases Handled",
+    "initialAnalysis": "Initial Analysis",
+    "transparentFee": "Transparent Fees"
+  },
+  "servicesSection": {
+    "eyebrow": "STRATEGIC CONSULTING SOLUTIONS",
+    "title": "Choose the Right Service for Your Needs",
+    "description": "Overview of core services. Full process, fee structure, and FAQ are available on each service detail page.",
+    "viewDetail": "View Service Details",
+    "viewAll": "View All Services"
+  },
+  "bridgingSection": {
+    "badge": "STRATEGIC SOLUTION",
+    "title": "BRIDGING FINANCE &",
+    "titleHighlight": "Financial Restructuring",
+    "description": "Bank loan approaching maturity? We help design bridging finance strategy and support financial restructuring — not direct fund disbursement.",
+    "highlights": {
+      "fastAnalysis": "Fast Analysis 1-2 Days",
+      "shortTermStrategy": "Short-Term Strategy",
+      "professionalSupport": "Professional Support"
+    },
+    "benefits": {
+      "cashFlow": "Cash flow stays under control",
+      "operations": "Operations remain uninterrupted",
+      "creditLimit": "Bank credit limit can be restored"
+    },
+    "card": {
+      "eyebrow": "NEED IMMEDIATE SUPPORT?",
+      "description": "Learn the 5-step process, fee structure, FAQ, and ideal client criteria — all on the service detail page.",
+      "footnote": "Not direct fund disbursement • We help design strategy & support the process"
+    }
+  },
+  "testimonialsSection": {
+    "eyebrow": "CLIENT TESTIMONIALS",
+    "title": "Trusted by Business Owners",
+    "description": "Client identities are anonymized to protect confidentiality."
+  },
+  "ctaSection": {
+    "badge": "FREE INITIAL CONSULTATION • 30 MINUTES",
+    "titleLine1": "Ready to Optimize",
+    "titleLine2": "Your Business Financial Strategy?",
+    "description": "Tell us your business challenges. Our advisor team will respond within 24 hours with recommended next steps.",
+    "chatWhatsApp": "Chat on WhatsApp",
+    "strategicAdvisory": "Strategic Advisory — Not a Lending Institution"
+  },
+  "consultation": {
+    "general": {
+      "eyebrow": "DANAWANGSA CAPITAL",
+      "title": "Free Initial Consultation",
+      "footerNote": "Data protected • For consultation purposes only",
+      "fields": {
+        "name": "FULL NAME / COMPANY",
+        "whatsapp": "WHATSAPP NO.",
+        "email": "EMAIL",
+        "topic": "CONSULTATION TOPIC",
+        "description": "BRIEF DESCRIPTION OF ISSUE / NEED"
+      },
+      "placeholders": {
+        "name": "PT Maju Bersama",
+        "topic": "Select a topic",
+        "description": "Example: Need a solution for a bank loan maturing in 2 weeks..."
+      },
+      "topics": {
+        "bridging": "Bridging Finance & Financial Restructuring",
+        "modalUsaha": "Working Capital Financing with Asset Collateral",
+        "modalKerja": "SKBDN-Based Working Capital Financing",
+        "assetCollateral": "Asset Collateral Program",
+        "advisory": "Business & Financial Advisory"
+      }
+    },
+    "bridging": {
+      "eyebrow": "BRIDGING & RESTRUCTURING STRATEGY",
+      "title": "Specialized Consultation",
+      "footnote": "We help design strategy & support the process • Not fund disbursement",
+      "fields": {
+        "companyName": "COMPANY NAME",
+        "whatsapp": "WHATSAPP NO.",
+        "email": "EMAIL",
+        "bank": "BANK WITH MATURING LOAN",
+        "loanAmount": "ESTIMATED LOAN AMOUNT"
+      },
+      "placeholders": {
+        "companyName": "PT Maju Bersama",
+        "bank": "Bank Mandiri / BRI / BCA / etc.",
+        "loanAmount": "Rp 350,000,000"
+      }
+    },
+    "submit": "SUBMIT CONSULTATION REQUEST",
+    "submitting": "Sending...",
+    "close": "Close",
+    "success": {
+      "title": "Consultation Request Received",
+      "message": "Thank you. Our team will contact you within 24 hours."
+    },
+    "errors": {
+      "validation": "Please review the information you entered.",
+      "webhookMissing": "Form service is not configured. Please contact us via WhatsApp.",
+      "generic": "Failed to submit request. Please try again or contact us via WhatsApp.",
+      "whatsappMin": "WhatsApp number must be at least 10 digits",
+      "whatsappMax": "WhatsApp number is too long",
+      "whatsappFormat": "Invalid WhatsApp format (example: 081214144214)",
+      "emailInvalid": "Invalid email address",
+      "emailMax": "Email is too long",
+      "nameMin": "Name / company must be at least 2 characters",
+      "nameMax": "Name / company is too long",
+      "topicRequired": "Please select a consultation topic",
+      "descriptionMin": "Description must be at least 10 characters",
+      "descriptionMax": "Description must not exceed 2000 characters",
+      "companyNameMin": "Company name must be at least 2 characters",
+      "companyNameMax": "Company name is too long",
+      "bankMin": "Bank name is required",
+      "bankMax": "Bank name is too long",
+      "loanAmountMin": "Estimated loan amount is required",
+      "loanAmountMax": "Estimated loan amount is too long"
+    }
+  },
+  "legal": {
+    "documentBadge": "LEGAL DOCUMENT",
+    "lastUpdated": "Last updated:",
+    "privacyTitle": "Privacy Policy",
+    "termsTitle": "Consultation Service Terms & Conditions",
+    "footerNote": "Danawangsa Capital — Strategic Business & Financial Advisory.",
+    "footerDisclaimer": "Not a lending institution. For further questions,",
+    "footerContactLink": "contact us"
+  },
+  "layanan": {
+    "badge": "CONSULTING SERVICES",
+    "title": "Strategic Consulting Solutions",
+    "description": "Professional guidance for business & financial strategy — not a lending institution.",
+    "viewDetail": "View Service Details",
+    "moreServicesPrefix": "Other consulting services are available on the",
+    "moreServicesLink": "homepage",
+    "notFound": {
+      "badge": "404 — SERVICE NOT FOUND",
+      "title": "Service not found",
+      "description": "Sorry, the service you are looking for is not available. Please check the URL or browse our consulting services."
+    }
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "services": "Services",
+    "privacy": "Privacy",
+    "terms": "Consultation Terms",
+    "notFound": "Not Found",
+    "ariaLabel": "Breadcrumb"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "indonesia": "Indonesia",
+    "english": "English",
+    "chinese": "中文"
+  },
+  "common": {
+    "siteName": "Danawangsa Capital",
+    "tagline": "Strategic Business & Financial Advisory",
+    "ctaLabel": "Schedule Free Consultation",
+    "riskReversal": "Response within 24 hours • Initial consultation with no commitment • Your data is kept confidential",
+    "whatsappMessage": "Hello Danawangsa Capital, I would like to consult on business financial strategy.",
+    "viewFee": "View Fee Structure",
+    "viewServiceDetail": "View Service Details",
+    "viewAllServices": "View All Services",
+    "viewOtherServices": "View Other Services",
+    "popular": "Popular",
+    "chatWhatsApp": "Chat on WhatsApp",
+    "backToHome": "Back to Home",
+    "backToServices": "Back to Services",
+    "close": "Close",
+    "deliverable": "Deliverable:",
+    "discussYourCase": "Discuss Your Case"
+  },
+  "serviceNav": {
+    "ariaLabel": "Service navigation",
+    "home": "Home",
+    "allServices": "All Services"
+  },
+  "legalNav": {
+    "ariaLabel": "Legal page navigation"
+  },
+  "stickyCta": {},
+  "floatingWhatsapp": {
+    "ariaLabel": "Chat on WhatsApp"
+  }
+}

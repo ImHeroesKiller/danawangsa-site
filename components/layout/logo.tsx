@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n/navigation";
 
 export function Logo({ compact = false }: { compact?: boolean }) {
   const content = (

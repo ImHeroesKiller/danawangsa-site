@@ -1,21 +1,38 @@
-import type { NavLink } from "@/types";
+import type { NavLinkKey } from "@/lib/data/navigation";
+
+/** Strip locale prefix from pathname for active-state checks */
+export function stripLocalePrefix(pathname: string): string {
+  const match = pathname.match(/^\/(id|en|zh)(\/|$)/);
+  if (!match) return pathname;
+
+  const rest = pathname.slice(match[0].length - 1);
+  return rest || "/";
+}
 
 /** Determines whether a main nav link should show the active state */
-export function isMainNavLinkActive(pathname: string, link: NavLink): boolean {
-  switch (link.label) {
-    case "Beranda":
-      return pathname === "/";
-    case "Layanan":
-      return pathname.startsWith("/layanan");
-    case "Proses Kerja":
-      return pathname === "/layanan";
-    case "Testimoni":
-      return pathname === "/";
+export function isMainNavLinkActive(
+  pathname: string,
+  key: NavLinkKey,
+  href: string,
+): boolean {
+  const path = stripLocalePrefix(pathname);
+
+  switch (key) {
+    case "home":
+      return path === "/";
+    case "services":
+      return path.startsWith("/layanan");
+    case "process":
+      return path === "/layanan";
+    case "testimonials":
+      return path === "/";
     default:
-      return pathname === link.href || pathname.startsWith(`${link.href}/`);
+      return path === href || path.startsWith(`${href}/`);
   }
 }
 
 export function isLegalNavLinkActive(pathname: string, href: string): boolean {
-  return pathname === href;
+  const path = stripLocalePrefix(pathname);
+  const normalizedHref = href.startsWith("/") ? href : `/${href}`;
+  return path === normalizedHref;
 }

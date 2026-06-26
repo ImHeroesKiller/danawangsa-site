@@ -18,6 +18,6 @@ export const siteConfig = {
     "Respon dalam 1×24 jam • Sesi konsultasi awal tanpa komitmen • Data Anda dijaga kerahasiaannya",
 } as const;
 
-export function getWhatsAppUrl(message = siteConfig.whatsappMessage) {
+export function getWhatsAppUrl(message: string = siteConfig.whatsappMessage) {
   return `https://wa.me/${siteConfig.phoneRaw}?text=${encodeURIComponent(message)}`;
 }

@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "siteDescription": "Konsultasi strategis bisnis & keuangan untuk pemilik usaha. Pendampingan profesional dalam optimalisasi aset, struktur pendanaan, dan restrukturisasi kredit — bukan lembaga pembiayaan.",
+    "keywords": [
+      "konsultasi bisnis",
+      "konsultasi keuangan",
+      "strategic advisory",
+      "danawangsa capital",
+      "restrukturisasi kredit",
+      "bridging strategy"
+    ],
+    "ogImageAlt": "Danawangsa Capital — Strategic Business & Financial Advisory",
+    "layanan": {
+      "title": "Layanan Konsultasi",
+      "description": "Daftar layanan konsultasi Danawangsa Capital — Bridging Finance, pembiayaan modal usaha, SKBDN, Asset Collateral Program, dan Business & Financial Advisory.",
+      "imageAlt": "Layanan Konsultasi — Danawangsa Capital"
+    }
+  },
+  "nav": {
+    "home": "Beranda",
+    "services": "Layanan",
+    "process": "Proses Kerja",
+    "testimonials": "Testimoni",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "legalSection": "LEGAL",
+    "privacyPolicy": "Kebijakan Privasi",
+    "termsOfService": "Syarat Konsultasi"
+  },
+  "footer": {
+    "services": "Layanan",
+    "company": "Perusahaan",
+    "legal": "Legal",
+    "contact": "Kontak",
+    "taglineExtension": "Bukan lembaga pembiayaan — kami membantu merancang strategi bisnis & keuangan.",
+    "copyright": "© 2026 Danawangsa Capital — Strategic Advisory",
+    "disclaimer": "Konsultan bisnis & keuangan strategis — bukan bank, bukan lembaga pembiayaan.",
+    "allServices": "Semua Layanan",
+    "contactUs": "Hubungi Kami",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "titleLine1": "TURNING ASSETS",
+    "titleLine2": "INTO OPPORTUNITIES",
+    "description": "Partner konsultasi strategis untuk pemilik usaha & manajemen — merancang strategi keuangan, mengoptimalkan aset, dan mendampingi proses pendanaan melalui jaringan profesional.",
+    "positioning": "Konsultan bisnis & keuangan strategis — bukan bank, bukan lembaga pembiayaan.",
+    "ctaSecondary": "Lihat Solusi Konsultasi"
+  },
+  "trustBar": {
+    "experience": "Tahun Pengalaman",
+    "casesHandled": "Kasus Ditangani",
+    "initialAnalysis": "Analisis Awal",
+    "transparentFee": "Fee Transparan"
+  },
+  "servicesSection": {
+    "eyebrow": "SOLUSI KONSULTASI STRATEGIS",
+    "title": "Pilih Layanan yang Sesuai Kebutuhan",
+    "description": "Ringkasan layanan utama. Proses lengkap, struktur fee, dan FAQ tersedia di halaman detail masing-masing.",
+    "viewDetail": "Lihat Detail Layanan",
+    "viewAll": "Lihat Semua Layanan"
+  },
+  "bridgingSection": {
+    "badge": "SOLUSI STRATEGIS",
+    "title": "BRIDGING FINANCE &",
+    "titleHighlight": "Financial Restructuring",
+    "description": "Pinjaman bank mendekati jatuh tempo? Kami membantu merancang strategi bridging finance dan mendampingi financial restructuring — bukan menyalurkan dana langsung.",
+    "highlights": {
+      "fastAnalysis": "Analisis Cepat 1-2 Hari",
+      "shortTermStrategy": "Strategi Jangka Pendek",
+      "professionalSupport": "Pendampingan Profesional"
+    },
+    "benefits": {
+      "cashFlow": "Cash flow tetap terkendali",
+      "operations": "Operasional tidak terganggu",
+      "creditLimit": "Plafon bank dapat dipulihkan"
+    },
+    "card": {
+      "eyebrow": "BUTUH PENDAMPATAN SEGERA?",
+      "description": "Pelajari proses 5 langkah, struktur fee, FAQ, dan kriteria klien yang cocok — semuanya di halaman detail layanan.",
+      "footnote": "Bukan penyaluran dana langsung • Kami bantu rancang strategi & dampingi proses"
+    }
+  },
+  "testimonialsSection": {
+    "eyebrow": "TESTIMONI KLIEN",
+    "title": "Dipercaya Pemilik Usaha",
+    "description": "Identitas klien disamarkan untuk menjaga kerahasiaan."
+  },
+  "ctaSection": {
+    "badge": "KONSULTASI AWAL GRATIS • 30 MENIT",
+    "titleLine1": "Siap Mengoptimalkan",
+    "titleLine2": "Strategi Keuangan Bisnis Anda?",
+    "description": "Ceritakan tantangan bisnis Anda. Tim advisor kami akan merespons dalam 1×24 jam dengan rekomendasi langkah selanjutnya.",
+    "chatWhatsApp": "Chat WhatsApp",
+    "strategicAdvisory": "Strategic Advisory — Bukan Lembaga Pembiayaan"
+  },
+  "consultation": {
+    "general": {
+      "eyebrow": "DANAWANGSA CAPITAL",
+      "title": "Konsultasi Awal Gratis",
+      "footerNote": "Data dilindungi • Hanya untuk keperluan konsultasi",
+      "fields": {
+        "name": "NAMA LENGKAP / PERUSAHAAN",
+        "whatsapp": "NO. WHATSAPP",
+        "email": "EMAIL",
+        "topic": "TOPIK KONSULTASI",
+        "description": "DESKRIPSI SINGKAT MASALAH / KEBUTUHAN"
+      },
+      "placeholders": {
+        "name": "PT Maju Bersama",
+        "topic": "Pilih topik",
+        "description": "Contoh: Butuh solusi untuk pinjaman bank yang akan jatuh tempo dalam 2 minggu..."
+      },
+      "topics": {
+        "bridging": "Bridging Finance & Financial Restructuring",
+        "modalUsaha": "Pembiayaan Modal Usaha dengan Jaminan Aset",
+        "modalKerja": "Pembiayaan Modal Kerja Berbasis SKBDN",
+        "assetCollateral": "Asset Collateral Program",
+        "advisory": "Business & Financial Advisory"
+      }
+    },
+    "bridging": {
+      "eyebrow": "STRATEGI BRIDGING & RESTRUKTURISASI",
+      "title": "Konsultasi Khusus",
+      "footnote": "Kami bantu rancang strategi & dampingi proses • Bukan penyaluran dana",
+      "fields": {
+        "companyName": "NAMA PERUSAHAAN",
+        "whatsapp": "NO. WHATSAPP",
+        "email": "EMAIL",
+        "bank": "BANK YANG MENGALAMI JATUH TEMPO",
+        "loanAmount": "ESTIMASI NILAI PINJAMAN"
+      },
+      "placeholders": {
+        "companyName": "PT Maju Bersama",
+        "bank": "Bank Mandiri / BRI / BCA / dll",
+        "loanAmount": "Rp 350.000.000"
+      }
+    },
+    "submit": "KIRIM PERMINTAAN KONSULTASI",
+    "submitting": "Mengirim...",
+    "close": "Tutup",
+    "success": {
+      "title": "Permintaan Konsultasi Diterima",
+      "message": "Terima kasih. Tim kami akan menghubungi Anda dalam 1×24 jam."
+    },
+    "errors": {
+      "validation": "Periksa kembali data yang Anda isi.",
+      "webhookMissing": "Layanan formulir belum dikonfigurasi. Silakan hubungi kami via WhatsApp.",
+      "generic": "Gagal mengirim permintaan. Silakan coba lagi atau hubungi WhatsApp.",
+      "whatsappMin": "Nomor WhatsApp minimal 10 digit",
+      "whatsappMax": "Nomor WhatsApp terlalu panjang",
+      "whatsappFormat": "Format WhatsApp tidak valid (contoh: 081214144214)",
+      "emailInvalid": "Alamat email tidak valid",
+      "emailMax": "Email terlalu panjang",
+      "nameMin": "Nama / perusahaan minimal 2 karakter",
+      "nameMax": "Nama / perusahaan terlalu panjang",
+      "topicRequired": "Pilih topik konsultasi",
+      "descriptionMin": "Deskripsi minimal 10 karakter",
+      "descriptionMax": "Deskripsi maksimal 2000 karakter",
+      "companyNameMin": "Nama perusahaan minimal 2 karakter",
+      "companyNameMax": "Nama perusahaan terlalu panjang",
+      "bankMin": "Nama bank wajib diisi",
+      "bankMax": "Nama bank terlalu panjang",
+      "loanAmountMin": "Estimasi nilai pinjaman wajib diisi",
+      "loanAmountMax": "Estimasi nilai pinjaman terlalu panjang"
+    }
+  },
+  "legal": {
+    "documentBadge": "DOKUMEN LEGAL",
+    "lastUpdated": "Terakhir diperbarui:",
+    "privacyTitle": "Kebijakan Privasi",
+    "termsTitle": "Syarat & Ketentuan Layanan Konsultasi",
+    "footerNote": "Danawangsa Capital — Strategic Business & Financial Advisory.",
+    "footerDisclaimer": "Bukan lembaga pembiayaan. Untuk pertanyaan lebih lanjut,",
+    "footerContactLink": "hubungi kami"
+  },
+  "layanan": {
+    "badge": "LAYANAN KONSULTASI",
+    "title": "Solusi Konsultasi Strategis",
+    "description": "Pendampingan profesional untuk strategi bisnis & keuangan — bukan lembaga pembiayaan.",
+    "viewDetail": "Lihat Detail Layanan",
+    "moreServicesPrefix": "Layanan konsultasi lainnya tersedia di",
+    "moreServicesLink": "halaman utama",
+    "notFound": {
+      "badge": "404 — LAYANAN TIDAK DITEMUKAN",
+      "title": "Layanan tidak ditemukan",
+      "description": "Maaf, layanan yang kamu cari tidak tersedia. Periksa kembali URL atau lihat daftar layanan konsultasi kami."
+    }
+  },
+  "breadcrumb": {
+    "home": "Beranda",
+    "services": "Layanan",
+    "privacy": "Privasi",
+    "terms": "Syarat Konsultasi",
+    "notFound": "Tidak Ditemukan",
+    "ariaLabel": "Breadcrumb"
+  },
+  "languageSwitcher": {
+    "label": "Bahasa",
+    "indonesia": "Indonesia",
+    "english": "English",
+    "chinese": "中文"
+  },
+  "common": {
+    "siteName": "Danawangsa Capital",
+    "tagline": "Strategic Business & Financial Advisory",
+    "ctaLabel": "Jadwalkan Konsultasi Gratis",
+    "riskReversal": "Respon dalam 1×24 jam • Sesi konsultasi awal tanpa komitmen • Data Anda dijaga kerahasiaannya",
+    "whatsappMessage": "Halo Danawangsa Capital, saya ingin konsultasi strategi keuangan bisnis.",
+    "viewFee": "Lihat Struktur Fee",
+    "viewServiceDetail": "Lihat Detail Layanan",
+    "viewAllServices": "Lihat Semua Layanan",
+    "viewOtherServices": "Lihat Layanan Lainnya",
+    "popular": "Populer",
+    "chatWhatsApp": "Chat WhatsApp",
+    "backToHome": "Kembali ke Beranda",
+    "backToServices": "Kembali ke Layanan",
+    "close": "Tutup",
+    "deliverable": "Deliverable:",
+    "discussYourCase": "Diskusikan Kasus Anda"
+  },
+  "serviceNav": {
+    "ariaLabel": "Navigasi layanan",
+    "home": "Beranda",
+    "allServices": "Semua Layanan"
+  },
+  "legalNav": {
+    "ariaLabel": "Navigasi halaman legal"
+  },
+  "stickyCta": {},
+  "floatingWhatsapp": {
+    "ariaLabel": "Chat WhatsApp"
+  }
+}

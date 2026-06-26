@@ -11,13 +11,13 @@ import {
   Zap,
   type LucideIcon,
 } from "lucide-react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import { useConsultation } from "@/components/consultation/consultation-context";
 import { RiskReversal } from "@/components/shared/risk-reversal";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/site-config";
+import { Link } from "@/lib/i18n/navigation";
 import type { ServiceIconKey, ServicePageData } from "@/types/service";
 
 const TEASER_ICONS: Record<ServiceIconKey, LucideIcon> = {
@@ -40,6 +40,7 @@ export function ServiceTeaserSection({
   sectionId,
 }: ServiceTeaserSectionProps) {
   const { openConsultation } = useConsultation();
+  const tCommon = useTranslations("common");
   const { teaser, path, consultationModalType } = service;
 
   return (
@@ -105,7 +106,7 @@ export function ServiceTeaserSection({
                     href={path}
                     className="inline-flex items-center justify-center gap-2"
                   >
-                    Lihat Detail Layanan
+                    {tCommon("viewServiceDetail")}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
@@ -119,7 +120,7 @@ export function ServiceTeaserSection({
                     })
                   }
                 >
-                  {siteConfig.ctaLabel}
+                  {tCommon("ctaLabel")}
                 </Button>
               </div>
 

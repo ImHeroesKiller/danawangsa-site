@@ -1,5 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 
+import type { ConsultationTopicKey } from "@/lib/data/content";
+
 /** Navigation link used in Navbar & Footer */
 export interface NavLink {
   label: string;
@@ -64,13 +66,8 @@ export interface FaqItem {
   answer: string;
 }
 
-/** Consultation form topic options */
-export type ConsultationTopic =
-  | "Bridging Finance & Financial Restructuring"
-  | "Pembiayaan Modal Usaha dengan Jaminan Aset"
-  | "Pembiayaan Modal Kerja Berbasis SKBDN"
-  | "Asset Collateral Program"
-  | "Business & Financial Advisory";
+/** Consultation form topic options — stable keys for validation */
+export type ConsultationTopic = ConsultationTopicKey;
 
 /** General consultation form payload */
 export interface ConsultationFormData {

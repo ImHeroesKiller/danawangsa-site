@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "siteDescription": "为企业主提供战略性商业与财务咨询。在资产优化、融资结构和信贷重组方面提供专业指导——非放贷机构。",
+    "keywords": [
+      "商业咨询",
+      "财务咨询",
+      "战略顾问",
+      "danawangsa capital",
+      "信贷重组",
+      "过桥融资策略"
+    ],
+    "ogImageAlt": "Danawangsa Capital — Strategic Business & Financial Advisory",
+    "layanan": {
+      "title": "咨询服务",
+      "description": "Danawangsa Capital 咨询服务列表——过桥融资、营运资金融资、SKBDN、资产抵押计划及商业与财务顾问。",
+      "imageAlt": "咨询服务 — Danawangsa Capital"
+    }
+  },
+  "nav": {
+    "home": "首页",
+    "services": "服务",
+    "process": "工作流程",
+    "testimonials": "客户评价",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "legalSection": "法律",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "咨询条款"
+  },
+  "footer": {
+    "services": "服务",
+    "company": "公司",
+    "legal": "法律",
+    "contact": "联系",
+    "taglineExtension": "非放贷机构——我们协助制定商业与财务战略。",
+    "copyright": "© 2026 Danawangsa Capital — Strategic Advisory",
+    "disclaimer": "战略性商业与财务顾问——非银行，非放贷机构。",
+    "allServices": "全部服务",
+    "contactUs": "联系我们",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "titleLine1": "TURNING ASSETS",
+    "titleLine2": "INTO OPPORTUNITIES",
+    "description": "为企业主和管理层提供战略咨询合作伙伴——制定财务战略、优化资产，并通过专业网络协助融资流程。",
+    "positioning": "战略性商业与财务顾问——非银行，非放贷机构。",
+    "ctaSecondary": "查看咨询方案"
+  },
+  "trustBar": {
+    "experience": "年经验",
+    "casesHandled": "处理案例",
+    "initialAnalysis": "初步分析",
+    "transparentFee": "费用透明"
+  },
+  "servicesSection": {
+    "eyebrow": "战略咨询方案",
+    "title": "选择适合您需求的服务",
+    "description": "主要服务概览。完整流程、费用结构和常见问题请见各服务详情页。",
+    "viewDetail": "查看服务详情",
+    "viewAll": "查看全部服务"
+  },
+  "bridgingSection": {
+    "badge": "战略方案",
+    "title": "BRIDGING FINANCE &",
+    "titleHighlight": "Financial Restructuring",
+    "description": "银行贷款即将到期？我们协助制定过桥融资战略并支持财务重组——非直接资金发放。",
+    "highlights": {
+      "fastAnalysis": "快速分析 1-2 天",
+      "shortTermStrategy": "短期战略",
+      "professionalSupport": "专业陪同"
+    },
+    "benefits": {
+      "cashFlow": "现金流保持可控",
+      "operations": "运营不受影响",
+      "creditLimit": "银行授信额度可恢复"
+    },
+    "card": {
+      "eyebrow": "需要立即协助？",
+      "description": "了解五步流程、费用结构、常见问题及适合客户标准——均在服务详情页。",
+      "footnote": "非直接资金发放 • 我们协助制定战略并陪同流程"
+    }
+  },
+  "testimonialsSection": {
+    "eyebrow": "客户评价",
+    "title": "深受企业主信赖",
+    "description": "客户身份已匿名处理以保护机密。"
+  },
+  "ctaSection": {
+    "badge": "免费初步咨询 • 30 分钟",
+    "titleLine1": "准备好优化",
+    "titleLine2": "您的企业财务战略了吗？",
+    "description": "告诉我们您的业务挑战。顾问团队将在 24 小时内回复并推荐后续步骤。",
+    "chatWhatsApp": "WhatsApp 咨询",
+    "strategicAdvisory": "战略顾问 — 非放贷机构"
+  },
+  "consultation": {
+    "general": {
+      "eyebrow": "DANAWANGSA CAPITAL",
+      "title": "免费初步咨询",
+      "footerNote": "数据受保护 • 仅用于咨询目的",
+      "fields": {
+        "name": "姓名 / 公司名称",
+        "whatsapp": "WhatsApp 号码",
+        "email": "电子邮箱",
+        "topic": "咨询主题",
+        "description": "问题 / 需求简要说明"
+      },
+      "placeholders": {
+        "name": "PT Maju Bersama",
+        "topic": "请选择主题",
+        "description": "例如：需要解决两周内到期的银行贷款..."
+      },
+      "topics": {
+        "bridging": "Bridging Finance & Financial Restructuring",
+        "modalUsaha": "以资产抵押的营运资金融资",
+        "modalKerja": "基于 SKBDN 的营运资金融资",
+        "assetCollateral": "Asset Collateral Program",
+        "advisory": "Business & Financial Advisory"
+      }
+    },
+    "bridging": {
+      "eyebrow": "过桥与重组战略",
+      "title": "专项咨询",
+      "footnote": "我们协助制定战略并陪同流程 • 非资金发放",
+      "fields": {
+        "companyName": "公司名称",
+        "whatsapp": "WhatsApp 号码",
+        "email": "电子邮箱",
+        "bank": "贷款到期银行",
+        "loanAmount": "预估贷款金额"
+      },
+      "placeholders": {
+        "companyName": "PT Maju Bersama",
+        "bank": "Bank Mandiri / BRI / BCA 等",
+        "loanAmount": "Rp 350.000.000"
+      }
+    },
+    "submit": "提交咨询申请",
+    "submitting": "发送中...",
+    "close": "关闭",
+    "success": {
+      "title": "咨询申请已收到",
+      "message": "感谢您。我们的团队将在 24 小时内与您联系。"
+    },
+    "errors": {
+      "validation": "请检查您填写的信息。",
+      "webhookMissing": "表单服务尚未配置。请通过 WhatsApp 联系我们。",
+      "generic": "提交失败。请重试或通过 WhatsApp 联系我们。",
+      "whatsappMin": "WhatsApp 号码至少 10 位",
+      "whatsappMax": "WhatsApp 号码过长",
+      "whatsappFormat": "WhatsApp 格式无效（示例：081214144214）",
+      "emailInvalid": "电子邮箱地址无效",
+      "emailMax": "电子邮箱过长",
+      "nameMin": "姓名/公司名称至少 2 个字符",
+      "nameMax": "姓名/公司名称过长",
+      "topicRequired": "请选择咨询主题",
+      "descriptionMin": "说明至少 10 个字符",
+      "descriptionMax": "说明最多 2000 个字符",
+      "companyNameMin": "公司名称至少 2 个字符",
+      "companyNameMax": "公司名称过长",
+      "bankMin": "请填写银行名称",
+      "bankMax": "银行名称过长",
+      "loanAmountMin": "请填写预估贷款金额",
+      "loanAmountMax": "预估贷款金额过长"
+    }
+  },
+  "legal": {
+    "documentBadge": "法律文件",
+    "lastUpdated": "最后更新：",
+    "privacyTitle": "隐私政策",
+    "termsTitle": "咨询服务条款与条件",
+    "footerNote": "Danawangsa Capital — Strategic Business & Financial Advisory。",
+    "footerDisclaimer": "非放贷机构。如有更多问题，请",
+    "footerContactLink": "联系我们"
+  },
+  "layanan": {
+    "badge": "咨询服务",
+    "title": "战略咨询方案",
+    "description": "商业与财务战略专业指导——非放贷机构。",
+    "viewDetail": "查看服务详情",
+    "moreServicesPrefix": "其他咨询服务请见",
+    "moreServicesLink": "首页",
+    "notFound": {
+      "badge": "404 — 未找到服务",
+      "title": "未找到服务",
+      "description": "抱歉，您查找的服务不可用。请检查网址或浏览我们的咨询服务列表。"
+    }
+  },
+  "breadcrumb": {
+    "home": "首页",
+    "services": "服务",
+    "privacy": "隐私",
+    "terms": "咨询条款",
+    "notFound": "未找到",
+    "ariaLabel": "面包屑导航"
+  },
+  "languageSwitcher": {
+    "label": "语言",
+    "indonesia": "Indonesia",
+    "english": "English",
+    "chinese": "中文"
+  },
+  "common": {
+    "siteName": "Danawangsa Capital",
+    "tagline": "Strategic Business & Financial Advisory",
+    "ctaLabel": "预约免费咨询",
+    "riskReversal": "24 小时内回复 • 初步咨询无需承诺 • 您的数据严格保密",
+    "whatsappMessage": "您好 Danawangsa Capital，我想咨询企业财务战略。",
+    "viewFee": "查看费用结构",
+    "viewServiceDetail": "查看服务详情",
+    "viewAllServices": "查看全部服务",
+    "viewOtherServices": "查看其他服务",
+    "popular": "热门",
+    "chatWhatsApp": "WhatsApp 咨询",
+    "backToHome": "返回首页",
+    "backToServices": "返回服务",
+    "close": "关闭",
+    "deliverable": "交付成果：",
+    "discussYourCase": "讨论您的案例"
+  },
+  "serviceNav": {
+    "ariaLabel": "服务导航",
+    "home": "首页",
+    "allServices": "全部服务"
+  },
+  "legalNav": {
+    "ariaLabel": "法律页面导航"
+  },
+  "stickyCta": {},
+  "floatingWhatsapp": {
+    "ariaLabel": "WhatsApp 咨询"
+  }
+}

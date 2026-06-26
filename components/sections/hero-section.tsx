@@ -1,16 +1,19 @@
 "use client";
 
 import { Info } from "lucide-react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import { useConsultation } from "@/components/consultation/consultation-context";
 import { RiskReversal } from "@/components/shared/risk-reversal";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/lib/i18n/navigation";
 import { siteConfig } from "@/lib/site-config";
 
 export function HeroSection() {
   const { openConsultation } = useConsultation();
+  const t = useTranslations("hero");
+  const tCommon = useTranslations("common");
 
   return (
     <section className="mx-auto max-w-5xl px-5 pb-14 pt-16 text-center sm:px-6">
@@ -19,21 +22,18 @@ export function HeroSection() {
       </div>
 
       <h1 className="hero-title heading-serif mb-5 text-[52px] font-semibold leading-[0.95] tracking-[-3.8px] sm:text-6xl md:text-[82px]">
-        TURNING ASSETS
+        {t("titleLine1")}
         <br />
-        INTO OPPORTUNITIES
+        {t("titleLine2")}
       </h1>
 
       <p className="mx-auto mb-4 max-w-xl text-[17px] leading-relaxed text-white/70">
-        Partner konsultasi strategis untuk pemilik usaha & manajemen — merancang
-        strategi keuangan, mengoptimalkan aset, dan mendampingi proses pendanaan
-        melalui jaringan profesional.
+        {t("description")}
       </p>
 
       <p className="mx-auto mb-9 flex max-w-lg items-center justify-center gap-1 text-sm font-medium text-gold">
         <Info className="h-4 w-4 shrink-0" />
-        Konsultan bisnis & keuangan strategis — bukan bank, bukan lembaga
-        pembiayaan.
+        {t("positioning")}
       </p>
 
       <div className="flex flex-col justify-center gap-3 px-2 sm:flex-row">
@@ -46,10 +46,10 @@ export function HeroSection() {
             })
           }
         >
-          {siteConfig.ctaLabel}
+          {tCommon("ctaLabel")}
         </Button>
         <Button variant="outline" size="lg" asChild>
-          <Link href="#solutions">Lihat Solusi Konsultasi</Link>
+          <Link href="#solutions">{t("ctaSecondary")}</Link>
         </Button>
       </div>
 

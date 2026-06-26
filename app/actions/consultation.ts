@@ -1,39 +1,66 @@
 "use server";
 
+import { getTranslations } from "next-intl/server";
+
+import { hasLocale } from "next-intl";
+import { routing, type Locale } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site-config";
 import {
-  bridgingConsultationSchema,
+  createBridgingConsultationSchema,
+  createGeneralConsultationSchema,
   formatZodErrors,
-  generalConsultationSchema,
 } from "@/lib/validations/consultation";
 import type { ConsultationActionResult } from "@/types";
-
-const SUCCESS_MESSAGE =
-  "Terima kasih. Tim kami akan menghubungi Anda dalam 1×24 jam.";
-
-const WEBHOOK_MISSING_MESSAGE =
-  "Layanan formulir belum dikonfigurasi. Silakan hubungi kami via WhatsApp.";
-
-const GENERIC_ERROR_MESSAGE =
-  "Gagal mengirim permintaan. Silakan coba lagi atau hubungi WhatsApp.";
 
 type WebhookPayload = {
   type: "general" | "bridging";
   submittedAt: string;
   source: string;
   siteUrl: string;
+  locale: string;
   [key: string]: string;
 };
+
+function resolveLocale(raw: string): Locale {
+  return hasLocale(routing.locales, raw) ? raw : routing.defaultLocale;
+}
+
+async function getValidationMessages(locale: Locale) {
+  const t = await getTranslations({ locale, namespace: "consultation.errors" });
+
+  return {
+    whatsappMin: t("whatsappMin"),
+    whatsappMax: t("whatsappMax"),
+    whatsappFormat: t("whatsappFormat"),
+    emailInvalid: t("emailInvalid"),
+    emailMax: t("emailMax"),
+    nameMin: t("nameMin"),
+    nameMax: t("nameMax"),
+    topicRequired: t("topicRequired"),
+    descriptionMin: t("descriptionMin"),
+    descriptionMax: t("descriptionMax"),
+    companyNameMin: t("companyNameMin"),
+    companyNameMax: t("companyNameMax"),
+    bankMin: t("bankMin"),
+    bankMax: t("bankMax"),
+    loanAmountMin: t("loanAmountMin"),
+    loanAmountMax: t("loanAmountMax"),
+  };
+}
 
 /** POST validated payload to CONSULTATION_WEBHOOK_URL */
 async function sendToWebhook(
   payload: WebhookPayload,
 ): Promise<{ ok: true } | { ok: false; message: string }> {
   const webhookUrl = process.env.CONSULTATION_WEBHOOK_URL?.trim();
+  const t = await getTranslations({
+    locale: resolveLocale(payload.locale),
+    namespace: "consultation.errors",
+  });
 
   if (!webhookUrl) {
     console.error("[Consultation] CONSULTATION_WEBHOOK_URL is not set");
-    return { ok: false, message: WEBHOOK_MISSING_MESSAGE };
+    return { ok: false, message: t("webhookMissing") };
   }
 
   try {
@@ -54,13 +81,13 @@ async function sendToWebhook(
         `[Consultation] Webhook failed: ${response.status} ${response.statusText}`,
         body.slice(0, 500),
       );
-      return { ok: false, message: GENERIC_ERROR_MESSAGE };
+      return { ok: false, message: t("generic") };
     }
 
     return { ok: true };
   } catch (error) {
     console.error("[Consultation] Webhook request error:", error);
-    return { ok: false, message: GENERIC_ERROR_MESSAGE };
+    return { ok: false, message: t("generic") };
   }
 }
 
@@ -68,6 +95,10 @@ async function sendToWebhook(
 export async function submitConsultationRequest(
   formData: FormData,
 ): Promise<ConsultationActionResult> {
+  const locale = resolveLocale(String(formData.get("locale") ?? "id"));
+  const messages = await getValidationMessages(locale);
+  const t = await getTranslations({ locale, namespace: "consultation" });
+
   const raw = {
     name: String(formData.get("name") ?? ""),
     whatsapp: String(formData.get("whatsapp") ?? ""),
@@ -76,12 +107,12 @@ export async function submitConsultationRequest(
     description: String(formData.get("description") ?? ""),
   };
 
-  const parsed = generalConsultationSchema.safeParse(raw);
+  const parsed = createGeneralConsultationSchema(messages).safeParse(raw);
 
   if (!parsed.success) {
     return {
       success: false,
-      message: "Periksa kembali data yang Anda isi.",
+      message: t("errors.validation"),
       fieldErrors: formatZodErrors(parsed.error),
     };
   }
@@ -91,6 +122,7 @@ export async function submitConsultationRequest(
     submittedAt: new Date().toISOString(),
     source: "danawangsa-capital",
     siteUrl: siteConfig.url,
+    locale,
     name: parsed.data.name,
     whatsapp: parsed.data.whatsapp,
     email: parsed.data.email,
@@ -102,13 +134,17 @@ export async function submitConsultationRequest(
     return { success: false, message: webhookResult.message };
   }
 
-  return { success: true, message: SUCCESS_MESSAGE };
+  return { success: true, message: t("success.message") };
 }
 
 /** Submit bridging consultation form */
 export async function submitBridgingRequest(
   formData: FormData,
 ): Promise<ConsultationActionResult> {
+  const locale = resolveLocale(String(formData.get("locale") ?? "id"));
+  const messages = await getValidationMessages(locale);
+  const t = await getTranslations({ locale, namespace: "consultation" });
+
   const raw = {
     companyName: String(formData.get("companyName") ?? ""),
     whatsapp: String(formData.get("whatsapp") ?? ""),
@@ -117,12 +153,12 @@ export async function submitBridgingRequest(
     loanAmount: String(formData.get("loanAmount") ?? ""),
   };
 
-  const parsed = bridgingConsultationSchema.safeParse(raw);
+  const parsed = createBridgingConsultationSchema(messages).safeParse(raw);
 
   if (!parsed.success) {
     return {
       success: false,
-      message: "Periksa kembali data yang Anda isi.",
+      message: t("errors.validation"),
       fieldErrors: formatZodErrors(parsed.error),
     };
   }
@@ -132,6 +168,7 @@ export async function submitBridgingRequest(
     submittedAt: new Date().toISOString(),
     source: "danawangsa-capital",
     siteUrl: siteConfig.url,
+    locale,
     companyName: parsed.data.companyName,
     whatsapp: parsed.data.whatsapp,
     email: parsed.data.email,
@@ -143,5 +180,5 @@ export async function submitBridgingRequest(
     return { success: false, message: webhookResult.message };
   }
 
-  return { success: true, message: SUCCESS_MESSAGE };
+  return { success: true, message: t("success.message") };
 }

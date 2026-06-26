@@ -1,16 +1,17 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 import { useConsultation } from "@/components/consultation/consultation-context";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 /** Mobile-only sticky CTA — appears after scroll, hides near final CTA */
 export function StickyCTA() {
   const [visible, setVisible] = useState(false);
   const { openConsultation } = useConsultation();
+  const t = useTranslations("common");
 
   useEffect(() => {
     const onScroll = () => {
@@ -51,7 +52,7 @@ export function StickyCTA() {
           })
         }
       >
-        {siteConfig.ctaLabel}
+        {t("ctaLabel")}
       </Button>
     </div>
   );

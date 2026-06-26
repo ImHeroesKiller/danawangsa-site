@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import { Link } from "@/lib/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 interface SiteNavLinkProps {
@@ -24,7 +23,8 @@ export function SiteNavLink({
     external ??
     (href.startsWith("http") ||
       href.startsWith("mailto:") ||
-      href.startsWith("tel:"));
+      href.startsWith("tel:") ||
+      href.startsWith("#"));
 
   const classes = cn(
     "transition-colors",

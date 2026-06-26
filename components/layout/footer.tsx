@@ -1,11 +1,18 @@
+"use client";
+
+import { useLocale, useTranslations } from "next-intl";
+
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Logo } from "@/components/layout/logo";
 import { SiteNavLink } from "@/components/layout/site-nav-link";
 import {
-  footerCompanyLinks,
-  footerContactLinks,
-  footerLegalLinks,
-  footerServiceLinks,
+  footerCompanyLinkDefs,
+  getFooterContactLinks,
+  getFooterLegalLinks,
+  getFooterServiceLinks,
+  type NavLinkKey,
 } from "@/lib/data/navigation";
+import type { Locale } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site-config";
 
 interface FooterColumnProps {
@@ -32,7 +39,42 @@ function FooterColumn({ title, links }: FooterColumnProps) {
   );
 }
 
+const COMPANY_LABEL_KEYS: Record<NavLinkKey, string> = {
+  home: "home",
+  services: "services",
+  process: "process",
+  testimonials: "testimonials",
+  allServices: "allServices",
+  contactUs: "contactUs",
+};
+
 export function Footer() {
+  const locale = useLocale() as Locale;
+  const tFooter = useTranslations("footer");
+  const tNav = useTranslations("nav");
+
+  const serviceLinks = getFooterServiceLinks(locale).map((link) => ({
+    ...link,
+    label:
+      link.label === "allServices"
+        ? tFooter("allServices")
+        : link.label,
+  }));
+
+  const companyLinks = footerCompanyLinkDefs.map((link) => ({
+    label:
+      link.key === "process" || link.key === "testimonials"
+        ? tNav(link.key)
+        : tFooter(COMPANY_LABEL_KEYS[link.key]),
+    href: link.href,
+  }));
+
+  const legalLinks = getFooterLegalLinks(locale);
+  const contactLinks = getFooterContactLinks().map((link) => ({
+    ...link,
+    label: link.label === "WhatsApp" ? tFooter("whatsapp") : link.label,
+  }));
+
   return (
     <footer className="border-t border-white/10 py-12">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
@@ -40,23 +82,20 @@ export function Footer() {
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Logo compact />
             <p className="mt-3 max-w-xs text-xs leading-relaxed text-white/45">
-              {siteConfig.tagline}. Bukan lembaga pembiayaan — kami membantu
-              merancang strategi bisnis & keuangan.
+              {siteConfig.tagline}. {tFooter("taglineExtension")}
             </p>
+            <LanguageSwitcher className="mt-4" />
           </div>
 
-          <FooterColumn title="Layanan" links={footerServiceLinks} />
-          <FooterColumn title="Perusahaan" links={footerCompanyLinks} />
-          <FooterColumn title="Legal" links={footerLegalLinks} />
-          <FooterColumn title="Kontak" links={footerContactLinks} />
+          <FooterColumn title={tFooter("services")} links={serviceLinks} />
+          <FooterColumn title={tFooter("company")} links={companyLinks} />
+          <FooterColumn title={tFooter("legal")} links={legalLinks} />
+          <FooterColumn title={tFooter("contact")} links={contactLinks} />
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row">
-          <p>© 2026 Danawangsa Capital — Strategic Advisory</p>
-          <p className="text-white/30">
-            Konsultan bisnis & keuangan strategis — bukan bank, bukan lembaga
-            pembiayaan.
-          </p>
+          <p>{tFooter("copyright")}</p>
+          <p className="text-white/30">{tFooter("disclaimer")}</p>
         </div>
       </div>
     </footer>
