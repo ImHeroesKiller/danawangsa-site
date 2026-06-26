@@ -3,29 +3,29 @@ import type { ServicePageData } from "@/types/service";
 export const bridgingRestrukturisasiService: ServicePageData = {
   slug: "bridging-restrukturisasi",
   path: "/layanan/bridging-restrukturisasi",
-  navLabel: "Bridging & Restrukturisasi",
+  navLabel: "Bridging Finance & Financial Restructuring",
   consultationModalType: "bridging",
 
   meta: {
-    title: "Bridging & Restrukturisasi",
+    title: "Bridging Finance & Financial Restructuring",
     description:
-      "Konsultasi strategi bridging & restrukturisasi kredit bank untuk perusahaan. Pendampingan profesional — bukan lembaga pembiayaan. Analisis 1–2 hari untuk kasus urgent.",
+      "Konsultasi strategi bridging finance & financial restructuring untuk perusahaan. Pendampingan profesional — bukan lembaga pembiayaan. Analisis 1–2 hari untuk kasus urgent.",
   },
 
   listing: {
-    category: "SOLUSI STRATEGIS",
-    title: "Bridging & Restrukturisasi",
+    category: "BRIDGING & RESTRUCTURING",
+    title: "Bridging Finance & Financial Restructuring",
     description:
-      "Konsultasi strategi untuk mengatasi jatuh tempo pinjaman bank, restrukturisasi kredit, dan pemulihan plafon — dengan pendampingan negosiasi profesional.",
+      "Konsultasi strategi bridging finance dan restrukturisasi keuangan untuk mengatasi jatuh tempo pinjaman bank, restrukturisasi kredit, dan pemulihan plafon.",
     badge: "Populer",
   },
 
   hero: {
     badge: { label: "LAYANAN KONSULTASI STRATEGIS", variant: "amber" },
-    title: "Konsultasi Strategi",
-    titleHighlight: "Bridging & Restrukturisasi",
+    title: "Bridging Finance &",
+    titleHighlight: "Financial Restructuring",
     description:
-      "Partner konsultasi untuk mengatasi jatuh tempo pinjaman bank — kami merancang strategi dan mendampingi negosiasi, bukan menyalurkan dana langsung.",
+      "Partner konsultasi untuk mengatasi jatuh tempo pinjaman bank — kami merancang strategi bridging finance & financial restructuring dan mendampingi negosiasi, bukan menyalurkan dana langsung.",
     positioning:
       "Konsultan bisnis & keuangan strategis — bukan bank, bukan lembaga pembiayaan.",
     secondaryCta: {
@@ -36,10 +36,10 @@ export const bridgingRestrukturisasiService: ServicePageData = {
 
   teaser: {
     badge: { label: "SOLUSI STRATEGIS", variant: "amber" },
-    title: "KONSULTASI STRATEGI",
-    titleHighlight: "Bridging & Restrukturisasi",
+    title: "BRIDGING FINANCE &",
+    titleHighlight: "Financial Restructuring",
     description:
-      "Pinjaman bank mendekati jatuh tempo? Kami membantu merancang strategi bridging dan mendampingi negosiasi restrukturisasi — bukan menyalurkan dana langsung.",
+      "Pinjaman bank mendekati jatuh tempo? Kami membantu merancang strategi bridging finance dan mendampingi financial restructuring — bukan menyalurkan dana langsung.",
     highlights: [
       { label: "Analisis Cepat 1-2 Hari", icon: "bolt" },
       { label: "Strategi Jangka Pendek", icon: "clock" },
@@ -90,9 +90,9 @@ export const bridgingRestrukturisasiService: ServicePageData = {
 
   solusi: {
     eyebrow: "SOLUSI KAMI",
-    title: "Konsultasi Strategi — Bukan Penyaluran Dana",
+    title: "Bridging Finance Advisory — Bukan Penyaluran Dana",
     description:
-      "Danawangsa Capital membantu Anda merancang dan mengeksekusi strategi bridging & restrukturisasi dengan pendampingan profesional di setiap tahap.",
+      "Danawangsa Capital membantu Anda merancang dan mengeksekusi strategi bridging finance & financial restructuring dengan pendampingan profesional di setiap tahap.",
     items: [
       "Analisis mendalam posisi keuangan, jatuh tempo, dan exposure kredit per bank",
       "Merancang strategi bridging yang realistis sesuai profil risiko perusahaan",

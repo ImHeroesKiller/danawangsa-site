@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata = createPageMetadata({
   title: `Layanan Konsultasi • ${siteConfig.name}`,
   description:
-    "Daftar layanan konsultasi bisnis & keuangan strategis Danawangsa Capital — bridging, restrukturisasi, dan optimalisasi pendanaan.",
+    "Daftar layanan konsultasi Danawangsa Capital — Bridging Finance, pembiayaan modal usaha, SKBDN, Asset Collateral Program, dan Business & Financial Advisory.",
   path: "/layanan",
   imageAlt: `Layanan Konsultasi — ${siteConfig.name}`,
 });

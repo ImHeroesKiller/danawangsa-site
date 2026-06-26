@@ -66,11 +66,11 @@ export interface FaqItem {
 
 /** Consultation form topic options */
 export type ConsultationTopic =
-  | "Strategi Bridging & Restrukturisasi Kredit"
-  | "Optimalisasi Modal Usaha & Aset"
-  | "Perencanaan Pendapatan Pasif dari Aset"
-  | "Struktur Modal Kerja & SKBDN"
-  | "Konsultasi Bisnis & Keuangan Umum";
+  | "Bridging Finance & Financial Restructuring"
+  | "Pembiayaan Modal Usaha dengan Jaminan Aset"
+  | "Pembiayaan Modal Kerja Berbasis SKBDN"
+  | "Asset Collateral Program"
+  | "Business & Financial Advisory";
 
 /** General consultation form payload */
 export interface ConsultationFormData {

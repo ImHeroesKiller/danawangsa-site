@@ -17,7 +17,7 @@ export function ServicesSection() {
         showDivider
       />
 
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
           <article
             key={service.slug}
