@@ -14,6 +14,7 @@ import Link from "next/link";
 
 import { useConsultation } from "@/components/consultation/consultation-context";
 import { ServiceNav } from "@/components/layanan/service-nav";
+import { Breadcrumb } from "@/components/shared/breadcrumb";
 import { RiskReversal } from "@/components/shared/risk-reversal";
 import { SectionHeader } from "@/components/shared/section-header";
 import {
@@ -47,6 +48,13 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
     <div className="pb-16">
       <section className="border-b border-white/10 bg-surface">
         <div className="mx-auto max-w-5xl px-5 py-12 sm:px-6 sm:py-16">
+          <Breadcrumb
+            items={[
+              { label: "Beranda", href: "/" },
+              { label: "Layanan", href: "/layanan" },
+              { label: service.navLabel },
+            ]}
+          />
           <ServiceNav currentLabel={service.navLabel} />
 
           <div className="mt-10 text-center">
@@ -203,7 +211,7 @@ export function ServiceDetailContent({ service }: ServiceDetailContentProps) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-5 py-14 sm:px-6">
+      <section id="fee" className="mx-auto max-w-5xl px-5 py-14 sm:px-6">
         <SectionHeader
           eyebrow={service.strukturFee.eyebrow}
           title={service.strukturFee.title}

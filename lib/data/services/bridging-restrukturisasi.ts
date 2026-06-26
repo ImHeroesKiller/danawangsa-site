@@ -28,7 +28,10 @@ export const bridgingRestrukturisasiService: ServicePageData = {
       "Partner konsultasi untuk mengatasi jatuh tempo pinjaman bank — kami merancang strategi dan mendampingi negosiasi, bukan menyalurkan dana langsung.",
     positioning:
       "Konsultan bisnis & keuangan strategis — bukan bank, bukan lembaga pembiayaan.",
-    secondaryCta: { label: "Lihat Struktur Fee", href: "/#fee" },
+    secondaryCta: {
+      label: "Lihat Struktur Fee",
+      href: "/layanan/bridging-restrukturisasi#fee",
+    },
   },
 
   teaser: {

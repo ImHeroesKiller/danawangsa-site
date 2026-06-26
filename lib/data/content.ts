@@ -27,10 +27,8 @@ import type {
 
 export const navLinks: NavLink[] = [
   { label: "Solusi", href: "/#solutions" },
-  { label: "Proses Kerja", href: "/#process" },
-  { label: "Struktur Fee", href: "/#fee" },
+  { label: "Layanan", href: "/layanan" },
   { label: "Testimoni", href: "/#testimonials" },
-  { label: "FAQ", href: "/#faq" },
 ];
 
 export const trustStats: TrustStat[] = [

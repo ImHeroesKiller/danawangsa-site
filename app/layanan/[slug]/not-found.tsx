@@ -2,12 +2,20 @@ import { ArrowLeft, FileQuestion } from "lucide-react";
 import Link from "next/link";
 
 import { ServiceNav } from "@/components/layanan/service-nav";
+import { Breadcrumb } from "@/components/shared/breadcrumb";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export default function ServiceNotFound() {
   return (
     <div className="mx-auto max-w-3xl px-5 py-12 sm:px-6 sm:py-20">
+      <Breadcrumb
+        items={[
+          { label: "Beranda", href: "/" },
+          { label: "Layanan", href: "/layanan" },
+          { label: "Tidak Ditemukan" },
+        ]}
+      />
       <ServiceNav />
 
       <div className="mt-12 text-center">

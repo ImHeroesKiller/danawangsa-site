@@ -27,7 +27,10 @@ export const pendanaanStrategisService: ServicePageData = {
       "Partner konsultasi untuk merancang strategi pembiayaan yang tepat — kami analisis posisi keuangan, optimalisasi aset, dan dampingi negosiasi dengan bank atau mitra, bukan menyalurkan dana langsung.",
     positioning:
       "Konsultan bisnis & keuangan strategis — bukan bank, bukan lembaga pembiayaan.",
-    secondaryCta: { label: "Lihat Struktur Fee", href: "/#fee" },
+    secondaryCta: {
+      label: "Lihat Struktur Fee",
+      href: "/layanan/pendanaan-strategis#fee",
+    },
   },
 
   teaser: {

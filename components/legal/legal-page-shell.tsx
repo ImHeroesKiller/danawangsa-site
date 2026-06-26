@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { LegalNav } from "@/components/legal/legal-nav";
+import { Breadcrumb } from "@/components/shared/breadcrumb";
 import type { LegalPageContent } from "@/lib/data/legal-content";
 import { Badge } from "@/components/ui/badge";
 
@@ -12,6 +13,15 @@ interface LegalPageShellProps {
 export function LegalPageShell({ content }: LegalPageShellProps) {
   return (
     <article className="mx-auto max-w-3xl px-5 py-12 sm:px-6 sm:py-16">
+      <Breadcrumb
+        items={[
+          { label: "Beranda", href: "/" },
+          {
+            label:
+              content.slug === "privasi" ? "Privasi" : "Syarat Konsultasi",
+          },
+        ]}
+      />
       <LegalNav />
 
       <header className="mt-10 border-b border-white/10 pb-8">

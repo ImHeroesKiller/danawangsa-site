@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, FileText } from "lucide-react";
 
 import { ServiceNav } from "@/components/layanan/service-nav";
+import { Breadcrumb } from "@/components/shared/breadcrumb";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/data/services";
@@ -19,6 +20,12 @@ export const metadata = createPageMetadata({
 export default function LayananPage() {
   return (
     <div className="mx-auto max-w-5xl px-5 py-12 sm:px-6 sm:py-16">
+      <Breadcrumb
+        items={[
+          { label: "Beranda", href: "/" },
+          { label: "Layanan" },
+        ]}
+      />
       <ServiceNav />
 
       <header className="mt-10 text-center">
