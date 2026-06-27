@@ -9,10 +9,17 @@ export interface IdaMessage {
 export interface IdaChatRequest {
   messages: Pick<IdaMessage, "role" | "content">[];
   locale: string;
+  sessionId?: string;
+}
+
+export interface IdaChatResponseMeta {
+  retrievedChunks: number;
+  usedRag: boolean;
 }
 
 export interface IdaChatResponse {
   message: string;
+  meta?: IdaChatResponseMeta;
 }
 
 export interface IdaChatErrorResponse {

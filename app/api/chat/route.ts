@@ -1,10 +1,9 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
 import { locales } from "@/i18n/routing";
+import { handleIdaChat } from "@/lib/ida/chat-handler";
 import { IDA_CONFIG } from "@/lib/ida/config";
-import { buildIdaSystemPrompt } from "@/lib/ida/system-prompt";
 import type { IdaChatResponse, IdaChatErrorResponse } from "@/types/ida";
 
 const chatRequestSchema = z.object({
@@ -21,18 +20,10 @@ const chatRequestSchema = z.object({
     .min(1)
     .max(IDA_CONFIG.maxMessages),
   locale: z.enum(locales),
+  sessionId: z.string().min(8).max(64).optional(),
 });
 
 export async function POST(request: Request) {
-  const apiKey = process.env.GEMINI_API_KEY;
-
-  if (!apiKey) {
-    return NextResponse.json<IdaChatErrorResponse>(
-      { error: "Chat service is not configured." },
-      { status: 503 },
-    );
-  }
-
   let body: unknown;
 
   try {
@@ -53,46 +44,31 @@ export async function POST(request: Request) {
     );
   }
 
-  const { messages, locale } = parsed.data;
-  const lastMessage = messages[messages.length - 1];
-
-  if (lastMessage.role !== "user") {
-    return NextResponse.json<IdaChatErrorResponse>(
-      { error: "Last message must be from the user." },
-      { status: 400 },
-    );
-  }
+  const { messages, locale, sessionId } = parsed.data;
 
   try {
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({
-      model: IDA_CONFIG.model,
-      systemInstruction: buildIdaSystemPrompt(locale),
+    const result = await handleIdaChat({ messages, locale, sessionId });
+
+    return NextResponse.json<IdaChatResponse>({
+      message: result.message,
+      meta: {
+        retrievedChunks: result.retrievedChunks,
+        usedRag: result.usedRag,
+      },
     });
-
-    const history = messages.slice(0, -1).map((message) => ({
-      role: message.role === "assistant" ? "model" : "user",
-      parts: [{ text: message.content }],
-    }));
-
-    const chat = model.startChat({ history });
-    const result = await chat.sendMessage(lastMessage.content);
-    const text = result.response.text().trim();
-
-    if (!text) {
-      return NextResponse.json<IdaChatErrorResponse>(
-        { error: "Empty response from model." },
-        { status: 502 },
-      );
-    }
-
-    return NextResponse.json<IdaChatResponse>({ message: text });
   } catch (error) {
+    const message =
+      error instanceof Error && error.message === "Chat service is not configured."
+        ? "Chat service is not configured."
+        : "Failed to generate response.";
+
+    const status =
+      error instanceof Error && error.message === "Chat service is not configured."
+        ? 503
+        : 500;
+
     console.error("[IDA chat]", error);
 
-    return NextResponse.json<IdaChatErrorResponse>(
-      { error: "Failed to generate response." },
-      { status: 500 },
-    );
+    return NextResponse.json<IdaChatErrorResponse>({ error: message }, { status });
   }
 }

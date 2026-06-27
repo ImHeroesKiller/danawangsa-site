@@ -1,6 +1,10 @@
 export const IDA_CONFIG = {
   name: "IDA",
   model: "gemini-3.1-flash-lite",
+  embeddingModel: "text-embedding-004",
   maxMessages: 40,
   maxMessageLength: 4000,
+  retrievalTopK: 6,
+  retrievalThreshold: 0.35,
+  memoryWindowK: 10,
 } as const;

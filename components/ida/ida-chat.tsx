@@ -20,6 +20,20 @@ import type { Locale } from "@/i18n/routing";
 import type { IdaMessage } from "@/types/ida";
 
 const WELCOME_MESSAGE_ID = "ida-welcome";
+const SESSION_STORAGE_KEY = "ida-session-id";
+
+function getOrCreateSessionId(): string {
+  if (typeof window === "undefined") return "";
+
+  let sessionId = sessionStorage.getItem(SESSION_STORAGE_KEY);
+
+  if (!sessionId) {
+    sessionId = `ida-${crypto.randomUUID()}`;
+    sessionStorage.setItem(SESSION_STORAGE_KEY, sessionId);
+  }
+
+  return sessionId;
+}
 
 function createMessageId() {
   return `ida-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
@@ -139,6 +153,7 @@ export function IdaChat() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           locale,
+          sessionId: getOrCreateSessionId(),
           messages: nextMessages
             .filter((message) => message.id !== WELCOME_MESSAGE_ID)
             .map(({ role, content }) => ({ role, content })),
