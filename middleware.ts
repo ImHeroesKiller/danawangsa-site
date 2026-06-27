@@ -13,7 +13,18 @@ function isInvalidLocalePath(pathname: string): boolean {
   return !routing.locales.includes(segment as Locale);
 }
 
+function handleAdminRoute(pathname: string): NextResponse | null {
+  if (pathname.startsWith("/admin")) {
+    return NextResponse.next();
+  }
+
+  return null;
+}
+
 export default function middleware(request: NextRequest) {
+  const adminResponse = handleAdminRoute(request.nextUrl.pathname);
+  if (adminResponse) return adminResponse;
+
   if (isInvalidLocalePath(request.nextUrl.pathname)) {
     return new NextResponse(null, { status: 404 });
   }

@@ -13,6 +13,7 @@ import {
   getClientIp,
   IdaRateLimitError,
 } from "@/lib/ida/rate-limit";
+import { logIdaConversation } from "@/lib/ida/analytics/log-conversation";
 import { createSseStream, sseResponse } from "@/lib/ida/sse";
 import type { IdaChatErrorResponse } from "@/types/ida";
 
@@ -80,6 +81,8 @@ export async function POST(request: Request) {
   try {
     const context = await prepareIdaChatContext({ messages, locale, sessionId });
 
+    const lastUserMessage = messages[messages.length - 1]!.content;
+
     const stream = createSseStream(async (send) => {
       send("meta", context.meta);
 
@@ -90,7 +93,16 @@ export async function POST(request: Request) {
         send("token", { text: token });
       }
 
-      send("done", { message: fullMessage.trim() });
+      const trimmed = fullMessage.trim();
+      send("done", { message: trimmed });
+
+      void logIdaConversation({
+        sessionId,
+        userMessage: lastUserMessage,
+        assistantReply: trimmed,
+        retrievedChunks: context.meta.retrievedChunks,
+        locale,
+      });
     });
 
     return sseResponse(stream);
