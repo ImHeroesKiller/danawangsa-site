@@ -7,4 +7,6 @@ export const IDA_CONFIG = {
   retrievalTopK: 6,
   retrievalThreshold: 0.35,
   memoryWindowK: 10,
+  rateLimitPoints: 10,
+  rateLimitDurationSec: 60,
 } as const;

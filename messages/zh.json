@@ -295,9 +295,28 @@
     "inputPlaceholder": "输入您的问题...",
     "send": "发送消息",
     "disclaimer": "IDA 是 AI 助手。业务决策请使用咨询表单。",
+    "quickReplies": {
+      "bridging": {
+        "label": "什么是过桥融资？",
+        "message": "什么是 Bridging Finance（过桥融资）？"
+      },
+      "assetCollateral": {
+        "label": "介绍资产抵押计划",
+        "message": "请介绍 Asset Collateral Program（资产抵押计划）"
+      },
+      "process": {
+        "label": "咨询流程是怎样的？",
+        "message": "Danawangsa Capital 的咨询流程是怎样的？"
+      },
+      "consultation": {
+        "label": "开始咨询",
+        "message": "我想开始咨询"
+      }
+    },
     "errors": {
       "generic": "获取回复失败，请重试。",
-      "tooLong": "消息过长。"
+      "tooLong": "消息过长。",
+      "rateLimit": "请求过于频繁，请稍后再试。"
     }
   },
   "collateralDiagram": {

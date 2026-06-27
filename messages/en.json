@@ -295,9 +295,28 @@
     "inputPlaceholder": "Type your question...",
     "send": "Send message",
     "disclaimer": "IDA is an AI assistant. For business decisions, use the consultation form.",
+    "quickReplies": {
+      "bridging": {
+        "label": "What is Bridging Finance?",
+        "message": "What is Bridging Finance?"
+      },
+      "assetCollateral": {
+        "label": "Explain Asset Collateral Program",
+        "message": "Explain the Asset Collateral Program"
+      },
+      "process": {
+        "label": "How does consultation work?",
+        "message": "How does the consultation process work at Danawangsa Capital?"
+      },
+      "consultation": {
+        "label": "Start Consultation",
+        "message": "I would like to start a consultation"
+      }
+    },
     "errors": {
       "generic": "Failed to get a response. Please try again.",
-      "tooLong": "Message is too long."
+      "tooLong": "Message is too long.",
+      "rateLimit": "Too many requests. Please wait a moment and try again."
     }
   },
   "collateralDiagram": {

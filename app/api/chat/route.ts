@@ -2,9 +2,19 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 
 import { locales } from "@/i18n/routing";
-import { handleIdaChat } from "@/lib/ida/chat-handler";
+import {
+  prepareIdaChatContext,
+  streamIdaChatResponse,
+} from "@/lib/ida/chat-handler";
 import { IDA_CONFIG } from "@/lib/ida/config";
-import type { IdaChatResponse, IdaChatErrorResponse } from "@/types/ida";
+import {
+  buildRateLimitKey,
+  enforceIdaRateLimit,
+  getClientIp,
+  IdaRateLimitError,
+} from "@/lib/ida/rate-limit";
+import { createSseStream, sseResponse } from "@/lib/ida/sse";
+import type { IdaChatErrorResponse } from "@/types/ida";
 
 const chatRequestSchema = z.object({
   messages: z
@@ -47,15 +57,43 @@ export async function POST(request: Request) {
   const { messages, locale, sessionId } = parsed.data;
 
   try {
-    const result = await handleIdaChat({ messages, locale, sessionId });
+    await enforceIdaRateLimit(
+      buildRateLimitKey({
+        ip: getClientIp(request),
+        sessionId,
+      }),
+    );
+  } catch (error) {
+    if (error instanceof IdaRateLimitError) {
+      return NextResponse.json<IdaChatErrorResponse>(
+        { error: "Rate limit exceeded. Please try again later." },
+        {
+          status: 429,
+          headers: { "Retry-After": String(error.retryAfterSec) },
+        },
+      );
+    }
 
-    return NextResponse.json<IdaChatResponse>({
-      message: result.message,
-      meta: {
-        retrievedChunks: result.retrievedChunks,
-        usedRag: result.usedRag,
-      },
+    throw error;
+  }
+
+  try {
+    const context = await prepareIdaChatContext({ messages, locale, sessionId });
+
+    const stream = createSseStream(async (send) => {
+      send("meta", context.meta);
+
+      let fullMessage = "";
+
+      for await (const token of streamIdaChatResponse(context)) {
+        fullMessage += token;
+        send("token", { text: token });
+      }
+
+      send("done", { message: fullMessage.trim() });
     });
+
+    return sseResponse(stream);
   } catch (error) {
     const message =
       error instanceof Error && error.message === "Chat service is not configured."

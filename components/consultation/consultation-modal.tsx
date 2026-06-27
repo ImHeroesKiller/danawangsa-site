@@ -30,7 +30,8 @@ type FormStatus = "idle" | "success" | "error";
 
 export function ConsultationModal() {
   const locale = useLocale() as Locale;
-  const { isOpen, modalType, closeConsultation } = useConsultation();
+  const { isOpen, modalType, closeConsultation, prefill } = useConsultation();
+  const formInstanceKey = `${modalType}-${prefill?.topic ?? "none"}-${prefill?.description?.length ?? 0}`;
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
@@ -222,7 +223,11 @@ export function ConsultationModal() {
 
               {status === "error" && message && <FormAlert message={message} />}
 
-              <form action={handleGeneralSubmit} className="space-y-4">
+              <form
+                key={formInstanceKey}
+                action={handleGeneralSubmit}
+                className="space-y-4"
+              >
                 <input type="hidden" name="locale" value={locale} />
                 <div>
                   <Label htmlFor="name">{t("general.fields.name")}</Label>
@@ -271,7 +276,7 @@ export function ConsultationModal() {
                   <select
                     id="topic"
                     name="topic"
-                    defaultValue=""
+                    defaultValue={prefill?.topic ?? ""}
                     aria-invalid={!!fieldErrors.topic}
                     disabled={isPending}
                     className={cn(
@@ -297,6 +302,7 @@ export function ConsultationModal() {
                   <Textarea
                     id="description"
                     name="description"
+                    defaultValue={prefill?.description ?? ""}
                     placeholder={t("general.placeholders.description")}
                     aria-invalid={!!fieldErrors.description}
                     disabled={isPending}

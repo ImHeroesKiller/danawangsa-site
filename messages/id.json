@@ -295,9 +295,28 @@
     "inputPlaceholder": "Tulis pertanyaan Anda...",
     "send": "Kirim pesan",
     "disclaimer": "IDA adalah asisten AI. Untuk keputusan bisnis, gunakan formulir konsultasi.",
+    "quickReplies": {
+      "bridging": {
+        "label": "Apa itu Bridging Finance?",
+        "message": "Apa itu Bridging Finance?"
+      },
+      "assetCollateral": {
+        "label": "Jelaskan Asset Collateral Program",
+        "message": "Jelaskan Asset Collateral Program"
+      },
+      "process": {
+        "label": "Bagaimana proses konsultasi?",
+        "message": "Bagaimana proses konsultasi di Danawangsa Capital?"
+      },
+      "consultation": {
+        "label": "Mulai Konsultasi",
+        "message": "Saya ingin mulai konsultasi"
+      }
+    },
     "errors": {
       "generic": "Gagal mendapatkan jawaban. Silakan coba lagi.",
-      "tooLong": "Pesan terlalu panjang."
+      "tooLong": "Pesan terlalu panjang.",
+      "rateLimit": "Terlalu banyak permintaan. Silakan tunggu sebentar dan coba lagi."
     }
   },
   "collateralDiagram": {
